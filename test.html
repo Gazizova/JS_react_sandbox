@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="cycles.js"></script>
+</head>
+<body>
+<H2>Variables:</H2>
+    <script type="text/javascript">
+        var a = 2;
+        var b = 4;
+        var result = a + b;
+        document.write(a + b + "<br>")
+        document.write("<br>" +(a + b ))
+        document.write(result+ "<br>");
+
+        var c = "2";
+        var d = "4";
+        document.write(c + d + "<br>");
+
+        var e = "2";
+        var f = "4";
+        document.write( Number(e) + Number(f) + "<br>");
+
+        var bool;
+        bool = f<e;
+        document.write( bool);
+    </script>
+<H2>Conditions:</H2>
+<script>
+    var a = 2;
+    var b = 4;
+
+    if (a > b){
+        document.write((a+b))
+    }
+    else{
+        document.write(a-b)
+    }
+    document.write( "<hr>" );
+    var x = 6;
+    switch(x){
+        case 1:
+            document.write("x = 1");
+            break;
+        case 2:
+            document.write("x = 2");
+            break;
+        case 5:
+            document.write("x = 5");
+            break;
+        default:
+            document.write("x > 5");
+    }
+    document.write( "<hr>" );
+    a > b ? document.write("a > b"): document.write("a < b")
+
+    document.write( "<hr>" );
+    var bool = true;
+
+    if(a < b && bool == true){
+            document.write("a < b")
+    }
+
+    if(a > b || bool == true){
+            document.write("a < b")
+    }
+</script>
+</body>
+</html>
