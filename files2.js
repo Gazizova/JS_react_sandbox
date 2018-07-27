@@ -73,3 +73,97 @@ obj.forEach((i) => {
   //     app.appendChild(newline)
   //     }
   //   }
+
+import './styles.scss';
+
+
+
+async function applicationStart() {
+  const httpResponse = await fetch('/data.json');
+  const jsonData = await httpResponse.json();
+  const len_arr = Object.keys(jsonData).length;
+  const app = document.getElementById('app');
+
+  jsonData.forEach(i => {
+    const newline = document.createElement('p');
+    newline.innerHTML =
+      ' <img src ="images\\' +
+      i.image +
+      '.svg"  height="40">' +
+      ' - ' +
+      i.name +
+      ' - (' +
+      i.age +
+      ')';
+
+    app.appendChild(newline);
+  });
+}
+
+// applicationStart();
+search()
+//Ernest Rhodes
+
+
+async function search() {
+  const form = document.getElementById('find_form');
+  const search_field = document.getElementById('search');
+  const search_button = document.getElementById('search-button');
+
+  const httpResponse = await fetch('/data.json');
+  const jsonData = await httpResponse.json();
+  const len_arr = Object.keys(jsonData).length;
+  const app = document.getElementById('app');
+
+  // let userName;
+  // let userImage;
+  // let userAge;
+
+  // let search_user_name = search_field.value;
+
+  // search_button.onclick = return_from_search(search_user_name)
+
+
+  form.onsubmit = function (e) {
+  e.preventDefault;
+  let search_user_name = search_field.value;
+    console.log(search_user_name)
+    console.log(search_user_name.split(' ')[1]);
+  // function return_from_search(search_user_name){
+  // jsonData.forEach(i => {
+  //       if (search_user_name == i.name) {
+  //         this.userImage = i.image;
+  //         this.userName = i.name ;
+  //         this.userAge = i.age;
+  //       }
+  //     })
+  //       return userImage;
+  //       return userName;
+  //       return userAge;
+  //   console.log(userName, userImage, userAge)
+  //       }
+  // console.log(userName, userImage, userAge)
+
+    jsonData.forEach(i => {
+      if (search_user_name == i.name) {
+        const newline = document.createElement('p');
+         newline.innerHTML =
+          ' <img src ="images\\' +
+          i.image +
+          '.svg"  height="40">' +
+          ' - ' +
+          i.name +
+          ' - (' +
+          i.age +
+          ')';
+
+        app.appendChild(newline);
+        setTimeout(1000);
+      }
+      // else {
+      //   setTimeout(function () {console.log("input correct name")
+      //   }, 5000);
+      // }
+    });
+  };
+}
