@@ -20,22 +20,22 @@ var images=new Array();
 
 // concatenate animals with file extention
 for(i = 0; i<uniqueArray.length; i++){
-       image = "img/"+ uniqueArray[i] + ".jpg";
+       image = "images/"+ uniqueArray[i] + ".jpg";
        images[i]=image;
     }
 
 
 console.log("images: ", images);
 
-html = "<img src = "
+html = "<images src = "
 console.log(html +  images[0] + ">");
 
 
 for(i = 0; i<images.length; i++){
 
-    if(images[i]=="img/fox.jpg" || images[i]=="img/koala.jpg" || images[i]=="img/pig.jpg") {
+    if(images[i]=="images/fox.jpg" || images[i]=="images/koala.jpg" || images[i]=="images/pig.jpg") {
         var newline = document.createElement('p');
-        newline.innerHTML= "<img src =" + images[i] + ">";
+        newline.innerHTML= "<images src =" + images[i] + ">";
         app.appendChild(newline)
 
     }
@@ -50,8 +50,8 @@ for(i = 0; i<images.length; i++){
   // for (var i = 0; i < len; i++) {
   //   if (jsonData[i].image && jsonData[i].name && jsonData[i].age ){
   //      var newline = document.createElement('p');
-  //     // console.log("IMG"+"<img src=https://rawgit.com/Strikersoft/strikersoft-frontend-test-assignment/f7de7f15c4c341bdbec5c9f7b13fa673d6240ed2/public/images/" + jsonData[i].image + ".svg>");
-  //     newline.innerHTML = '<img src="https://rawgit.com/Strikersoft/strikersoft-frontend-test-assignment/f7de7f15c4c341bdbec5c9f7b13fa673d6240ed2/public/images/' + jsonData[i].image + '.svg"  height="40">' + ' - ' + jsonData[i].name + ' - (' + jsonData[i].age+ ')';
+  //     // console.log("IMG"+"<images src=https://rawgit.com/Strikersoft/strikersoft-frontend-test-assignment/f7de7f15c4c341bdbec5c9f7b13fa673d6240ed2/public/images/" + jsonData[i].image + ".svg>");
+  //     newline.innerHTML = '<images src="https://rawgit.com/Strikersoft/strikersoft-frontend-test-assignment/f7de7f15c4c341bdbec5c9f7b13fa673d6240ed2/public/images/' + jsonData[i].image + '.svg"  height="40">' + ' - ' + jsonData[i].name + ' - (' + jsonData[i].age+ ')';
   //     app.appendChild(newline)
   //     }
   //   }
