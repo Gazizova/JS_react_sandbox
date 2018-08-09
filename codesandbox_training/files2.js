@@ -64,6 +64,7 @@ data2 = '{"id":0,"name":"Ernest Rhodes","age":36,"phone":"(709) 257-3706","image
 
 // obj2 = JSON.parse(data2);
 obj = JSON.parse(data);
+// var mydata = JSON.parse('data.json');
 console.log(typeof obj2);
 const app = document.getElementById('app');
 const form = document.getElementById('find_form');
@@ -106,11 +107,6 @@ async function renderItems(data) {
               ')';
     app.appendChild(newline);
   }
-  // else{
-  //   const newline = document.createElement('p');
-  //   newline.innerHTML = "No data available"
-  //   app.appendChild(newline);
-  // }
 }
 
 renderItems(obj);
@@ -121,29 +117,28 @@ renderItems(obj);
 
 form.onsubmit = function (e) {
   e.preventDefault();
+  arrForStoreSelectResults=[];
     let search_user_name = search_field.value;
     if(search_user_name =="" || search_user_name ==" ") {
       alert("Please, input user name")
-      // return renderItems(obj);
+
     }
     else{
         let j=0;
         obj.forEach(i => {
-            if (search_user_name == i.name || search_user_name == i.name+" ") {
-                 return renderItems(i);
-            }
-            else if(search_user_name == i.name.split(" ")[0] || search_user_name == i.name.split(" ")[0]+" " ||   search_user_name == i.name.split(" ")[1] || search_user_name == i.name.split(" ")[1]+" "){
+            if(search_user_name == i.name || search_user_name == i.name+" " ||search_user_name == i.name.split(" ")[0] || search_user_name == i.name.split(" ")[0]+" " ||   search_user_name == i.name.split(" ")[1] || search_user_name == i.name.split(" ")[1]+" "){
              arrForStoreSelectResults.push(i);
              j++;
             }
-            // else{
-            //  app.innerHTML = '';
-            //  const newline = document.createElement('p');
-            //  newline.innerHTML = "No data available"
-            //  app.appendChild(newline);
-            // }
+            else{
+             app.innerHTML = '';
+             const newline = document.createElement('p');
+             newline.innerHTML = "No data available"
+             return app.appendChild(newline);
+            }
         });
         if(arrForStoreSelectResults.length >0){
+          app.innerHTML = '';
           console.log(arrForStoreSelectResults);
           return renderItems(arrForStoreSelectResults);
         }
@@ -152,5 +147,6 @@ form.onsubmit = function (e) {
 
 clearAllButton.onclick = function (e) {
   search_field.form.reset();
+  arrForStoreSelectResults=[];
   return renderItems(obj);
 }
