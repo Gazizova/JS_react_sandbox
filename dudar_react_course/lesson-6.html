@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="program"></div>
+<script type="text/babel">
+
+    function edit() {
+        alert("Edit button")
+
+    }
+    function remove() {
+        alert("DELETE button")
+
+    }
+    class Task extends React.Component{
+        render() {
+            return (
+                <div className="box">
+                    <div className="text">{this.props.children}</div>
+                    <button onClick={edit} className="btn-light">Edit</button>
+                    <button onClick={remove} className="btn-red">Delete</button>
+                </div>)
+        }
+    }
+    const app = document.getElementById("program")
+
+    ReactDOM.render(
+        <div>
+            <Task>First</Task>
+            <Task>Second</Task>
+            <Task>Third</Task>
+        </div>,
+        app
+    );
+
+
+</script>
+
+</body>
