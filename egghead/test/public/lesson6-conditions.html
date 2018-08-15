@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <title>React props</title>
+  </head>
+  <body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+  <script type="text/babel">
+    // case 1:
+      function Message({message}) {
+          if (!message) {
+              return <div>there are no message</div>
+          }
+              return <div>{message}</div>
+      }
+    // case2:
+     function Message2({message}){
+         return message
+             ? React.createElement(
+                 'div',
+                 null,
+                 message)
+             : React.createElement(
+                 'div',
+                 null,
+                 "no message"
+             )
+     }
+    // case3:
+    function Message3({message}){
+        return message ? <div>{message}</div> : <div>Input your message</div>
+    }
+      ReactDOM.render(
+          <Message3 message={null} />,
+          document.getElementById('root'),
+      )
+  </script>
+  </body>
+</html>

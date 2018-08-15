@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <!--<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">-->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React 2nd</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="ind"></div>
+    <script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/babel">
+      const rootElement = document.getElementById('ind')
+      // Lesson 2 - JS
+      // const element = document.createElement('div')
+      // element.textContent = 'Hello World'
+      // element.className = 'container'
+      // rootElement.appendChild(element)
+
+      // Lesson 2 - create Element - 1st case
+      const element = React.createElement('div', {className:'container'}, 'Hello React ', 'Hello React ')
+
+      // Lesson 2 - create Element - 2nd case
+      const element2 = React.createElement('div', {
+          className:'container',
+          children: [ 'Hello React',  'Hello All']
+
+      })
+      class Element extends React.Component{
+          render(){
+              return(
+
+              <div className="container">
+                  Hello React 2
+              </div>
+              )
+          }
+      }
+      // Lesson 3 JSX
+      const string = 'Hello JSX '
+      const myClassName = 'container'
+      const elementJSX = <div className={myClassName + '_hi_there'}> {string} </div>
+
+      // Lesson 3 JSX-2:
+      const props = {
+          className: 'container2',
+          children: 'Hello LSX 2 '
+      }
+      // override props
+      const elementJSX2 = <div {...props} className="my-class" />
+
+      console.log(elementJSX2)
+
+      // Lesson 4 Simple Reusable React Component
+      const Message_element =(props) => <div>{props.msg}</div>
+      const Message_child =(props) => <div>{props.children}</div>
+
+      const reusableElement = (
+          <div className="container">
+              {Message_element({msg: '1st method for add child '})}
+          <Message_element msg='2hd method for add child '/>
+          <Message_child>Hello</Message_child>
+
+          </div>
+      )
+
+      ReactDOM.render(
+          // <div>
+          //     <Element />
+          // </div>,
+          reusableElement,
+          rootElement)
+    </script>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+    {message_element({msg: 'Hello World'})}
+              {message_element({msg: 'Lesson 4 Simple Reusable React Component'})}
+              {message_element({msg: "Hi everyone "})}
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
