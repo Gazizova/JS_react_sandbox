@@ -1,8 +1,8 @@
 import React from 'react';
+import logo from './logo.svg';
+// import './App.css';
 const App = () =><h1>Hello!</h1>
 export default App
-// import logo from './logo.svg';
-// // import './App.css';
 //
 // class App extends Component {
 //   render() {
@@ -19,5 +19,5 @@ export default App
 //     );
 //   }
 // }
-//
+
 // export default App;
