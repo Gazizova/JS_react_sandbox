@@ -6,24 +6,18 @@ import App from "./App";
 import ReactDOM  from 'react';
 
 
+// console.log(clientList[1])
 
-
-function FilterEmoji() {
+function RenderUsersList() {
     return (
-        clientList.forEach(i => {
-            document.write(i.name)
-        })
+        <div className="user-list">
+            {
+                clientList.map(i => {
+                return <p><img src={require(`./images/${i.image}.svg`)} height="40"/> {i.name + '   age:' + i.age} </p>
+            })
+            }
+        </div>
     )
 }
-class RenderClientList extends Component {
 
-            render(){
-                return(
-                    <div className = "list">
-                        <FilterEmoji />
-                    </div>
-                )
-            }
-}
-
-export default RenderClientList;
+export default RenderUsersList;

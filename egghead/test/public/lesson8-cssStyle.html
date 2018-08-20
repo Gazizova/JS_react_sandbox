@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <title>React css</title>
+  </head>
+  <body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+  <style>
+    .box {
+      border: 1px solid #333;
+    }
+    .box--large {
+      width: 180px;
+      height: 180px;
+    }
+    .box--medium {
+      width: 120px;
+      height: 120px;
+    }
+    .box--small {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+  <script type="text/babel">
+  const rootElement = document.getElementById('root')
+// case 1:
+    const props = {
+        className: "box box--small",
+        style: {paddingLeft: 20},
+        }
+    const element = (
+      <div>
+          <div {...props}>box</div>
+      </div>
+      )
+
+  // case 2:
+  function Box(props){
+      return(
+          <div
+                  className="box box--small"
+                  style={{paddingLeft: 20}}
+                  {...props}
+          />
+      )
+  }
+  const element2 = (
+      <div>
+          <Box>box</Box>
+      </div>
+  )
+  // case 3:
+  function Box2({style, size, className='', ...rest}){
+      const sizeClassName = size? `box--${size}`:''
+      return(
+          <div
+              className={`box ${className} ${sizeClassName}`}
+              style={{paddingLeft: 20, ...style}}
+              {...rest}
+          />
+      )
+  }
+  const element3 = (
+      <div>
+          <Box2
+              size="small"
+              style = {{backgroundColor:"lightblue"}}>
+              box
+          </Box2>
+          <Box2
+              size="medium"
+              style = {{backgroundColor:"blue"}}>
+              medium box
+          </Box2>
+          <Box2
+              size="large"
+              style = {{backgroundColor:"orange"}}>
+              large box
+          </Box2>
+      </div>
+  )
+      ReactDOM.render(element3, rootElement)
+  </script>
+  </body>
+</html>

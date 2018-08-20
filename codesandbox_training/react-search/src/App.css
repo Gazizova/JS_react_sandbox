@@ -26,3 +26,52 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.component-users-results{
+  padding-top: 20px;
+}
+.component-user-row{
+  border-bottom: 1px solid #ccc;
+  padding: 2px;
+  height: 50px;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*cursor: pointer;*/
+  text-align: left;
+}
+
+.component-user-row:hover{
+  background-color: #eee;
+}
+
+.component-user-row .user-name   {
+  /*float: right;*/
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+}
+.component-user-row .user-age  {
+  float: right;
+  position: relative;
+  top: 25px;
+  right: 10px;
+}
+
+.component-user-row img {
+  width: 40px;
+  height: 40px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+
+label{
+  position: relative;
+  color: darkgrey;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+  /*float: left;*/
+}
+input{
+  background-color: #eeeeee;
+  box-shadow: darkgrey;
+}
+

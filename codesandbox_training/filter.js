@@ -68,17 +68,17 @@ async function renderItems(data) {
       });
   }
       else{
-    app.innerHTML = '';
-    const newline = document.createElement('p');
-    newline.innerHTML =
-              ' <img src ="images\\' +
-              data.image +
-              '.svg"  height="40">' +
-              ' - ' +
-              data.name +
-              ' - (' +
-              data.age +
-              ')';
+      app.innerHTML = '';
+      const newline = document.createElement('p');
+      newline.innerHTML =
+          ' <img src ="images\\' +
+          data.image +
+          '.svg"  height="40">' +
+          ' - ' +
+          data.name +
+          ' - (' +
+          data.age +
+          ')';
     app.appendChild(newline);
   }
 }
