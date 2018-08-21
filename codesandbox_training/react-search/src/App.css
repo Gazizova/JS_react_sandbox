@@ -27,7 +27,7 @@
   to { transform: rotate(360deg); }
 }
 .component-users-results{
-  padding-top: 20px;
+  padding-top: 50px;
 }
 .component-user-row{
   border-bottom: 1px solid #ccc;
@@ -68,10 +68,15 @@ label{
   color: darkgrey;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 20px;
-  /*float: left;*/
+  float: left;
 }
 input{
   background-color: #eeeeee;
   box-shadow: darkgrey;
+  float: left;
+}
+button{
+  position: relative;
+  float: right;
 }
 

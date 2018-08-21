@@ -19,7 +19,12 @@ function RenderArray() {
 }
 
 function RenderArray2() {
-    return (<div>{data.map(item => <div>{item}</div>)}</div>);
+    return (
+        <div>   
+            {data.map(item => 
+                <div>{item}</div>)
+            }
+        </div>);
 }
 
 let usrs = data.map(function(i){
