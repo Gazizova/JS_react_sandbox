@@ -57,13 +57,17 @@ class App extends PureComponent {
               <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to React</h1>
             </header>
-            <p className="App-intro">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
               <form id="find_form">
-                      <SearchInput textChange={this.handleSearchChange} asc={this.sortbyAsc} desc={this.sortbyDesc} clear={this.clearAllButton}/>
-                      <UsersResults dataList={this.state.filterUserList}/>
+                  <SearchInput textChange={this.handleSearchChange} />
               </form>
+              <div className="button-block">
+                  <button onClick={this.sortbyAsc} type="button" value="SortAsc" id="sort-button-asc">Sort Asc</button>
+                  <button onClick={this.sortbyDesc} type="button" value="SortDesc" id="sort-button-desc">Sort Desc</button>
+                  <button onClick={this.clearAllButton} type="button" value="Clear" id="clear-button">Clear All</button>
+                  </div>
+              <div>
+                    <UsersResults dataList={this.state.filterUserList}/>
+              </div>
           </div>
 
     );

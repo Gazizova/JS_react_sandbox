@@ -13,3 +13,4 @@ export default function FilterUserList(array, searchText) {
         })
         .slice(0);
 }
+
