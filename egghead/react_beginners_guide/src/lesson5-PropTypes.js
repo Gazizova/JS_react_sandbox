@@ -6,6 +6,7 @@ class Lesson5 extends Component{
     render(){
          return(
              <div>
+                 <h3> Lesson 5:</h3>
                  Hello {this.props.firstName} {this.props.lastName}!
              </div>
          )

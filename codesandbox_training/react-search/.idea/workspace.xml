@@ -2,39 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecb20988-c03b-46d8-9d96-8e8cc9edb55e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/filterUsers2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson3-JSX.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson4-ReusableReactProject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson5-PropTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson6-conditionalRender.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson7-renderApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Date.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../alert_confirm_prompt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../arrays2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson10-componentState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson12-classComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson13-manipulateWithDOM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson14-basicForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson15-dynamicForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson16-controllingFormValues.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson9-eventHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearchInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filterUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/filterUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../cycles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/01-js.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../event_handler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../forms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../functionsMath.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../local_global_var.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../string.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tetra.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../timer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson5-PropTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson5-PropTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson6-conditionalRender.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson6-conditionalRender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson7-renderApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../egghead/react_beginners_guide/src/lesson7-renderApp.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,12 +66,13 @@
     <session id="-1895574419">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -108,8 +93,8 @@
         <counts>
           <entry key="css" value="5" />
           <entry key="html" value="3" />
-          <entry key="js" value="48" />
-          <entry key="json" value="5" />
+          <entry key="js" value="49" />
+          <entry key="json" value="6" />
           <entry key="svg" value="1" />
         </counts>
       </usages-collector>
@@ -117,8 +102,8 @@
         <counts>
           <entry key="CSS" value="5" />
           <entry key="HTML" value="3" />
-          <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="48" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="49" />
           <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
@@ -129,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
                 <marker date="1534925680731" expanded="true" signature="532:675" ph="..." />
@@ -187,7 +172,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/usersSorting2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="320">
               <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -197,9 +182,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/usersSorting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SearchInput.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="289">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -211,7 +205,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/usersResults2ndSample.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="221">
               <caret line="13" column="58" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="58" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -284,11 +278,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="90" />
-    <option name="y" value="13" />
-    <option name="width" value="1687" />
-    <option name="height" value="935" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -357,17 +351,19 @@
       <workItem from="1534840659952" duration="598000" />
       <workItem from="1534842268178" duration="14279000" />
       <workItem from="1535009750703" duration="2571000" />
+      <workItem from="1535357391103" duration="478000" />
+      <workItem from="1535362115120" duration="1939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54987000" />
+    <option name="totallyTimeSpent" value="57404000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="13" width="1687" height="935" extended-state="1" />
+    <frame x="1912" y="-8" width="1456" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17889631" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20803949" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -467,20 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/usersSorting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/clientList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -495,10 +477,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/filterUsers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/filterUsers2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SearchInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -509,16 +515,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/usersResultsRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/usersSorting2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="320">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -526,19 +525,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SearchInput.js">
+    <entry file="file://$PROJECT_DIR$/src/usersSorting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="714">
+          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/usersResultsRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/usersResults2ndSample.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="221">
           <caret line="13" column="58" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="58" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -546,17 +549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/filterUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="204">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
             <marker date="1534925680731" expanded="true" signature="532:675" ph="..." />
