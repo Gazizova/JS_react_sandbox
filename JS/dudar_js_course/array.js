@@ -9,14 +9,18 @@ document.write("<br>");
         document.write(arr[i] + " ");
 
     };
-    document.write("<br>");
+    document.write("<br>")
 
-var arr = new Array();
+document.write("<p> arr_0_start  <p>")
+var arr_0 = [];
     for(i = 0; i<10; i++){
-        arr[i]=i*3;
+        arr_0[i]=i*3;
 
-        document.write(arr[i] + " ");
+        document.write(arr_0[i] + " ");
     }
+document.write("<br>")
+document.write(arr_0);
+document.write("<br>")
 var sum =0;
     for(i = 0; i<arr.length; i++){
         sum += arr[i]

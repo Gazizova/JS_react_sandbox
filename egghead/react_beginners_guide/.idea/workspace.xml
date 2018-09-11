@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bdb901d-74f6-4d7e-ab7f-987e6e38bb95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/src/component/todo/TodoForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/src/component/todo/TodoItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/src/component/todo/TodoList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/src/component/todo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/src/lib/todoHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../build_first_react_app/src/lib/todoHelper.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../codesandbox_training/react-search/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../codesandbox_training/react-search/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build_first_react_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../build_first_react_app/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,11 +19,12 @@
     <session id="1960998660">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -91,8 +86,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lesson5-PropTypes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="35" />
+            <state relative-caret-position="153">
+              <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,7 +210,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="width" value="1245" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -247,7 +245,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../start_learniing_react" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -283,17 +281,18 @@
       <workItem from="1535357982453" duration="19144000" />
       <workItem from="1535434531160" duration="200000" />
       <workItem from="1535459803121" duration="641000" />
+      <workItem from="1535527650434" duration="622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29283000" />
+    <option name="totallyTimeSpent" value="29905000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1245" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40064102" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22866611" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -374,9 +373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding>
-            <marker date="1535368063635" expanded="true" signature="41:989" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -415,6 +411,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson16-controllingFormValues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -467,17 +470,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lesson16-controllingFormValues.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson5-PropTypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

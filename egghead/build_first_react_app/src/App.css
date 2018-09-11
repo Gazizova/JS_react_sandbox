@@ -40,3 +40,6 @@ ul{
 li{
   list-style-type: none;
 }
+.delete-item a{
+  visibility: visible;
+}

@@ -11,7 +11,7 @@ export const TodoForm = (props) => (
 )
 
     TodoForm.propTypes = {
-        currentTodo: PropTypes.string.isRequuired,
-        handleInputChange: PropTypes.func.isRequuired,
-        handleSubmit: PropTypes.func.isRequuired
+        currentTodo: PropTypes.string,
+        handleInputChange: PropTypes.func,
+        handleSubmit: PropTypes.func
     }
