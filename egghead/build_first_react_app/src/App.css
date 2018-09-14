@@ -43,3 +43,10 @@ li{
 .delete-item a{
   visibility: visible;
 }
+.Footer a {
+  padding-left:2px;
+  padding-right:2px;
+}
+.Footer a.active {
+  font-weight: bold;
+}

@@ -2,48 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb4ca0c-67a9-469a-a03f-e2843d430a13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../JS/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JS/flenagan_js_tutorial/chapter8_functions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JS/flenagan_js_tutorial/chapter8_functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JS/flenagan_js_tutorial/chapter9_classes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/lib/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/lib/utils.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../egghead/test/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-search/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/react-search/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/Date.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/alert_confirm_prompt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/arrays2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/cycles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/event_handler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/forms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/functionsMath.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/local_global_var.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/string.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/tetra.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dudar_js_course/timer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/src/component/todo/TodoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/component/todo/TodoForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/src/component/todo/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/component/todo/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/src/component/todo/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/component/todo/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/src/lib/todoHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/lib/todoHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/build_first_react_app/src/lib/todoHelper.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/build_first_react_app/src/lib/todoHelper.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../egghead/react_beginners_guide/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/react_beginners_guide/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mozillaOrgTutorial/calendar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mozillaOrgTutorial/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mozillaOrgTutorial/conditions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mozillaOrgTutorial/flenagan_js_tutorial/chapter4_variables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mozillaOrgTutorial/flenagan_js_tutorial/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mozillaOrgTutorial/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../egghead/test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../egghead/test/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,7 +55,7 @@
     <session id="-1629941165">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.3" value="2" />
@@ -143,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/files.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="510">
+              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -248,11 +212,11 @@
       <path value="$PROJECT_DIR$/react-search/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="90" />
-    <option name="y" value="13" />
-    <option name="width" value="1687" />
-    <option name="height" value="935" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="31" />
+    <option name="y" value="-13" />
+    <option name="width" value="1452" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -287,7 +251,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Git/swipecare-admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -324,18 +288,18 @@
       <workItem from="1536066743493" duration="1814000" />
       <workItem from="1536323914873" duration="598000" />
       <workItem from="1536568307999" duration="598000" />
-      <workItem from="1536652048339" duration="598000" />
+      <workItem from="1536652048339" duration="1265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24222000" />
+    <option name="totallyTimeSpent" value="24889000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="13" width="1687" height="935" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21649484" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -467,8 +431,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/files.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="510">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>

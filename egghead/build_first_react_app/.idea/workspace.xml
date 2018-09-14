@@ -2,48 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c13226-598c-48a4-845c-94e56902fd90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../JS/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JS/flenagan_js_tutorial/chapter8_functions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JS/flenagan_js_tutorial/chapter8_functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../JS/flenagan_js_tutorial/chapter9_classes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/utils.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../codesandbox_training/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../codesandbox_training/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../codesandbox_training/react-search/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../codesandbox_training/react-search/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/Date.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/alert_confirm_prompt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/arrays2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/cycles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/event_handler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/forms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/functionsMath.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/local_global_var.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/string.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/tetra.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dudar_js_course/timer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/todo/TodoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/todo/TodoForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/todo/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/todo/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/todo/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/todo/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/todoHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/todoHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/todoHelper.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/todoHelper.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react_beginners_guide/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../react_beginners_guide/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mozillaOrgTutorial/calendar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mozillaOrgTutorial/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mozillaOrgTutorial/conditions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mozillaOrgTutorial/flenagan_js_tutorial/chapter4_variables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mozillaOrgTutorial/flenagan_js_tutorial/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mozillaOrgTutorial/test.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,7 +19,7 @@
     <session id="-1399790350">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -72,7 +33,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
+          <entry key="css" value="2" />
           <entry key="html" value="1" />
           <entry key="js" value="16" />
           <entry key="json" value="1" />
@@ -80,7 +41,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="2" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="16" />
@@ -88,14 +49,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="84" />
+          <entry key="css" value="99" />
           <entry key="html" value="6" />
           <entry key="js" value="3826" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="84" />
+          <entry key="CSS" value="99" />
           <entry key="HTML" value="6" />
           <entry key="JavaScript" value="3826" />
         </counts>
@@ -125,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/todo/TodoItem.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -133,6 +94,15 @@
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -221,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/component/todo/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/component/todo/TodoForm.js" />
@@ -235,6 +204,7 @@
         <option value="$PROJECT_DIR$/src/component/todo/TodoList.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/component/todo/TodoItem.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
       </list>
     </option>
   </component>
@@ -255,10 +225,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1448" />
-    <option name="y" value="177" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="x" value="31" />
+    <option name="y" value="-13" />
+    <option name="width" value="1452" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -422,7 +392,7 @@
       <workItem from="1536047644098" duration="2142000" />
       <workItem from="1536323914848" duration="599000" />
       <workItem from="1536568307999" duration="9103000" />
-      <workItem from="1536652048339" duration="4326000" />
+      <workItem from="1536652048339" duration="5001000" />
     </task>
     <servers />
   </component>
@@ -459,19 +429,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53114000" />
+    <option name="totallyTimeSpent" value="53789000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1448" y="177" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16008462" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11959958" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30592993" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2462039" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -533,13 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -629,6 +592,13 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>
     </entry>
