@@ -8,6 +8,7 @@ class Lesson4 extends Component{
     render(){
          return(
              <div className="Lesson4">
+                <h3> Lesson 4:</h3>
                  <this.Message msg="Im Message!" />
                  <this.Message msg="Im 2-nd Message!" />
              </div>

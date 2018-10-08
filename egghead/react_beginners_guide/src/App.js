@@ -9,7 +9,7 @@ import Lesson7tick from './lesson7-renderApp'
 import Lesson9 from './lesson9-eventHandler'
 import Lesson10 from './lesson10-componentState'
 import Lesson11 from './lesson12-classComponent'
-import Lesson13 from './lesson13-manipulateWithDOM'
+// import Lesson13 from './lesson13-manipulateWithDOM'
 import Lesson14 from './lesson14-basicForm'
 import Lesson15 from './lesson15-dynamicForm'
 import Lesson16 from './lesson16-controllingFormValues'
@@ -19,11 +19,8 @@ class App extends Component {
 
     func(){
     const a = () => (1)
-
     console.log(a())
-
     const b = () => { 1 }
-
     console.log(b())
       }
 

@@ -21,7 +21,7 @@ class Lesson9 extends Component {
     render() {
         return (
             <div>
-                <h3> Lesson 9:</h3>
+            <h3> Lesson 9:</h3>
               <div>there have been {this.state.eventCount} events</div>
                 <p>
                     <button onClick={this.increment.bind(this)}>&#9829;</button>

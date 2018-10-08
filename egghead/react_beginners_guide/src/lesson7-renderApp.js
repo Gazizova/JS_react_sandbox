@@ -14,9 +14,9 @@ class Lesson7tick extends Component {
         );
     }
 
-    // componentWillUnmount() {
-    //     clearInterval(this.timerID);
-    // }
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
 
     tick() {
         this.setState({

@@ -11,8 +11,11 @@ class Lesson3 extends Component{
     )
     render(){
          return(
-             this.element
-             //{/*<div{...this.props}/>*/}  // почему не работает?
+            <div>
+                <h3> Lesson 3:</h3>
+                 {this.element}
+             {/* <div{...this.props}/>  / почему не работает? */}
+             </div>
          )
     }
 }
