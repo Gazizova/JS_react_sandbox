@@ -37,10 +37,10 @@
      }
     // case3:
     function Message3({message}){
-        return message ? <div>{message}</div> : <div>Input your message</div>
+        return message ? <div>{message}<div><a type="button" text="text" href="#">qwe</a></div></div> : <div>Input your message</div>
     }
       ReactDOM.render(
-          <Message3 message={null} />,
+          <Message3 message="messs"/>,
           document.getElementById('root'),
       )
   </script>

@@ -1,0 +1,2013 @@
+{
+  "metadata": {
+    "template": {
+      "title": "Medfit Autoanamnes",
+      "code": "MEDFIT_Autoanamnes_solo",
+      "version": {
+        "major": 0,
+        "minor": 0,
+        "patch": 3
+      },
+      "lastUpdate": "2018-10-01T00:00:00.000Z"
+    }
+  },
+  "dicts": {
+    "groupSmarte": {
+      "ref": "Smarte",
+      "questions": [
+        {
+          "ref": "Q.PainType",
+          "type": "strikersoft.question.multiSelect",
+          "title": "Smärta",
+          "extensions": [
+            {
+              "type": "strikersoft.component.multiSelectButtonList",
+              "buttonsPerRow": 3
+            }
+          ],
+          "answers": [
+            {
+              "value": "Molande"
+            },
+            {
+              "value": "Huggande/skärande"
+            },
+            {
+              "value": "Brinnande/svidande"
+            },
+            {
+              "value": "Stickande"
+            },
+            {
+              "value": "Domning"
+            },
+            {
+              "value": "Muskelkramp"
+            },
+            {
+              "type": "strikersoft.answer.freeText"
+            }
+          ]
+        },
+        {
+          "ref": "Q.PainVAS",
+          "type": "strikersoft.question.singleSelect",
+          "title": "Smärtskattning (VAS)\r\nSkatta din smärta genom att dra bollen nedan",
+          "extra": "VAS:",
+          "answers": [
+            {
+              "value": 0,
+              "title": "Ingen smärta"
+            },
+            { "value": 1, "title": "Enligt skalan" },
+            { "value": 2, "title": "Enligt skalan" },
+            { "value": 3, "title": "Enligt skalan" },
+            { "value": 4, "title": "Enligt skalan" },
+            { "value": 5, "title": "Enligt skalan" },
+            { "value": 6, "title": "Enligt skalan" },
+            { "value": 7, "title": "Enligt skalan" },
+            { "value": 8, "title": "Enligt skalan" },
+            { "value": 9, "title": "Enligt skalan" },
+            { "value": 10, "title": "Enligt skalan" },
+            { "value": 11, "title": "Enligt skalan" },
+            { "value": 12, "title": "Enligt skalan" },
+            { "value": 13, "title": "Enligt skalan" },
+            { "value": 14, "title": "Enligt skalan" },
+            { "value": 15, "title": "Enligt skalan" },
+            { "value": 16, "title": "Enligt skalan" },
+            { "value": 17, "title": "Enligt skalan" },
+            { "value": 18, "title": "Enligt skalan" },
+            { "value": 19, "title": "Enligt skalan" },
+            { "value": 20, "title": "Enligt skalan" },
+            { "value": 21, "title": "Enligt skalan" },
+            { "value": 22, "title": "Enligt skalan" },
+            { "value": 23, "title": "Enligt skalan" },
+            { "value": 24, "title": "Enligt skalan" },
+            { "value": 25, "title": "Enligt skalan" },
+            { "value": 26, "title": "Enligt skalan" },
+            { "value": 27, "title": "Enligt skalan" },
+            { "value": 28, "title": "Enligt skalan" },
+            { "value": 29, "title": "Enligt skalan" },
+            { "value": 30, "title": "Enligt skalan" },
+            { "value": 31, "title": "Enligt skalan" },
+            { "value": 32, "title": "Enligt skalan" },
+            { "value": 33, "title": "Enligt skalan" },
+            { "value": 34, "title": "Enligt skalan" },
+            { "value": 35, "title": "Enligt skalan" },
+            { "value": 36, "title": "Enligt skalan" },
+            { "value": 37, "title": "Enligt skalan" },
+            { "value": 38, "title": "Enligt skalan" },
+            { "value": 39, "title": "Enligt skalan" },
+            { "value": 40, "title": "Enligt skalan" },
+            { "value": 41, "title": "Enligt skalan" },
+            { "value": 42, "title": "Enligt skalan" },
+            { "value": 43, "title": "Enligt skalan" },
+            { "value": 44, "title": "Enligt skalan" },
+            { "value": 45, "title": "Enligt skalan" },
+            { "value": 46, "title": "Enligt skalan" },
+            { "value": 47, "title": "Enligt skalan" },
+            { "value": 48, "title": "Enligt skalan" },
+            { "value": 49, "title": "Enligt skalan" },
+            { "value": 50, "title": "Enligt skalan" },
+            { "value": 51, "title": "Enligt skalan" },
+            { "value": 52, "title": "Enligt skalan" },
+            { "value": 53, "title": "Enligt skalan" },
+            { "value": 54, "title": "Enligt skalan" },
+            { "value": 55, "title": "Enligt skalan" },
+            { "value": 56, "title": "Enligt skalan" },
+            { "value": 57, "title": "Enligt skalan" },
+            { "value": 58, "title": "Enligt skalan" },
+            { "value": 59, "title": "Enligt skalan" },
+            { "value": 60, "title": "Enligt skalan" },
+            { "value": 61, "title": "Enligt skalan" },
+            { "value": 62, "title": "Enligt skalan" },
+            { "value": 63, "title": "Enligt skalan" },
+            { "value": 64, "title": "Enligt skalan" },
+            { "value": 65, "title": "Enligt skalan" },
+            { "value": 66, "title": "Enligt skalan" },
+            { "value": 67, "title": "Enligt skalan" },
+            { "value": 68, "title": "Enligt skalan" },
+            { "value": 69, "title": "Enligt skalan" },
+            { "value": 70, "title": "Enligt skalan" },
+            { "value": 71, "title": "Enligt skalan" },
+            { "value": 72, "title": "Enligt skalan" },
+            { "value": 73, "title": "Enligt skalan" },
+            { "value": 74, "title": "Enligt skalan" },
+            { "value": 75, "title": "Enligt skalan" },
+            { "value": 76, "title": "Enligt skalan" },
+            { "value": 77, "title": "Enligt skalan" },
+            { "value": 78, "title": "Enligt skalan" },
+            { "value": 79, "title": "Enligt skalan" },
+            { "value": 80, "title": "Enligt skalan" },
+            { "value": 81, "title": "Enligt skalan" },
+            { "value": 82, "title": "Enligt skalan" },
+            { "value": 83, "title": "Enligt skalan" },
+            { "value": 84, "title": "Enligt skalan" },
+            { "value": 85, "title": "Enligt skalan" },
+            { "value": 86, "title": "Enligt skalan" },
+            { "value": 87, "title": "Enligt skalan" },
+            { "value": 88, "title": "Enligt skalan" },
+            { "value": 89, "title": "Enligt skalan" },
+            { "value": 90, "title": "Enligt skalan" },
+            { "value": 91, "title": "Enligt skalan" },
+            { "value": 92, "title": "Enligt skalan" },
+            { "value": 93, "title": "Enligt skalan" },
+            { "value": 94, "title": "Enligt skalan" },
+            { "value": 95, "title": "Enligt skalan" },
+            { "value": 96, "title": "Enligt skalan" },
+            { "value": 97, "title": "Enligt skalan" },
+            {
+              "value": 100,
+              "title": "Värsta tänkbara smärta"
+            }
+          ],
+          "extensions": [
+            {
+              "type": "strikersoft.component.slider"
+            }
+          ]
+        },
+        {
+          "ref": "Q.Duration",
+          "type": "strikersoft.question.singleSelect",
+          "title": "Hur länge har du haft besväret?",
+          "answers": [
+            {
+              "value": "1-3 dagar"
+            },
+            {
+              "value": "1-2 veckor"
+            },
+            {
+              "value": "1-2 månader"
+            },
+            {
+              "value": "Över 2 månader (leder till ÖMPSQ)"
+            }
+          ]
+        },
+        {
+          "ref": "Q.PainComment",
+          "type": "strikersoft.question.text",
+          "title": "Övrigt"
+        }
+      ]
+    }
+  },
+  "assessment": {
+    "type": "strikersoft.assessment.swipecare",
+    "extensions": [
+      {
+        "type": "strikersoft.component.subsection",
+        "groupCountersEnabled": false
+      },
+      {
+        "type": "strikersoft.component.group",
+        "questionCountersEnabled": false
+      }
+    ],
+    "sections": [
+      {
+        "ref": "section1",
+        "title": "Section1",
+        "subsections": [
+          {
+            "ref": "e_bakgrund",
+            "title": "Besvär",
+            "groups": [
+              {
+                "ref": "p_bakgrund",
+                "title": "Intro",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_orsak",
+                    "type": "strikersoft.question.text",
+                    "title": "Av vilken orsak söker Du sjukgymnast/fysioterapeut?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": true
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_tidigarevard",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Har Du sökt vård för dessa besvär tidigare? !С",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Ja, på denna mottagning/vårdenhet",
+                        "title": "Ja, på denna mottagning/vårdenhet"
+                      },
+                      {
+                        "value": "Ja, på annan mottagning/vårdenhet",
+                        "title": "Ja, på annan mottagning/vårdenhet"
+                      },
+                      {
+                        "value": "Nej",
+                        "title": "Nej"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_journaler",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Får vi titta på dina tidigare journaler?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": true
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Patienten samtycker",
+                        "title": "Ja"
+                      },
+                      {
+                        "value": "Patienten samtycker inte",
+                        "title": "Nej"
+                      }
+                    ]
+                  }
+                ]
+              },
+
+              {
+                "ref": "PSarDokFram",
+                "title": "Smärtdokumentation fram",
+                "questions": [
+                  {
+                    "ref": "QSmarteSarDokFram",
+                    "type": "strikersoft.question.collection",
+                    "title": "",
+                    "group": {
+                      "#ref": "#/dicts/groupSmarte"
+                    },
+                    "items": [
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.1",
+                        "title": "Ansikte",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 350,
+                            "y": 45
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.2",
+                        "title": "Höger axel",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 248,
+                            "y": 120
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.5",
+                        "title": "Buken",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 435,
+                            "y": 250
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.8",
+                        "title": "Huvud",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 527,
+                            "y": 28
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.9",
+                        "title": "Vänster axel",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 608,
+                            "y": 120
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.10",
+                        "title": "Vänster armbåge",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 608,
+                            "y": 220
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.12",
+                        "title": "Vänster underarm",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 573,
+                            "y": 265
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.13",
+                        "title": "Vänster hand",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 575,
+                            "y": 332
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.14",
+                        "title": "Vänster lår",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 608,
+                            "y": 390
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.15",
+                        "title": "Vänster knäskål",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 608,
+                            "y": 448
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.16",
+                        "title": "Vänster ankel",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 608,
+                            "y": 590
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.17",
+                        "title": "Höger ankel",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 248,
+                            "y": 590
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.18",
+                        "title": "Höger knäskål",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 248,
+                            "y": 448
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.19",
+                        "title": "Höger lår",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 248,
+                            "y": 390
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.20",
+                        "title": "Höger armbåge",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 239,
+                            "y": 220
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.21",
+                        "title": "Höger handled",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 220,
+                            "y": 300
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.22",
+                        "title": "Höger hand",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 273,
+                            "y": 332
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.23",
+                        "title": "Vänster handled",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 635,
+                            "y": 305
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.24",
+                        "title": "Höger underarm",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 270,
+                            "y": 265
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.25",
+                        "title": "Bröstkorg",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 435,
+                            "y": 130
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.26",
+                        "title": "Vänster smalben",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 574,
+                            "y": 514
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.27",
+                        "title": "Höger smalben",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 293,
+                            "y": 512
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.28",
+                        "title": "Höger ljumske",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 397,
+                            "y": 304
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.29",
+                        "title": "Vänster ljumske",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 457,
+                            "y": 304
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeFramAreaIQ4.30",
+                        "title": "Mun",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 550,
+                            "y": 68
+                          }
+                        ]
+                      }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.imageMap",
+                        "image": {
+                          "id": "i5",
+                          "width": 703,
+                          "height": 623
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "PSarDokFramKomment",
+                    "type": "strikersoft.question.text",
+                    "title": "Kommentarer",
+                    "extra": "Kommentarer:"
+                  }
+                ]
+              },
+              {
+                "ref": "PSarDokBak",
+                "title": "Smärtdokumentation bak",
+                "questions": [
+                  {
+                    "ref": "QSmarteSarDokBak",
+                    "type": "strikersoft.question.collection",
+                    "title": "",
+                    "group": {
+                      "#ref": "#/dicts/groupSmarte"
+                    },
+                    "items": [
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.1",
+                        "title": "Bakhuvud",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 360,
+                            "y": 35
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.2",
+                        "title": "Vänster midja",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 250
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.3",
+                        "title": "Vänster skulderblad",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 160
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.4",
+                        "title": "Höger skulderblad",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 160
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.5",
+                        "title": "Höger midja",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 250
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.6",
+                        "title": "Höger höft",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 312
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.7",
+                        "title": "Höger knäveck",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 450
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.8",
+                        "title": "Höger fot",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 540
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.9",
+                        "title": "Höger häl",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 595
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.10",
+                        "title": "Vänster häl",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 595
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.11",
+                        "title": "Vänster säte",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 372
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.12",
+                        "title": "Nedre rygg",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 354,
+                            "y": 277
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.13",
+                        "title": "Ländrygg (trigger)",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 354,
+                            "y": 215
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.14B",
+                        "title": "Övre bröstrygg (trigger)",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 354,
+                            "y": 108
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.15",
+                        "title": "Nacke (trigger?)",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 183,
+                            "y": 83
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.16",
+                        "title": "Vänster höft",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 312
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.17",
+                        "title": "Vänster fot",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 540
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.18",
+                        "title": "Vänster knäveck",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 174,
+                            "y": 450
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.19",
+                        "title": "Höger säte",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 534,
+                            "y": 372
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.20",
+                        "title": "Höger vad",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 480,
+                            "y": 510
+                          }
+                        ]
+                      },
+                      {
+                        "ref": "SmartgubbeBakAreaIQ3.21",
+                        "title": "Vänster vad",
+                        "extensions": [
+                          {
+                            "type": "strikersoft.component.imageMapPoint",
+                            "x": 238,
+                            "y": 510
+                          }
+                        ]
+                      }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.imageMap",
+                        "image": {
+                          "id": "i4",
+                          "width": 703,
+                          "height": 623
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "PSarDokBakKomment",
+                    "type": "strikersoft.question.text",
+                    "title": "Kommentarer",
+                    "extra": "Kommentarer:"
+                  }
+                ]
+              }
+            
+          ,
+              {
+                "ref": "p_ovrigasjukdomar",
+                "title": "Övriga sjukdomar",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_ovriga_sjukdomar1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Har Du haft ofrivillig viktnedgång under senaste månaderna?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Har haft viktnedgång",
+                        "title": "Ja"
+                      },
+                      {
+                        "value": "Har inte haft viktnedgång",
+                        "title": "Nej"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_ovriga_sjukdomar2",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Har Du haft konstant eller ökande olidlig värk på natten?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Har haft konstant eller ökande olidlig värk på natten",
+                        "title": "Ja"
+                      },
+                      {
+                        "value": "Har inte konstant eller ökande olidlig värk på natten",
+                        "title": "Nej"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_ovriga_sjukdomar3",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Har Du feberkänsla?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Har feberkänsla",
+                        "title": "Ja"
+                      },
+                      {
+                        "value": "Har inte feberkänsla",
+                        "title": "Nej"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_ovriga_sjukdomar4",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Har Du opererats, eller behandlas/medicinerar Du, för någon pågående sjukdom som t.ex. infektioner, osteoporos, cancer: neurologisk, reumatisk, eller annan sjukdom?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Har opererats eller behandlads/medicinerat för någon annan pågående sjukdom",
+                        "title": "Ja"
+                      },
+                      {
+                        "value": "Har inte opererats eller behandlads/medicinerat för någon annan pågående sjukdom",
+                        "title": "Nej",
+                        "jumpTo": "p_lakemedel"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_ovriga_sjukdomar5",
+                    "type": "strikersoft.question.text",
+                    "title": "Vilka sjukdomar har Du eller har Du haft?",
+                    "extra": "Sjukdomar (har/haft):",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "p_lakemedel",
+                "title": "Läkemedel",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_lake1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Använder Du någon form av medicin mot de aktuella besvären?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Använder inte medicin mot de aktuella besvären",
+                        "title": "Nej"
+                      },
+                      {
+                        "value": "Använder kontinuerligt medicin mot de aktuella besvären",
+                        "title": "Ja, kontinuerligt ",
+                        "jumpTo": "q_lake2"
+                      },
+                      {
+                        "value": "Använder vid behov medicin mot de aktuella besvären",
+                        "title": "Ja, vid behov",
+                        "jumpTo": "q_lake2"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_lake2",
+                    "type": "strikersoft.question.text",
+                    "title": "Om ja, vilka?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_lake3",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Använder några andra läkemedel, hormonella preventivmedel, natur- eller hälsokostpreparat?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Använder inte andra läkemedel, hormonella preventivmedel, natur- eller hälsokostpreparat?",
+                        "title": "Nej"
+                      },
+                      {
+                        "value": "Använder kontinuerligt andra läkemedel, hormonella preventivmedel, natur- eller hälsokostpreparat?",
+                        "title": "Ja, kontinuerligt ",
+                        "jumpTo": "q_lake4"
+                      },
+                      {
+                        "value": "Använder vid behov andra läkemedel, hormonella preventivmedel, natur- eller hälsokostpreparat?",
+                        "title": "Ja, vid behov",
+                        "jumpTo": "q_lake4"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_lake4",
+                    "type": "strikersoft.question.text",
+                    "title": "Om ja, vilka?",
+                    "extra": "Andra läkemedel, hormonella preventivmedel och andra preparat:",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "e_funktion",
+            "title": "Funktion",
+            "groups": [
+              {
+                "ref": "p_funktion",
+                "title": "Funktion",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_guide1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Hur svårt är det för dig att klara följande aktiviteter? (0-100)"
+                  },
+                  {
+                    "ref": "q_funk1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Av- och påklädning utan hjälp",
+                    "extra": "Av- och påklädning utan hjälp",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk2",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Promenader",
+                    "extra": "Promenader:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk3",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Gång i trappor",
+                    "extra": "Gång i trappor:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk4",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Sitta en längre stund",
+                    "extra": "Sitta en längre stund:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk5",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Stå framåtböjd över tvättställ",
+                    "extra": "Stå framåtböjd över tvättställ:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk6",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Bära väska eller kasse",
+                    "extra": "Bära väska eller kasse:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk7",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Bädda en säng",
+                    "extra": "Bädda en säng:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk8",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Springa",
+                    "extra": "Springa:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk9",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Lättare kroppsarbete",
+                    "extra": "Lättare kroppsarbete:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk10",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Ansträngande kroppsarbete",
+                    "extra": "Ansträngande kroppsarbete:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk11",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Tunga lyft",
+                    "extra": "Tunga lyft:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_funk12",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Motion/Sport",
+                    "extra": "Motion/Sport:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Inga svårigheter alls"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Klarar ej"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "e_halsotillstand",
+            "title": "Hälsotillstånd",
+            "groups": [
+              {
+                "ref": "p_halsotillstand2",
+                "title": "Hälsotillstånd",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_total_tillstand",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Hur bedömer Du ditt totala hälsotillstånd i dag?",
+                    "extra": "Hälsotillstånd 0-100:",
+					
+                    "answers": [
+                        {
+                            "value": 0,
+                            "title": "Sämsta tänkbara"
+                        },
+{"value":1,"title":"Enligt skalan"},{"value":2,"title":"Enligt skalan"},{"value":3,"title":"Enligt skalan"},{"value":4,"title":"Enligt skalan"},{"value":5,"title":"Enligt skalan"},{"value":6,"title":"Enligt skalan"},{"value":7,"title":"Enligt skalan"},{"value":8,"title":"Enligt skalan"},{"value":9,"title":"Enligt skalan"},{"value":10,"title":"Enligt skalan"},{"value":11,"title":"Enligt skalan"},{"value":12,"title":"Enligt skalan"},{"value":13,"title":"Enligt skalan"},{"value":14,"title":"Enligt skalan"},{"value":15,"title":"Enligt skalan"},{"value":16,"title":"Enligt skalan"},{"value":17,"title":"Enligt skalan"},{"value":18,"title":"Enligt skalan"},{"value":19,"title":"Enligt skalan"},{"value":20,"title":"Enligt skalan"},{"value":21,"title":"Enligt skalan"},{"value":22,"title":"Enligt skalan"},{"value":23,"title":"Enligt skalan"},{"value":24,"title":"Enligt skalan"},{"value":25,"title":"Enligt skalan"},{"value":26,"title":"Enligt skalan"},{"value":27,"title":"Enligt skalan"},{"value":28,"title":"Enligt skalan"},{"value":29,"title":"Enligt skalan"},{"value":30,"title":"Enligt skalan"},{"value":31,"title":"Enligt skalan"},{"value":32,"title":"Enligt skalan"},{"value":33,"title":"Enligt skalan"},{"value":34,"title":"Enligt skalan"},{"value":35,"title":"Enligt skalan"},{"value":36,"title":"Enligt skalan"},{"value":37,"title":"Enligt skalan"},{"value":38,"title":"Enligt skalan"},{"value":39,"title":"Enligt skalan"},{"value":40,"title":"Enligt skalan"},{"value":41,"title":"Enligt skalan"},{"value":42,"title":"Enligt skalan"},{"value":43,"title":"Enligt skalan"},{"value":44,"title":"Enligt skalan"},{"value":45,"title":"Enligt skalan"},{"value":46,"title":"Enligt skalan"},{"value":47,"title":"Enligt skalan"},{"value":48,"title":"Enligt skalan"},{"value":49,"title":"Enligt skalan"},{"value":50,"title":"Enligt skalan"},{"value":51,"title":"Enligt skalan"},{"value":52,"title":"Enligt skalan"},{"value":53,"title":"Enligt skalan"},{"value":54,"title":"Enligt skalan"},{"value":55,"title":"Enligt skalan"},{"value":56,"title":"Enligt skalan"},{"value":57,"title":"Enligt skalan"},{"value":58,"title":"Enligt skalan"},{"value":59,"title":"Enligt skalan"},{"value":60,"title":"Enligt skalan"},{"value":61,"title":"Enligt skalan"},{"value":62,"title":"Enligt skalan"},{"value":63,"title":"Enligt skalan"},{"value":64,"title":"Enligt skalan"},{"value":65,"title":"Enligt skalan"},{"value":66,"title":"Enligt skalan"},{"value":67,"title":"Enligt skalan"},{"value":68,"title":"Enligt skalan"},{"value":69,"title":"Enligt skalan"},{"value":70,"title":"Enligt skalan"},{"value":71,"title":"Enligt skalan"},{"value":72,"title":"Enligt skalan"},{"value":73,"title":"Enligt skalan"},{"value":74,"title":"Enligt skalan"},{"value":75,"title":"Enligt skalan"},{"value":76,"title":"Enligt skalan"},{"value":77,"title":"Enligt skalan"},{"value":78,"title":"Enligt skalan"},{"value":79,"title":"Enligt skalan"},{"value":80,"title":"Enligt skalan"},{"value":81,"title":"Enligt skalan"},{"value":82,"title":"Enligt skalan"},{"value":83,"title":"Enligt skalan"},{"value":84,"title":"Enligt skalan"},{"value":85,"title":"Enligt skalan"},{"value":86,"title":"Enligt skalan"},{"value":87,"title":"Enligt skalan"},{"value":88,"title":"Enligt skalan"},{"value":89,"title":"Enligt skalan"},{"value":90,"title":"Enligt skalan"},{"value":91,"title":"Enligt skalan"},{"value":92,"title":"Enligt skalan"},{"value":93,"title":"Enligt skalan"},{"value":94,"title":"Enligt skalan"},{"value":95,"title":"Enligt skalan"},{"value":96,"title":"Enligt skalan"},{"value":97,"title":"Enligt skalan"},
+                        {
+                            "value": 100,
+                            "title": "Bästa tänkbara"
+                        }
+                    ],
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.slider"
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "e_fysisk_aktivitet",
+            "title": "Fysisk aktivitet",
+            "groups": [
+              {
+                "ref": "",
+                "title": "Träning och motion",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_syssel",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Aktuell sysselsättning?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Arbete",
+                        "title": "Arbete",
+                        "jumpTo": "q_yrke"
+                      },
+                      {
+                        "value": "Studerar",
+                        "title": "Studerar"
+                      },
+                      {
+                        "value": "Pensionär",
+                        "title": "Pensionär"
+                      },
+                      {
+                        "value": "Sjukskriven",
+                        "title": "Sjukskriven"
+                      },
+                      {
+                        "type": "strikersoft.answer.freeText"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_yrke",
+                    "type": "strikersoft.question.text",
+                    "title": "Yrke",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_traning1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Brukar Du träna så att Du blir andfådd, till exempel springa, göra gymnastik eller spela boll?",
+                    "extra": "Konditionsträning (springa, gymnastik, boll):",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Nej, nästan aldrig",
+                        "title": "Nej, nästan aldrig"
+                      },
+                      {
+                        "value": "Ja, mindre än 30 minuter varje vecka",
+                        "title": "Ja, mindre än 30 minuter varje vecka"
+                      },
+                      {
+                        "value": "Ja, 30–60 minuter varje vecka",
+                        "title": "Ja, 30–60 minuter varje vecka"
+                      },
+                      {
+                        "value": "Ja, 60–90 minuter varje vecka",
+                        "title": "Ja, 60–90 minuter varje vecka"
+                      },
+                      {
+                        "value": "Ja, 90–120 minuter varje vecka",
+                        "title": "Ja, 90–120 minuter varje vecka"
+                      },
+                      {
+                        "value": "Ja, mer än 120 minuter varje vecka",
+                        "title": "Ja, mer än 120 minuter varje vecka"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_traning2",
+                    "type": "strikersoft.question.text",
+                    "title": "Specificera dina aktiviteter",
+                    "extra": "Konditionsträning - aktiviteter:",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_traning3",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Hur mycket rör Du på dig varje vecka?\r\nTill exempel promenerar, cyklar eller arbetar i trädgården? Räkna ihop alla gånger som Du rör på dig i minst 10 minuter.",
+                    "extra": "Motion (promenad, cykel, trädgårdsatbete):",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Ingen tid",
+                        "title": "Ingen tid"
+                      },
+                      {
+                        "value": "Mindre än 30 minuter varje vecka",
+                        "title": "Mindre än 30 minuter varje vecka"
+                      },
+                      {
+                        "value": "30–60 minuter varje vecka",
+                        "title": "30–60 minuter varje vecka"
+                      },
+                      {
+                        "value": "60–90 minuter varje vecka",
+                        "title": "60–90 minuter varje vecka"
+                      },
+                      {
+                        "value": "90–150 minuter varje vecka",
+                        "title": "90–150 minuter varje vecka"
+                      },
+                      {
+                        "value": "150–300 minuter varje vecka",
+                        "title": "150–300 minuter varje vecka"
+                      },
+                      {
+                        "value": "Mer än 300 minuter (5 timmar) varje vecka",
+                        "title": "Mer än 300 minuter (5 timmar) varje vecka"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_traning4",
+                    "type": "strikersoft.question.text",
+                    "title": "Specificera dina aktiviteter",
+                    "extra": "Motion - aktiviteter:",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "e_vanor",
+            "title": "Vanor",
+            "groups": [
+              {
+                "ref": "",
+                "title": "Tobak",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_vanor1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Röker du?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Nej, jag har aldrig varit rökare",
+                        "title": "Nej, jag har aldrig varit rökare"
+                      },
+                      {
+                        "value": "Nej, jag slutade röka för mer än 6 månader sedan",
+                        "title": "Nej, jag slutade röka för mer än 6 månader sedan"
+                      },
+                      {
+                        "value": "Nej, jag slutade röka för mindre än 6 månader sedan",
+                        "title": "Nej, jag slutade röka för mindre än 6 månader sedan"
+                      },
+                      {
+                        "value": "Ja, jag röker, men inte varje dag",
+                        "title": "Ja, jag röker, men inte varje dag"
+                      },
+                      {
+                        "value": "Ja, jag röker 1–9 cigaretter varje dag",
+                        "title": "Ja, jag röker 1–9 cigaretter varje dag"
+                      },
+                      {
+                        "value": "Ja, jag röker 10–19 cigaretter varje dag",
+                        "title": "Ja, jag röker 10–19 cigaretter varje dag"
+                      },
+                      {
+                        "value": "Ja, jag röker fler än 19 cigaretter varje dag",
+                        "title": "Ja, jag röker fler än 19 cigaretter varje dag"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_vanor2",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Snusar du?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Nej, jag har aldrig varit snusare",
+                        "title": "Nej, jag har aldrig varit snusare"
+                      },
+                      {
+                        "value": "Nej, jag slutade snusa för mer än 6 månader sedan",
+                        "title": "Nej, jag slutade snusa för mer än 6 månader sedan"
+                      },
+                      {
+                        "value": "Nej, jag slutade snusa för mindre än 6 månader sedan",
+                        "title": "Nej, jag slutade snusa för mindre än 6 månader sedan"
+                      },
+                      {
+                        "value": "Ja, jag snusar men inte varje dag",
+                        "title": "Ja, jag snusar men inte varje dag"
+                      },
+                      {
+                        "value": "Ja, jag snusar 1–3 dosor varje vecka",
+                        "title": "Ja, jag snusar 1–3 dosor varje vecka"
+                      },
+                      {
+                        "value": "Ja, jag snusar 4–6 dosor varje vecka",
+                        "title": "Ja, jag snusar 4–6 dosor varje vecka"
+                      },
+                      {
+                        "value": "Ja, jag snusar fler än 6 dosor varje vecka",
+                        "title": "Ja, jag snusar fler än 6 dosor varje vecka"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "",
+                "title": "Alkohol – starköl, vin och sprit",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_alko1",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Hur många glas alkohol dricker Du varje vecka?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Hur många glas alkohol dricker du varje vecka?",
+                        "title": "Hur många glas alkohol dricker du varje vecka?"
+                      },
+                      {
+                        "value": "Inga alls (eller mindre än 1 glas varje vecka )",
+                        "title": "Inga alls (eller mindre än 1 glas varje vecka )"
+                      },
+                      {
+                        "value": "1–4 glas varje vecka",
+                        "title": "1–4 glas varje vecka"
+                      },
+                      {
+                        "value": "5–9 glas varje vecka",
+                        "title": "5–9 glas varje vecka"
+                      },
+                      {
+                        "value": "10–14 glas varje vecka",
+                        "title": "10–14 glas varje vecka"
+                      },
+                      {
+                        "value": "Fler än 14 glas varje vecka",
+                        "title": "Fler än 14 glas varje vecka"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_alko2",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Kvinna – Hur ofta dricker Du 4 glas, eller mer, vid samma tillfälle?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Aldrig",
+                        "title": "Aldrig"
+                      },
+                      {
+                        "value": "Mer sällan än 1 gång varje månad",
+                        "title": "Mer sällan än 1 gång varje månad"
+                      },
+                      {
+                        "value": "Varje månad",
+                        "title": "Varje månad"
+                      },
+                      {
+                        "value": "Varje vecka",
+                        "title": "Varje vecka"
+                      },
+                      {
+                        "value": "Varje dag eller nästan varje dag",
+                        "title": "Varje dag eller nästan varje dag"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_vem",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Man – Hur ofta dricker Du 5 glas, eller mer, vid samma tillfälle?",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.singleSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+					
+                    "answers": [
+                      {
+                        "value": "Aldrig",
+                        "title": "Aldrig"
+                      },
+                      {
+                        "value": "Mer sällan än 1 gång varje månad",
+                        "title": "Mer sällan än 1 gång varje månad"
+                      },
+                      {
+                        "value": "Varje månad",
+                        "title": "Varje månad"
+                      },
+                      {
+                        "value": "Varje vecka",
+                        "title": "Varje vecka"
+                      },
+                      {
+                        "value": "Varje dag eller nästan varje dag",
+                        "title": "Varje dag eller nästan varje dag"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_wat",
+                    "type": "strikersoft.question.singleSelect",
+                    "title": "Bild på alkohol - hur mycket är ett glas?"
+                  }
+                ]
+              },
+              {
+                "ref": "p_somn",
+                "title": "Sömn",              
+    	        "extensions": [
+                {
+                  "type": "strikersoft.component.group",
+                  "twoColumsLayout": false,
+                  "fullWidthLayout": false
+                }
+              ],
+                "questions": [
+                  {
+                    "ref": "q_somn1",
+                    "type": "strikersoft.question.multiSelect",
+                    "title": "Hur har Du det med sömnen?",
+					
+                    "extensions": [
+                      {
+                        "type": "strikersoft.component.multiSelectButtonList",
+                        "buttonsPerRow": 1,
+                        "alignResidualButtonsToGrid": false
+                      },
+					  {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ],
+                    "answers": [
+                      {
+                        "value": 6363,
+                        "title": "Inga sömnsvårigheter"
+                      },
+                      {
+                        "value": "Svårt att somna (tar mer än 45 min)",
+                        "title": "Svårt att somna (tar mer än 45 min)"
+                      },
+                      {
+                        "value": "Vaknar en eller flera gånger. Svårt att somna om.",
+                        "title": "Vaknar en eller flera gånger. Svårt att somna om."
+                      },
+                      {
+                        "value": "Vaknar för tidigt, icke utsövd. Kan inte somna om. ",
+                        "title": "Vaknar för tidigt, icke utsövd. Kan inte somna om. "
+                      },
+                      {
+                        "value": 2975,
+                        "title": "Sömnapné"
+                      },
+                      {
+                        "value": 2978,
+                        "title": "Snarkar"
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q_somn2",
+                    "type": "strikersoft.question.text",
+                    "title": "Övrigt om sömnen",
+                    "extensions": [
+                      {
+                        "type": "strikersoft.ext.validation",
+                        "obligatory": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

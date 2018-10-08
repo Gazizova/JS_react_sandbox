@@ -6,14 +6,14 @@ class VolumeSlider extends React.Component {
     super(props);
 
     this.state = {
-      value: { min: 2, max: 10 },
+      value:  0 
     };
   }
 
   render() {
     return (
       <InputRange
-        maxValue={20}
+        maxValue={100}
         minValue={0}
         value={this.state.value}
         onChange={value => this.setState({ value })} />
