@@ -13,11 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           </header>
           <div>
-           
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-         
+
           </div>
           
           <Route/>

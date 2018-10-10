@@ -20,7 +20,7 @@ class RouteElements extends React.Component {
             </ul>  
             <div className="component">
                 <Route exact path="/home" component={HomeAlt}/>
-                <Route exact path="/slider" component={SliderPage}/>
+                <Route path="/slider" component={SliderPage}/>
             </div>
         </div>
       </Router>
