@@ -16,16 +16,25 @@ code {
 .menu{
   list-style: none;
 }
+ul{
+  padding-inline-start: 0px;
+}
 .menu li a{
   text-decoration: none;
 }
 .menu li{
  padding: 4px;
  border-bottom: 1px solid lightblue;
- width: 50px;
+ min-width: 50px;
  margin-top: 1px;
  background-color: aliceblue;
 }
-/* .input-range{
-  margin-top: 20px; 
-} */
+.main-block{
+  display: flex;
+}
+.main-block .menu{
+  width: 20%
+}
+.component{
+  width: 80%;
+}

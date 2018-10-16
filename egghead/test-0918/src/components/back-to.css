@@ -16,6 +16,9 @@
         color: red;
         position: relative;
         /*top: 100px;*/
-        /* left: 100px; */
+    }
+    .back-to{
+        /* position: relative;*/
+        text-align: right;
     }
 
