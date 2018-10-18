@@ -37,4 +37,5 @@ ul{
 }
 .component{
   width: 80%;
+  display: flex;
 }

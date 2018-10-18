@@ -1,7 +1,27 @@
 
 .componentSlider{
-    position: relative;
-    width: 50% !important;
+    width: 80% !important;
     margin: auto;
-    color: brown;
+    /* color: brown; */
+    flex-direction: column;
+    display: flex;
+    justify-content:center;
+}
+.componentSlider .input-range{
+    width:80%;
+    margin: 1px;
+    /* border: 1px solid black; */
+    align-self: flex-start;
+}
+.componentSlider-message{
+    width: 20%;
+    align-self: flex-end;
+    /* border: 1px solid black; */
+}
+.inner-slider{
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    align-self: center;
 }
