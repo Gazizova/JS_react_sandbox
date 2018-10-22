@@ -13,29 +13,43 @@ code {
     monospace;
 }
 
-.menu{
+.menu,
+#home > ul {
   list-style: none;
+  margin: 0px;
 }
-ul{
+ul {
   padding-inline-start: 0px;
 }
-.menu li a{
+.menu li a {
   text-decoration: none;
 }
-.menu li{
- padding: 4px;
- border-bottom: 1px solid lightblue;
- min-width: 50px;
- margin-top: 1px;
- background-color: aliceblue;
+.menu li {
+  padding: 4px;
+  border-bottom: 1px solid lightblue;
+  min-width: 50px;
+  margin-top: 1px;
+  background-color: aliceblue;
+  text-align: center;
 }
-.main-block{
+.main-block {
   display: flex;
 }
-.main-block .menu{
-  width: 20%
+.main-block .menu {
+  width: 20%;
 }
-.component{
+.component {
   width: 80%;
+  /* display: flex; */
+}
+form {
+  /* width: 400px; */
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 20px;
+}
+.form-block {
+  margin: 20px;
+  text-align: left;
 }
