@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import {VolumeSlider} from '../components/slider'
-import data from "../data.1.json";
+import data from "../data/data.1.json";
 import "./slider.css";
 import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";

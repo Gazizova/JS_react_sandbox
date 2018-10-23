@@ -16,15 +16,16 @@ class TemperatureInput extends React.Component {
   render() {
     const scale = this.props.scale;
     return (
+      <div className="form-block">
       <label>
-        Enter temperature in {scaleNames[scale]}:{" "}
+        Temperature in {scaleNames[scale]}:{" "}</label>
         <input
           name="farengeit"
           type="text"
           onChange={this.handleChange}
           value={this.props.temperature}
         />
-      </label>
+      </div>
     );
   }
 }
@@ -34,19 +35,23 @@ export default class Form extends React.Component {
     super(props);
     this.state = {
       value: "",
-      temperature: ""
-      //   scale: "c"
+      temperature: "",
+      scale: 'c'
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleChangeTemperarure = this.handleChangeTemperarure.bind(this);
+    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
-  handleChangeTemperarure(temperature) {
-    this.setState({ temperature });
+  handleCelsiusChange(temperature) {
+    this.setState({ temperature: temperature, scale: 'c'});
+  }
+  handleFahrenheitChange(temperature) {
+    this.setState({temperature, scale: 'f'});
   }
   onSubmit(e) {
     e.preventDefault();
@@ -86,6 +91,8 @@ export default class Form extends React.Component {
   render() {
     const temperature = this.state.temperature;
     const scale = this.state.scale;
+    const celsius = scale === 'f' ? this.tryConvert(temperature, this.toCelsius): temperature;
+    const farengeit = scale === 'c'? this.tryConvert(temperature, this.toFahrenheit): temperature;
     return (
       <div>
         <form onSubmit={this.onSubmit}>
@@ -98,22 +105,23 @@ export default class Form extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-block">
+          <div className='temp-calc-block'>
+          <div className='temp-calc-block--input'>
             <TemperatureInput
               scale="c"
-              onTemperatureChange={this.handleChangeTemperarure}
-              temperature={this.state.temperature}
+              onTemperatureChange={this.handleCelsiusChange}
+              temperature={celsius}
             />
-          </div>
-          <div className="form-block">
             <TemperatureInput
               scale="f"
-              onTemperatureChange={this.handleChangeTemperarure}
-              temperature={this.state.temperature}
+              onTemperatureChange={this.handleFahrenheitChange}
+              temperature={farengeit}
             />
+           </div>  
+           <div className='temp-calc-block--resume'>
             <this.temperatureCalculator celsius={temperature} />
-          </div>
-
+          </div>  
+          </div>  
           <input type="submit" value="Submit" />
         </form>
       </div>

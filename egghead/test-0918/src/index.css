@@ -50,6 +50,65 @@ form {
   margin-left: 20px;
 }
 .form-block {
-  margin: 20px;
+  /* margin: 20px; */
   text-align: left;
+}
+.temp-calc-block{
+  display: flex;
+  /* max-width: 70%; */
+  flex-direction: column;
+ 
+  justify-content: flex-start
+}
+.temp-calc-block--input{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.temp-calc-block--resume{
+ /* border-top: 3px solid rgb(204, 211, 218); */
+ /* border-radius: 10px; */
+ align-self: flex-start;
+ padding: 20px 0px;
+ margin: 0px 20px;
+}
+.temp-calc-block input{
+  background-color: mintcream; 
+  min-height: 50px;
+  width: 100px;
+  color: rgb(0,0,0, 0.7);
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+.temp-calc-block .form-block{
+ display: flex;
+ position: relative;
+ flex-direction: column;
+ justify-content: flex-end;
+ padding: 20px;
+ flex-grow:  1;
+ align-items: stretch;
+ border: 3px solid rgb(204, 211, 218);
+ border-radius: 10px;
+ margin: 20px;
+ height: 100px;
+ width: 150px;
+ 
+}
+.temp-calc-block .form-block:hover{
+  box-shadow: 0 0 5px grey;
+}
+
+.temp-calc-block .form-block label{
+  position: absolute;
+  top: -17px;
+  left: 10%;
+  right: 10%;
+  border: 1px solid rgb(204, 211, 218);
+  border-radius: 15px;
+  background-color: aliceblue;
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
 }
