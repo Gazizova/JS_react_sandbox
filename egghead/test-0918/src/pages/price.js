@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../data/price.json";
+import axios from "axios";
 
 class ProductCategoryRow extends React.Component {
   render() {
@@ -59,47 +60,69 @@ class ProductTable extends React.Component {
 }
 
 class SearchBar extends React.Component {
-    constructor(props){
-        super(props)
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(e){
-        this.props.handleChange1(e.target.value)
-    }
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    this.props.handleChange1(e.target.value);
+  }
   render() {
     return (
       <form>
-        <input type="text" placeholder="search" value={this.props.value} onChange={this.handleChange}/>
+        <input
+          type="text"
+          placeholder="search"
+          value={this.props.value}
+          onChange={this.handleChange}
+        />
         <p>
-        <input type="checkbox"/>
-        Only show products in stock
+          <input type="checkbox" />
+          Only show products in stock
         </p>
       </form>
     );
   }
 }
-
+class Swapi extends React.Component {
+  fetchUser = () => {
+    axios.get("https://swapi.co/api/planets/1/").then(function(response) {
+      // handle success
+      console.log(response);
+    });
+  };
+  render() {
+    const s = axios.get("https://swapi.co/api/planets/1/").then(response => {
+      console.log(response);
+    });
+    return <div>{this.fetchUser()}</div>;
+  }
+}
 export default class FinalProductTable extends React.Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            filterText: '123', 
-            inStockOnly: false,
-        }
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(filterText){
-        this.setState({filterText})
-    }
-    
-    localData = JSON.parse(JSON.stringify(data));
-    render() {
-        debugger
-        return (
-        <div>
-            <SearchBar value={this.state.filterText} handleChange1={this.handleChange}/>
-            <ProductTable data={this.localData}/>
-        </div>
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText: "123",
+      inStockOnly: false
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(filterText) {
+    this.setState({ filterText });
+  }
+
+  localData = JSON.parse(JSON.stringify(data));
+  render() {
+    debugger;
+    return (
+      <div>
+        <SearchBar
+          value={this.state.filterText}
+          handleChange1={this.handleChange}
+        />
+        <ProductTable data={this.localData} />
+        <Swapi />
+      </div>
+    );
+  }
 }
