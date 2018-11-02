@@ -55,17 +55,17 @@ class ProductTable extends React.Component {
         );
       
     });
-    debugger
+    
     return (
       <div>
-        <table class="table-price">
-          <thead class="table-price-head">
+        <table className="table-price">
+          <thead className="table-price-head">
             <tr>
               <td>Name</td>
               <td>Price</td>
             </tr>
           </thead>
-          <tbody class="table-price-body">{row}</tbody>
+          <tbody className="table-price-body">{row}</tbody>
         </table>
       </div>
     );
@@ -93,6 +93,7 @@ class SearchBar extends React.Component {
           placeholder="search"
           value={this.props.filterText}
           onChange={this.handleFilterChange}
+          ref={this.props.inputRef}
         />
         <p>
           <input
@@ -148,6 +149,10 @@ export default class FinalProductTable extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.onStockChange = this.onStockChange.bind(this);
+    this.textInputFocus = React.createRef();
+  }
+  componentDidMount(){
+    this.focus();
   }
   handleChange(filterText) {
     this.setState({ filterText: filterText });
@@ -156,7 +161,12 @@ export default class FinalProductTable extends React.Component {
   onStockChange(inStockOnly) {
     this.setState({ inStockOnly: inStockOnly });
   }
-
+  focus() {
+    // Explicitly focus the text input using the raw DOM API
+    // Note: we're accessing "current" to get the DOM node
+    this.textInputFocus.current.focus();
+  }
+ 
   localData = JSON.parse(JSON.stringify(data));
   render() {
     return (
@@ -166,6 +176,7 @@ export default class FinalProductTable extends React.Component {
           inStockOnly={this.state.inStockOnly}
           onFilterChange={this.handleChange}
           onStockChange={this.onStockChange}
+          inputRef={this.textInputFocus}
         />
         <ProductTable 
           data={this.localData} 
@@ -173,6 +184,10 @@ export default class FinalProductTable extends React.Component {
           inStockOnly={this.state.inStockOnly}
         />
         <Swapi />
+        <input
+        type="text"
+        // ref={this.textInput}
+      />
       </div>
     );
   }

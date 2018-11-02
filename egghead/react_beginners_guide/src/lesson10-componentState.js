@@ -1,8 +1,5 @@
 import React,{Component} from 'react'
 
-// class StopWatch extends Component{
-//
-// }
 class Lesson10 extends Component {
 
     state = {lapse:0, running: false}
@@ -18,23 +15,6 @@ class Lesson10 extends Component {
     componentWillUnmount(){
         clearInterval(this.timer)
     }
-
-    // handleRunClick = () =>{
-    //     this.setState( () =>{
-    //         if(this.state.running){
-    //           clearInterval(this.timer)
-    //
-    //     } else{
-    //             const startTime = Date.now() - this.state.lapse;
-    //             this.timer = setInterval(()=>{
-    //                 this.setState({
-    //                     lapse:Date.now()- startTime,
-    //                 })
-    //             })
-    //     }
-    //     return {running: !this.state.running}
-    //     })
-    // }
 
 
     handleRunClick = function(){
@@ -60,13 +40,6 @@ class Lesson10 extends Component {
         clearInterval(this.timer)
         this.setState({lapse:0, running: false})
     }
-
-    // }
-    // stateStart(){
-    //     this.setState({running: this.props.running=true})
-    // }
-    // element = <stopWatch running = {true} lapse={10}/>
-
     render(){
          const {lapse, running} = this.state
         return (

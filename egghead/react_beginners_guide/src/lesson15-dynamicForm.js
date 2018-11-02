@@ -1,14 +1,12 @@
-import React,{Component} from 'react'
+import React from 'react'
 
 
 class Lesson15 extends React.Component {
     handleSubmit = event => {
         event.preventDefault()
         const value =
-            event.target.elements.username.value
-        const error = this.props.getErrorMessage(
-            value,
-        )
+            event.target.elements.username.value;
+        const error = this.props.getErrorMessage(value);
         if (error) {
             alert(`error: ${error}`)
         } else {
@@ -16,12 +14,12 @@ class Lesson15 extends React.Component {
         }
     }
 
-    handleChange = event => {
-        const {value} = event.target
-        this.setState({
-            error: this.props.getErrorMessage(value),
-        })
-    }
+    // handleChange = event => {
+    //     const {value} = event.target
+    //     this.setState({
+    //         error: this.props.getErrorMessage(value),
+    //     })
+    // }
 
     render() {
         return (
@@ -34,14 +32,14 @@ class Lesson15 extends React.Component {
                     <input
                         type="text"
                         name="username"
-                        onChange={this.handleChange}
+                        // onChange={this.handleChange}
                     />
                 </label>
-                {this.error ? (
+                {/* {this.error ? (
                     <div style={{color: 'red'}}>
                         {this.error}
                     </div>
-                ) : null}
+                ) : null} */}
                 <button disabled={Boolean(this.error)}
                     type="submit">Submit</button>
             </form>

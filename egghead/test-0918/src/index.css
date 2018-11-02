@@ -114,19 +114,13 @@ form {
 }
 .table-price {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  font-size: 14px;
+  font-size: 18px;
   width: 660px;
   background: white;
   text-align: left;
   border-collapse: collapse;
   color: #3E4347;
 }
-
-/* .table-price  thead:first-child, 
-.table-price  td:first-child {
-  color: #F5F6F6;
-  border-left: none;
-  } */
 
 .table-price thead tr{
   font-weight: normal;
@@ -136,9 +130,9 @@ form {
   padding: 8px 10px;
   }
 
-  .table-price td {
+.table-price td {
     border-right: 20px solid white;
     border-left: 20px solid white;
     padding: 12px 10px;
     color: #8b8e91;
-    }
+  }

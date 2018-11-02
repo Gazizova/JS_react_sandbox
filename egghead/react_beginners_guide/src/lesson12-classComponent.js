@@ -1,14 +1,12 @@
-import React,{Component} from 'react'
+import React from 'react'
 
 // class StopWatch extends Component{
 //
 // }
 class Lesson11 extends React.Component {
-    constructor(...args) {
-        super(...args)
-        // this.state = {count: 0}
-        // this.handleClick = this.handleClick.bind(this)
-    }
+    // constructor(...args) {
+    //     super(...args)
+    // }
 
     // case 1:
 

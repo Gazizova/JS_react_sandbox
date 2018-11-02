@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 
 
 class Lesson16 extends React.Component {
@@ -67,6 +67,7 @@ class Lesson16 extends React.Component {
 
         return (
             <form>
+                 <h3> Lesson 16:</h3>
                 <div>
                     <label>
                         comma separated values:

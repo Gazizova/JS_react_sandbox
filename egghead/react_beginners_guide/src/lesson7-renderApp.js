@@ -17,6 +17,9 @@ class Lesson7tick extends Component {
     componentWillUnmount() {
         clearInterval(this.timerID);
     }
+    onChange =(e) =>{
+        e.preventDefault();
+    }
 
     tick() {
         this.setState({
@@ -28,8 +31,8 @@ class Lesson7tick extends Component {
         const time = new Date().toLocaleTimeString()
         const element = <div>
             It is
-            <input value={time} />
-            <input value={time} />
+            <input value={time} onChange={this.onChange}/>
+            <input value={time} onChange={this.onChange}/>
         </div>
         return element
         // ReactDOM.render(element, rootElement)
@@ -48,39 +51,3 @@ class Lesson7tick extends Component {
 }
 
 export default Lesson7tick
-//
-// class Lesson7 extends Component{
-//
-//     componentDidMount() {
-//         this.timerID = setInterval(
-//             () => this.tick2(),
-//             1000
-//         );
-//     }
-//
-//     tick2() {
-//         const time = new Date().toLocaleTimeString()
-//         const element = <div>
-//             It is
-//             <input value={time} />
-//             <input value={time} />
-//         </div>
-//         return element
-//         // ReactDOM.render(element, rootElement)
-//     }
-//
-//     render(){
-//          return(
-//              <div>
-//                  It is
-//                  <div>{this.tick2()}</div>
-//                  {/*<input value={time}/>*/}
-//              </div>
-//
-//             // setInterval(this.tick(), 1000)
-//          )
-//     }
-// }
-//
-//
-// export default Lesson7

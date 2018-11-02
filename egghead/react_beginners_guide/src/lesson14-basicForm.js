@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 
 
 class Lesson14 extends React.Component {

@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 
 class Lesson3 extends Component{
 
-     props = {
+    props = {
         className: 'container',
         children: 'Hello!!!',
     }

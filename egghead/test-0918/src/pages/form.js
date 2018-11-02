@@ -1,4 +1,5 @@
 import React from "react";
+import TextareaAutosize from 'react-autosize-textarea';
 
 const scaleNames = {
   c: "Celsius",
@@ -104,6 +105,13 @@ export default class Form extends React.Component {
               value={this.state.value}
               onChange={this.handleChange}
             />
+            {/* <label htmlFor="name">Input any text: </label> */}
+            <div class="fake-textarea" contenteditable='true'
+              // name="textarea"
+              // value={this.state.value}
+              // onChange={this.handleChange}
+            >asd</div>
+             <TextareaAutosize onResize={(e) => {}} />,
           </div>
           <div className='temp-calc-block'>
           <div className='temp-calc-block--input'>

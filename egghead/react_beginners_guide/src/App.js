@@ -8,20 +8,20 @@ import Lesson6 from './lesson6-conditionalRender'
 import Lesson7tick from './lesson7-renderApp'
 import Lesson9 from './lesson9-eventHandler'
 import Lesson10 from './lesson10-componentState'
-import Lesson11 from './lesson12-classComponent'
+import Lesson12 from './lesson12-classComponent'
 // import Lesson13 from './lesson13-manipulateWithDOM'
 import Lesson14 from './lesson14-basicForm'
 import Lesson15 from './lesson15-dynamicForm'
 import Lesson16 from './lesson16-controllingFormValues'
-// import Lesson7 from './lesson7-renderApp'
+import Lesson17 from './lesson17-keyProp'
 
 class App extends Component {
 
     func(){
-    const a = () => (1)
-    console.log(a())
-    const b = () => { 1 }
-    console.log(b())
+    const a = (c) => (1, c = 2)
+    console.log('a: '+a())
+    const b = (c) => {c=1}
+    console.log('b: '+b())
       }
 
   render() {
@@ -34,6 +34,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+          <Lesson17/>
           <Lesson16/>
           <Lesson15
               getErrorMessage={value => {
@@ -46,7 +47,7 @@ class App extends Component {
                   return null
               }}/>
           <Lesson14/>
-          <Lesson11/>
+          <Lesson12/>
           <Lesson3/>
           <Lesson4/>
           <Lesson5 firstName={"string"}/>
