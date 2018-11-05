@@ -1,5 +1,5 @@
 import React from "react";
-import TextareaAutosize from 'react-autosize-textarea';
+import TextareaAutosize from "react-autosize-textarea";
 
 const scaleNames = {
   c: "Celsius",
@@ -18,8 +18,7 @@ class TemperatureInput extends React.Component {
     const scale = this.props.scale;
     return (
       <div className="form-block">
-      <label>
-        Temperature in {scaleNames[scale]}:{" "}</label>
+        <label>Temperature in {scaleNames[scale]}: </label>
         <input
           name="farengeit"
           type="text"
@@ -37,7 +36,7 @@ export default class Form extends React.Component {
     this.state = {
       value: "",
       temperature: "",
-      scale: 'c'
+      scale: "c"
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
@@ -49,10 +48,10 @@ export default class Form extends React.Component {
     this.setState({ value: event.target.value });
   }
   handleCelsiusChange(temperature) {
-    this.setState({ temperature: temperature, scale: 'c'});
+    this.setState({ temperature: temperature, scale: "c" });
   }
   handleFahrenheitChange(temperature) {
-    this.setState({temperature, scale: 'f'});
+    this.setState({ temperature, scale: "f" });
   }
   onSubmit(e) {
     e.preventDefault();
@@ -92,8 +91,14 @@ export default class Form extends React.Component {
   render() {
     const temperature = this.state.temperature;
     const scale = this.state.scale;
-    const celsius = scale === 'f' ? this.tryConvert(temperature, this.toCelsius): temperature;
-    const farengeit = scale === 'c'? this.tryConvert(temperature, this.toFahrenheit): temperature;
+    const celsius =
+      scale === "f"
+        ? this.tryConvert(temperature, this.toCelsius)
+        : temperature;
+    const farengeit =
+      scale === "c"
+        ? this.tryConvert(temperature, this.toFahrenheit)
+        : temperature;
     return (
       <div>
         <form onSubmit={this.onSubmit}>
@@ -106,30 +111,30 @@ export default class Form extends React.Component {
               onChange={this.handleChange}
             />
             {/* <label htmlFor="name">Input any text: </label> */}
-            <div class="fake-textarea" contenteditable='true'
+            {/* <div class="fake-textarea" contenteditable='true'
               // name="textarea"
               // value={this.state.value}
               // onChange={this.handleChange}
-            >asd</div>
-             <TextareaAutosize onResize={(e) => {}} />,
+            >asd</div> */}
+            {/* <TextareaAutosize onResize={(e) => {}} />, */}
           </div>
-          <div className='temp-calc-block'>
-          <div className='temp-calc-block--input'>
-            <TemperatureInput
-              scale="c"
-              onTemperatureChange={this.handleCelsiusChange}
-              temperature={celsius}
-            />
-            <TemperatureInput
-              scale="f"
-              onTemperatureChange={this.handleFahrenheitChange}
-              temperature={farengeit}
-            />
-           </div>  
-           <div className='temp-calc-block--resume'>
-            <this.temperatureCalculator celsius={temperature} />
-          </div>  
-          </div>  
+          <div className="temp-calc-block">
+            <div className="temp-calc-block--input">
+              <TemperatureInput
+                scale="c"
+                onTemperatureChange={this.handleCelsiusChange}
+                temperature={celsius}
+              />
+              <TemperatureInput
+                scale="f"
+                onTemperatureChange={this.handleFahrenheitChange}
+                temperature={farengeit}
+              />
+            </div>
+            <div className="temp-calc-block--resume">
+              <this.temperatureCalculator celsius={temperature} />
+            </div>
+          </div>
           <input type="submit" value="Submit" />
         </form>
       </div>

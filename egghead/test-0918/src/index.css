@@ -53,54 +53,53 @@ form {
   /* margin: 20px; */
   text-align: left;
 }
-.temp-calc-block{
+.temp-calc-block {
   display: flex;
   /* max-width: 70%; */
   flex-direction: column;
- 
-  justify-content: flex-start
+
+  justify-content: flex-start;
 }
-.temp-calc-block--input{
+.temp-calc-block--input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.temp-calc-block--resume{
- /* border-top: 3px solid rgb(204, 211, 218); */
- /* border-radius: 10px; */
- align-self: flex-start;
- padding: 20px 0px;
- margin: 0px 20px;
+.temp-calc-block--resume {
+  /* border-top: 3px solid rgb(204, 211, 218); */
+  /* border-radius: 10px; */
+  align-self: flex-start;
+  padding: 20px 0px;
+  margin: 0px 20px;
 }
-.temp-calc-block input{
-  background-color: mintcream; 
+.temp-calc-block input {
+  background-color: mintcream;
   min-height: 50px;
   width: 100px;
-  color: rgb(0,0,0, 0.7);
+  color: rgb(0, 0, 0, 0.7);
   font-size: 20px;
   text-align: center;
   margin: 0 auto 0 auto;
 }
-.temp-calc-block .form-block{
- display: flex;
- position: relative;
- flex-direction: column;
- justify-content: flex-end;
- padding: 20px;
- flex-grow:  1;
- align-items: stretch;
- border: 3px solid rgb(204, 211, 218);
- border-radius: 10px;
- margin: 20px;
- height: 100px;
- width: 150px;
- 
+.temp-calc-block .form-block {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  flex-grow: 1;
+  align-items: stretch;
+  border: 3px solid rgb(204, 211, 218);
+  border-radius: 10px;
+  margin: 20px;
+  height: 100px;
+  width: 150px;
 }
-.temp-calc-block .form-block:hover{
+.temp-calc-block .form-block:hover {
   box-shadow: 0 0 5px grey;
 }
 
-.temp-calc-block .form-block label{
+.temp-calc-block .form-block label {
   position: absolute;
   top: -17px;
   left: 10%;
@@ -119,30 +118,38 @@ form {
   background: white;
   text-align: left;
   border-collapse: collapse;
-  color: #3E4347;
+  color: #3e4347;
 }
 
-.table-price thead tr{
+.table-price thead tr {
   font-weight: normal;
-  border-bottom: 2px solid #F5E1A6;
+  border-bottom: 3px solid #f5e1a6;
   border-right: 20px solid white;
   border-left: 20px solid white;
   padding: 8px 10px;
-  }
+}
 
 .table-price td {
-    border-right: 20px solid white;
-    border-left: 20px solid white;
-    padding: 12px 10px;
-    color: #8b8e91;
-  }
+  border-right: 20px solid white;
+  border-left: 20px solid white;
+  padding: 12px 10px;
+  color: #8b8e91;
+}
 button {
   width: 80px;
   margin: 10px auto;
   padding: 5px;
   border-radius: 5px;
-  background-color: aliceblue
+  background-color: aliceblue;
 }
-input{
+input {
   min-width: 100px;
-}  
+  border-right: 20px solid white;
+  border-left: 20px solid white;
+  padding: 12px 10px;
+  color: #8b8e91;
+}
+
+.table-price td[colspan] {
+  background-color: rgb(247, 247, 247);
+}

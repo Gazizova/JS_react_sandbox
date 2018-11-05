@@ -6,7 +6,8 @@ import Game from "./pages/game";
 import Form from "./pages/form";
 import FinalProductTable from "./pages/price";
 import BackTo from "./components/back_to";
-import ReactBeginnersGuide from './pages/beginners-guide'
+import ReactBeginnersGuide from "./pages/beginners-guide";
+import Routing from "./pages/routing";
 
 class RouteElements extends React.Component {
   render() {
@@ -34,6 +35,9 @@ class RouteElements extends React.Component {
               <li>
                 <Link to="/courses">courses: beginners guide</Link>
               </li>
+              <li>
+                <Link to="/routing">Routing</Link>
+              </li>
             </ul>
             <div className="component">
               <Route exact path="/home" component={HomeAlt} />
@@ -42,6 +46,7 @@ class RouteElements extends React.Component {
               <Route path="/form" component={Form} />
               <Route path="/price" component={FinalProductTable} />
               <Route path="/courses" component={ReactBeginnersGuide} />
+              <Route path="/routing" component={Routing} />
             </div>
           </div>
         </div>
