@@ -136,3 +136,13 @@ form {
     padding: 12px 10px;
     color: #8b8e91;
   }
+button {
+  width: 80px;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: aliceblue
+}
+input{
+  min-width: 100px;
+}  

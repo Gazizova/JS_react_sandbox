@@ -28,3 +28,37 @@
 .fake-textarea{
     border: 1px solid grey;
 }
+
+.course-block{
+    max-width: 80%;
+}
+.course-block .lesson{
+    position: relative;
+    display: inline-block;
+    border: 2px solid lightgrey;
+    width: 300px;
+    margin: 10px;
+    padding: 30px 10px 10px 10px;
+    min-height: 100px;
+    vertical-align: top;
+    border-radius: 10px;
+    background-color: aliceblue
+}
+.course-block .lesson:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.course-block .lesson:hover h3{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+} 
+.course-block .lesson h3{
+    position: absolute;
+    top: -15px;
+    left: -2px;
+    margin: 0;
+    background-color: rgb(220, 239, 255);
+    padding: 3px;
+    border: 2px solid lightgrey;
+    border-radius: 1px;
+    color: rgb(94, 94, 94)
+}
