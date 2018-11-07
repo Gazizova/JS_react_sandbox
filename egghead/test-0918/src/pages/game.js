@@ -1,9 +1,9 @@
-import React, {Fragment} from "react";
+import React from "react";
 import  Board  from '../components/game/board' 
 import { Clock } from "../components/clock/clock";
 
 class Game extends React.Component{
-    debugger;
+    // debugger;
     constructor(props){
         super(props)
         this.state= {
@@ -16,13 +16,15 @@ class Game extends React.Component{
     }
 
     handleClick(i){
-        debugger;
+        // debugger;
         const history = this.state.history;
         const current = history[history.length-1];
         const squares = current.squares.slice();
+
         if(this.determineWinner(squares) || squares[i]){
             return;
         }
+
         squares[i] = this.state.xIsNext ? "X" : "O";
         this.setState({
             history: history.concat([{
@@ -54,17 +56,21 @@ class Game extends React.Component{
         return null;
     };
 
-    gameStep=(step)=>{
-        debugger
+    gameStep=()=>{
+        // debugger
         return(
-            this.state.history.map(<li>{this.props.step}</li>)     
+            this.state.history.map( () => 
+            <li>
+            <button>Next move {this.state.setStep}</button>
+            </li>)     
         )
     };
 
     render(){
         const winner = this.determineWinner(this.props.squares);
-        let status;
         const current = this.state.history[this.state.history.length -1];
+
+        let status;
         if(winner){
             status = "Winner: " + winner
         }else{
@@ -81,7 +87,7 @@ class Game extends React.Component{
                 </div>
                 <div className='game-info'>
                     <div>{status}</div>
-                    <ol>{this.gameStep(this.state.setStep)}</ol>
+                    <ol>{this.gameStep()}</ol>
                 </div>
             </div>
         )

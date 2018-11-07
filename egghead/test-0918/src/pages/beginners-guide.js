@@ -31,7 +31,8 @@ export default class ReactBeginnersGuide extends React.Component{
                   }}/>
               <Lesson14/>
               <Lesson12/>
-              <Lesson3/>
+              <Lesson3 />
+
               <Lesson4/>
               <Lesson5 firstName={"string"}/>
               <Lesson6 message = "Hi All"/>

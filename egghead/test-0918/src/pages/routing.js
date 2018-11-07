@@ -4,18 +4,19 @@ import "./slider.css";
 
 function Item({ match }) {
   console.log(match);
-  return <div>{match.params.i}</div>;
+  return <div className="Item">{ match.params.id }</div>;
 }
 
-function Third() {
+function Third({ match }) {
+  console.log(match);
   return (
     <div>
-      <nav class="third">
-        <Link to="/third/food">Food</Link>
-        <Link to="/third/drink">Drink</Link>
+      <nav className="third">
+        <Link to={`${match.url}/food`}>Food</Link>
+        <Link to={`${match.url}/drink`}>Drink</Link>
       </nav>
       <Route
-        path="/third/:item"
+        path={`${match.path}/:item`}
         render={({ match }) => <h3>{match.params.item}</h3>}
       />
     </div>
@@ -23,33 +24,31 @@ function Third() {
 }
 export default function Routing({ match }) {
   return (
-    <Router>
       <div>
-        <ul class="submenu">
+        <ul className="submenu">
           <li>
-            <Link to={`${match.url}/First`}> First </Link>
+            <Link to={`${match.url}/first`}> First </Link>
           </li>
           <li>
             <Link to={`${match.url}/Second`}> Second </Link>
           </li>
           <li>
-            <Link to="/third">Third </Link>
+            <Link to={`${match.url}/third`}>Third </Link>
           </li>
         </ul>
-        <Switch>
-          <Route path={`${match.path}/:i`} component={Item} />
+        {/* <Switch> */}
+          <Route path={`${match.path}/:id`} component={Item} />
           <Route
-            exact
-            path={match.path}
+            exact path={match.path}
             render={() => <h2>Select component</h2>}
           />
-          <Route path="/third" component={Third} />
+          <Route path={`${match.path}/third`} component={Third} />
           <Route
             path="/:a/:c/:b(\d{2}-\d{2})"
             render={({ match }) => <h2>{match.params.b}</h2>}
           />
-        </Switch>
+        {/* </Switch> */}
       </div>
-    </Router>
+
   );
 }
