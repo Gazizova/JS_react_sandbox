@@ -1,0 +1,17 @@
+.lesson-state >div{
+    margin:  0 auto;
+}
+.lesson-state >div:last-child{
+    border: 3px solid rgb(213, 222, 230);
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin-top: 10px; 
+}
+.lesson-state >div:last-child:hover{
+    box-shadow: 0 0 7px rgb(181, 193, 194);
+}
+.lesson-state>div>div{
+    margin-top: 22px;
+    font-size: 20px;
+}

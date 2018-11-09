@@ -18,7 +18,7 @@ class RouteElements extends React.Component {
           <BackTo title="Back" to="/" />
           <div className="main-block">
             <ul className="menu">
-              <li> <Link to="/home">Home</Link></li>
+              <li> <Link to="/">Home</Link></li>
               <li> <Link to="/slider">Slider</Link></li>
               <li> <Link to="/game">Game</Link></li>
               <li> <Link to="/form">Form</Link></li>
@@ -34,7 +34,7 @@ class RouteElements extends React.Component {
               </li>
             </ul>
             <div className="component">
-              <Route exact path="/home" component={HomeAlt} />
+              <Route exact path="/" component={HomeAlt} />
               <Route path="/slider" component={SliderPage} />
               <Route path="/game" component={Game} />
               <Route path="/form" component={Form} />
