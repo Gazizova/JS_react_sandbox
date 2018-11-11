@@ -43,6 +43,7 @@ class Wrapper extends Component {
     debugger;
     ReactDOM.render(<ComponentLifecycle />, document.getElementById("id"));
   };
+
   unmount() {
     ReactDOM.unmountComponentAtNode(document.getElementById("id"));
   }
