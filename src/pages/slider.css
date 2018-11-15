@@ -60,7 +60,12 @@
 
 .course-block {
   max-width: 80%;
+  margin: auto;
+  /* display: flex;
+  flex-wrap: wrap; */
+
 }
+
 .course-block .lesson {
   position: relative;
   display: inline-block;
@@ -72,6 +77,7 @@
   vertical-align: top;
   border-radius: 10px;
   background-color: aliceblue;
+  /* flex-grow:1; */
 }
 .course-block .lesson:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

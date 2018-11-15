@@ -24,7 +24,7 @@ class RouteElements extends React.Component {
               <li> <Link to="/form">Form</Link></li>
               <li> <Link to="/price">Pricing</Link></li>
               <li> Courses
-                  <ul className="multilevel">
+                  <ul className="sub-menu">
                   <li> <Link to="/courses/beginners-guide">beginners guide</Link></li>
                   <li> <Link to="/courses/start-learn-react">start-learn-react</Link></li>
                   </ul>

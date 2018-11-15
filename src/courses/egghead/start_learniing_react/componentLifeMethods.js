@@ -10,6 +10,7 @@ class ComponentLifecycle extends Component {
   };
 
   update = () => {
+    console.log("update "+this.state.val);
     this.setState({
       val: this.state.val + 1
     });
@@ -30,10 +31,11 @@ class ComponentLifecycle extends Component {
   componentDidMount() {
     console.log("componentDidMount");
     this.setState({
-      m: 2
+      m: 3
     });
     this.inc = setInterval(this.update, 3000);
   }
+
   componentWillUnmount() {
     console.log("componentWillUnmount");
     clearInterval(this.inc);
@@ -61,10 +63,14 @@ class Wrapper extends Component {
   unmount() {
     ReactDOM.unmountComponentAtNode(document.getElementById("id"));
   }
+  redirect(){
+    window.location.href='https://www.google.com.ua'
+  }
   render() {
     return (
       <div className="lesson">
         <h3>Lesson Component life methods</h3>
+        <button onClick={this.redirect}>Redirect</button>
         <button onClick={this.mount}>Mount</button>
         <button onClick={this.unmount}>Unmount</button>
         <div id="id" />

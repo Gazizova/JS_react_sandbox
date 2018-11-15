@@ -31,12 +31,13 @@ ul {
   margin-top: 1px;
   background-color: aliceblue;
   text-align: left;
+  position: relative;
 }
 .menu .multilevel li:first-child{
   margin-top: 10px;
   
 }
-.menu .multilevel li{
+.menu .sub-menu li{
   border-bottom: 0px;
   padding-left: 50px;
 }
@@ -46,32 +47,28 @@ ul {
 .main-block .menu {
   width: 20%;
 }
-.multilevel{
+.sub-menu{
   display: none;
 }
-li:hover>.multilevel{
+
+li:hover>.sub-menu{
   display: unset;
 }
 
-
 .component {
   width: 80%;
-  /* display: flex; */
 }
 form {
-  /* width: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 20px;
 }
 .form-block {
-  /* margin: 20px; */
   text-align: left;
 }
 .temp-calc-block {
   display: flex;
-  /* max-width: 70%; */
   flex-direction: column;
 
   justify-content: flex-start;

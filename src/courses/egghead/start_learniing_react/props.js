@@ -7,8 +7,7 @@ export class TestProps extends React.Component{
         num: PropTypes.number,
         validatedText(props, propsName){
             if (!(propsName in props)){
-                console.log(props)
-                return new Error(`missing props ${propsName}`)
+                return new Error(`missing props in component TestProps: ${propsName}`)
             }
             if(props[propsName].length < 6){
                 return new Error (`${propsName} is too short`)
