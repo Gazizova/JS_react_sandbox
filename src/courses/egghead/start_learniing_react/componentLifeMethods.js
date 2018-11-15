@@ -5,6 +5,9 @@ class ComponentLifecycle extends Component {
     super(props);
     this.state = { val: 0 };
   }
+  static defaultProps = {
+    propsval: 0
+  };
 
   update = () => {
     this.setState({
@@ -12,24 +15,36 @@ class ComponentLifecycle extends Component {
     });
   };
 
+  updateProps = () => {
+    ReactDOM.render(
+      <ComponentLifecycle propsval={this.props.propsval + 1} />,
+      document.getElementById("id")
+    );
+  };
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps.propsval);
+  }
+  shouldComponentUpdate(nextProps) {
+    return nextProps.propsval % 3 === 0;
+  }
   componentDidMount() {
     console.log("componentDidMount");
     this.setState({
       m: 2
     });
-    this.inc = setInterval(this.update, 1000);
+    this.inc = setInterval(this.update, 3000);
   }
   componentWillUnmount() {
     console.log("componentWillUnmount");
     clearInterval(this.inc);
   }
-  //   button = () => (
-  //     <button onClick={this.update}>{this.state.val * this.state.m}</button>
-  //   );
 
   render() {
     return (
-      <button onClick={this.update}>{this.state.val * this.state.m}</button>
+      <div>
+        <button onClick={this.update}>{this.state.val * this.state.m}</button>
+        <button onClick={this.updateProps}>props: {this.props.propsval}</button>
+      </div>
     );
   }
 }
@@ -40,7 +55,6 @@ export function Button(val) {
 
 class Wrapper extends Component {
   mount = () => {
-    debugger;
     ReactDOM.render(<ComponentLifecycle />, document.getElementById("id"));
   };
 
@@ -50,6 +64,7 @@ class Wrapper extends Component {
   render() {
     return (
       <div className="lesson">
+        <h3>Lesson Component life methods</h3>
         <button onClick={this.mount}>Mount</button>
         <button onClick={this.unmount}>Unmount</button>
         <div id="id" />

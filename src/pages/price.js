@@ -28,34 +28,27 @@ class ProductTable extends React.Component {
     const row = [];
 
     this.props.data.forEach(i => {
-
-      if(!i.name.toLowerCase().includes(this.props.filterText.toLowerCase())){
+      if (!i.name.toLowerCase().includes(this.props.filterText.toLowerCase())) {
         return;
       }
-      if(this.props.inStockOnly & !i.stoked){
+      if (this.props.inStockOnly & !i.stoked) {
         return;
       }
       if (i.category !== lastCategory) {
-        row.push(
-          <ProductCategoryRow 
-          category={i.category} 
-          key={i.category} 
-          />
-        );
+        row.push(<ProductCategoryRow category={i.category} key={i.category} />);
         lastCategory = i.category;
-      } 
-      
-        row.push(
-          <ProductRow
-            key={i.name}
-            name={i.name}
-            price={i.price}
-            style={i.stocked ? {} : { color: "red" }}
-          />
-        );
-      
+      }
+
+      row.push(
+        <ProductRow
+          key={i.name}
+          name={i.name}
+          price={i.price}
+          style={i.stocked ? {} : { color: "red" }}
+        />
+      );
     });
-    
+
     return (
       <div>
         <table className="table-price">
@@ -120,10 +113,9 @@ class Swapi extends React.Component {
 
   fetchPlanet = () => {
     axios
-      .get("https://swapi.co/api/planets/1/")
+      .get("https://swapi.co/api/planets")
       .then(response => {
-        // throw new Error('blabla')
-        this.setState({ planets: response.data, loading: false });
+        this.setState({ planets: response.data.results, loading: false });
       })
       .catch(() => this.setState({ error: true, loading: false }));
   };
@@ -136,8 +128,15 @@ class Swapi extends React.Component {
     if (this.state.error) {
       return "error";
     }
-
-    return <div>{this.state.planets.name}</div>;
+    let items = this.state.planets;
+    console.log(items);
+    return (
+      <div>
+        {items.map(item => (
+          <h4 key={item.diameter}>{item.name}</h4>
+        ))}
+      </div>
+    );
   }
 }
 export default class FinalProductTable extends React.Component {
@@ -151,7 +150,7 @@ export default class FinalProductTable extends React.Component {
     this.onStockChange = this.onStockChange.bind(this);
     this.textInputFocus = React.createRef();
   }
-  componentDidMount(){
+  componentDidMount() {
     this.focus();
   }
   handleChange(filterText) {
@@ -166,7 +165,7 @@ export default class FinalProductTable extends React.Component {
     // Note: we're accessing "current" to get the DOM node
     this.textInputFocus.current.focus();
   }
- 
+
   localData = JSON.parse(JSON.stringify(data));
   render() {
     return (
@@ -178,16 +177,16 @@ export default class FinalProductTable extends React.Component {
           onStockChange={this.onStockChange}
           inputRef={this.textInputFocus}
         />
-        <ProductTable 
-          data={this.localData} 
+        <ProductTable
+          data={this.localData}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />
         <Swapi />
         <input
-        type="text"
-        // ref={this.textInput}
-      />
+          type="text"
+          // ref={this.textInput}
+        />
       </div>
     );
   }
