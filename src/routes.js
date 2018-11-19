@@ -8,7 +8,8 @@ import FinalProductTable from "./pages/price";
 import BackTo from "./components/back_to";
 import ReactBeginnersGuide from "./pages/beginners-guide";
 import Routing from "./pages/routing";
-import Startlearningreact from './pages/startLearningReact';
+import Api from "./pages/api";
+import Startlearningreact from "./pages/startLearningReact";
 
 class RouteElements extends React.Component {
   render() {
@@ -18,19 +19,47 @@ class RouteElements extends React.Component {
           <BackTo title="Back" to="/" />
           <div className="main-block">
             <ul className="menu">
-              <li> <Link to="/">Home</Link></li>
-              <li> <Link to="/slider">Slider</Link></li>
-              <li> <Link to="/game">Game</Link></li>
-              <li> <Link to="/form">Form</Link></li>
-              <li> <Link to="/price">Pricing</Link></li>
-              <li> Courses
-                  <ul className="sub-menu">
-                  <li> <Link to="/courses/beginners-guide">beginners guide</Link></li>
-                  <li> <Link to="/courses/start-learn-react">start-learn-react</Link></li>
-                  </ul>
-              </li>    
+              <li>
+                {" "}
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to="/slider">Slider</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to="/game">Game</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to="/form">Form</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to="/price">Pricing</Link>
+              </li>
+              <li>
+                {" "}
+                Courses
+                <ul className="sub-menu">
+                  <li>
+                    {" "}
+                    <Link to="/courses/beginners-guide">beginners guide</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/courses/start-learn-react">
+                      start-learn-react
+                    </Link>
+                  </li>
+                </ul>
+              </li>
               <li>
                 <Link to="/routing">Routing</Link>
+              </li>
+              <li>
+                <Link to="/api">Api</Link>
               </li>
             </ul>
             <div className="component">
@@ -39,9 +68,16 @@ class RouteElements extends React.Component {
               <Route path="/game" component={Game} />
               <Route path="/form" component={Form} />
               <Route path="/price" component={FinalProductTable} />
-              <Route path="/courses/beginners-guide" component={ReactBeginnersGuide} />
-              <Route path="/courses/start-learn-react" component={Startlearningreact} />
+              <Route
+                path="/courses/beginners-guide"
+                component={ReactBeginnersGuide}
+              />
+              <Route
+                path="/courses/start-learn-react"
+                component={Startlearningreact}
+              />
               <Route path="/routing" component={Routing} />
+              <Route path="/api" component={Api} />
             </div>
           </div>
         </div>
