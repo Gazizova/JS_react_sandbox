@@ -106,3 +106,23 @@
 ul {
   list-style: none;
 }
+.api-submit{
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  margin: 5px;
+}
+.component-api-conteiner{
+  display: flex;
+  /* justify-content: row; */
+}
+.address-table, 
+.map-container{
+  border: 1px solid black;
+  margin: 10px;
+}
+.map-container{
+  width: 100%;
+  height: 500px;
+}
