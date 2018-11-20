@@ -42,91 +42,11 @@ class SearchBar extends React.Component {
 }
 
 function getAddress(filteredText){
+  console.log(filteredText)
   return axios.get(`https://api-adresse.data.gouv.fr/search/?q=${filteredText}&limit=10`)
   
 }
 
-class BuildAddressList extends React.Component {
-  state = {
-    houses: {},
-    loading: true,
-    error: false
-  };
-
-  componentDidMount() {
-    this.fetchAdresses();
-  }
-
-  fetchAdresses = () => {
-    axios
-      .get(
-        `https://api-adresse.data.gouv.fr/search/?q=${
-          this.props.filterText
-        }&limit=15`
-      )
-      .then(response => {
-        console.log(response.data.features);
-        this.setState({ houses: response.data.features, loading: false });
-      })
-      .catch(() => this.setState({ error: true, loading: false }));
-  };
-
-  render() {
-    const row = [];
-
-    if (this.state.loading) {
-      return "loading";
-    }
-
-    if (this.state.error) {
-      return "error";
-    }
-    let items = this.state.houses;
-    console.log(items);
-    this.state.houses.forEach(i => {
-      row.push(
-        <StreetRow
-          key={i.properties.id}
-          city={i.properties.city}
-          postcode={i.properties.postcode}
-          street={i.properties.street}
-          number={i.properties.housenumber}
-        />
-      );
-    });
-
-    return (
-      <div>
-        <table className="table-price">
-          <thead className="table-price-head">
-            <tr>
-              <td>postcode</td>
-              <td>City</td>
-              <td>Street</td>
-              <td>#</td>
-            </tr>
-          </thead>
-          <tbody className="table-price-body">{row}</tbody>
-        </table>
-      </div>
-    );
-  }
-}
-
-function parseTable(data){
-  let row =[];
-  data.forEach(i => {
-    row.push(
-      <StreetRow
-        key={i.properties.id}
-        city={i.properties.city}
-        postcode={i.properties.postcode}
-        street={i.properties.street}
-      />
-    );
-  });
-  return row;
-}
 class BuildAddressTable extends React.Component {
   render(){
     return (
@@ -145,17 +65,7 @@ class BuildAddressTable extends React.Component {
     );
   }
 }
-const AddressesForMap = ({ text }) => <div style={{
-  color: 'white', 
-  background: 'grey',
-  padding: '15px 10px',
-  display: 'inline-flex',
-  textAlign: 'center',
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: '100%',
-  transform: 'translate(-50%, -50%)'
-}}>{text}</div>;
+const AddressesForMap = ({ text }) => <div className="map-pointer">{text}</div>;
 
 class SimpleMap extends React.Component {
   static defaultProps = {
@@ -168,7 +78,6 @@ class SimpleMap extends React.Component {
 
   render() {
     return (
-      // Important! Always set the container height explicitly
       <div style={{ height: '100%', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key:'AIzaSyDRdx47eRI-WR5cqdT9hbtfE6V_z6QZJOc'}}
@@ -186,44 +95,45 @@ export default class FinalProductTable extends React.Component {
     super(props);
     this.state = {
       filterText: " ",
-      loading: false,
+      loading: true,
       houses:[],
       error: false,
+      failSearch: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.textInputFocus = React.createRef();
   }
+
+  searchFailMessage =" ";
+
   componentDidMount() {
-    
     getAddress(this.state.filterText).then(response => {
-      console.log(response.data.features);
+      console.log("Mounted"+response.data.features);
       this.setState({ houses: response.data.features, loading: false });
     })
   }
+  // componentDidUpdate(){
+  //   console.log("Updated");
+  //   console.log(this.state.failSearch)
+  //   this.state.failSearch===true? this.searchFailMessage=<div>Can't find address..</div>: this.searchFailMessage=" "
+  // }
+  
 
   handleChange(filterText) {
-    
     this.setState({ filterText});
   }
 
   handleSubmit(e){
       e.preventDefault();
-      // let a;
-      // let filterText = this.state.filterText
-    //   console.log(this.state.filterText)
-    //     if (this.state.filterText.includes(' ')){
-    //        a = this.state.filterText.slice(0).split(' ').join('&')
-    //        this.setState({filterText:a})
-    //        console.log("a:" +a)
-    //     }
-    //     console.log(this.state.filterText)
-
       getAddress(this.state.filterText).then(response => {
-        console.log(response.data.features);
-        this.setState({ houses: response.data.features, loading: false });
+        console.log(response.data.features.length);
+        if(response.data.features.length > 0){
+          this.setState({ houses: response.data.features, loading: false, failSearch: false});
+        }else{this.setState({ houses:[], failSearch: true})}        
       })
       .catch(() => this.setState({ error: true, loading: false }));
+      
   };
 
   onStockChange(inStockOnly) {
@@ -232,7 +142,14 @@ export default class FinalProductTable extends React.Component {
   focus() {
     this.textInputFocus.current.focus();
   }
-
+  sortbyAsc(){
+      const arr = sortByName(0, this.state.houses)
+      console.log("sortbyAsc")
+      console.log(arr)
+      this.setState({
+        houses:arr,
+      })
+    }
   render() {
     let row = [];
     
@@ -244,20 +161,22 @@ export default class FinalProductTable extends React.Component {
     if (this.state.error) {
       return "error";
     }
-    this.state.houses.forEach(i => {
-      row.push(
-        <StreetRow
-          key={i.properties.x}
-          city={i.properties.city}
-          postcode={i.properties.postcode}
-          street={i.properties.label}
-        />
-      );
-      
-    });
+
+       this.state.houses.forEach(i => {
+        row.push(
+          <StreetRow
+            key={i.properties.x}
+            city={i.properties.city}
+            postcode={i.properties.postcode}
+            street={i.properties.label}
+          />
+        );
+        
+      });
+    
+    
     let coordinat=[];
       this.state.houses.forEach(i => {
-        console.log(i)
         coordinat.push(
              { "lat": i.geometry.coordinates[1], "lng":i.geometry.coordinates[0], "label":i.properties.label}
       )
@@ -266,7 +185,6 @@ export default class FinalProductTable extends React.Component {
     console.log(coordinat);
     let addressesForMap=[];
     coordinat.forEach(i=>{
-      console.log(i.label);
       addressesForMap.push(<AddressesForMap
         key={i.lat}
         lat={i.lat}
@@ -275,6 +193,8 @@ export default class FinalProductTable extends React.Component {
       />)
     })
     console.log(addressesForMap);
+    
+    
     return (
       <div className="component-api-conteiner">
         <div className="address-table">
@@ -288,6 +208,7 @@ export default class FinalProductTable extends React.Component {
             <BuildAddressTable>
               {row}
             </BuildAddressTable>
+            {this.searchFailMessage}
         </div>   
         <div className="map-container">
             <SimpleMap>{addressesForMap}</SimpleMap>
@@ -296,3 +217,47 @@ export default class FinalProductTable extends React.Component {
     );
   }
 }
+
+
+function sortByName(cnt, array){
+  let newArray =array.slice();
+  let sortByFirstName = newArray.sort(function (a, b) {
+      let nameA = a.name.toLowerCase();
+      let nameB = b.name.toLowerCase();
+      if (cnt===0) {
+          if (nameA < nameB) {
+              return -1;
+          }
+          if (nameA > nameB) {
+              return 1;
+          }
+          return 0;
+      }else if(cnt === 1){
+          if (nameA > nameB) {
+              return -1;
+          }
+          if (nameA < nameB) {
+              return 1;
+          }
+          return 0;
+      }
+  });
+  return sortByFirstName
+}
+// function sortbyAsc(){
+//   const arr = sortByName(0, clientList)
+//   console.log("sortbyAsc")
+//   console.log(arr)
+//   this.setState({
+//       filterUserList: FilterUserList(arr, '')
+//   })
+// }
+
+// function sortbyDesc(){
+//   const arr = sortByName(1, clientList)
+//   console.log("sortbyDesc")
+//   console.log(arr)
+//   this.setState({
+//       filterUserList: FilterUserList(arr, '')
+//   })
+// }
