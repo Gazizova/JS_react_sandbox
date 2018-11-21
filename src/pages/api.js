@@ -42,8 +42,18 @@ class SearchBar extends React.Component {
 }
 
 function getAddress(filteredText){
-  console.log(filteredText)
-  return axios.get(`https://api-adresse.data.gouv.fr/search/?q=${filteredText}&limit=10`)
+  console.log(filteredText);
+  let filteredTextUpdated
+  if(filteredText.includes(' ')){
+    filteredTextUpdated=filteredText.split(' ').join('+');
+    console.log(filteredTextUpdated)
+  }
+  else{
+    filteredTextUpdated=filteredText;
+  }
+
+  console.log(`https://api-adresse.data.gouv.fr/search/?q=${filteredTextUpdated}&limit=10`)
+  return axios.get(`https://api-adresse.data.gouv.fr/search/?q=${filteredTextUpdated}&limit=10`)
   
 }
 
@@ -51,10 +61,10 @@ class BuildAddressTable extends React.Component {
   render(){
     return (
       <div>
-        <table className="table-price">
-          <thead className="table-price-head">
+        <table className="table-address">
+          <thead className="table-address-head">
             <tr>
-              <td>postcode</td>
+              <td>{this.props.togglep}Postcode</td>
               <td>City</td>
               <td>Address</td>
             </tr>
@@ -66,6 +76,14 @@ class BuildAddressTable extends React.Component {
   }
 }
 const AddressesForMap = ({ text }) => <div className="map-pointer">{text}</div>;
+
+function SortingToggle(sort){
+  return(
+    <a clasName="sort-toggle">
+      <img className="sort-toggle-img" src='ic-sort-default.svg' onClick={()=>sort}/>
+    </a>
+  )
+}
 
 class SimpleMap extends React.Component {
   static defaultProps = {
@@ -113,11 +131,11 @@ export default class FinalProductTable extends React.Component {
       this.setState({ houses: response.data.features, loading: false });
     })
   }
-  // componentDidUpdate(){
-  //   console.log("Updated");
-  //   console.log(this.state.failSearch)
-  //   this.state.failSearch===true? this.searchFailMessage=<div>Can't find address..</div>: this.searchFailMessage=" "
-  // }
+  componentDidUpdate(){
+    console.log("Updated");
+    console.log(this.state.failSearch)
+    this.state.failSearch===true? this.searchFailMessage=<div>Can't find address..</div>: this.searchFailMessage=" "
+  }
   
 
   handleChange(filterText) {
@@ -128,6 +146,7 @@ export default class FinalProductTable extends React.Component {
       e.preventDefault();
       getAddress(this.state.filterText).then(response => {
         console.log(response.data.features.length);
+        console.log(typeof(response.data.features));
         if(response.data.features.length > 0){
           this.setState({ houses: response.data.features, loading: false, failSearch: false});
         }else{this.setState({ houses:[], failSearch: true})}        
@@ -142,16 +161,39 @@ export default class FinalProductTable extends React.Component {
   focus() {
     this.textInputFocus.current.focus();
   }
-  sortbyAsc(){
-      const arr = sortByName(0, this.state.houses)
-      console.log("sortbyAsc")
-      console.log(arr)
-      this.setState({
-        houses:arr,
-      })
+
+  // objs = [
+  //   { g:{first_nom: 'Lazslo'}, p:{last_nom: 'Jamf'} },
+  //   { g:{first_nom: 'Pig'}, p:{last_nom: 'Bodine'} }
+  // ];
+
+  compare=()=>{
+    const objs = [
+      { g:{first_nom: 'Lazslo'}, p:{last_nom: 'Jamf'} },
+      { g:{first_nom: 'Pig'}, p:{last_nom: 'Bodine'} }
+    ];
+     
+      // let newArray = [];
+      // newArray =array.slice();
+      console.log("Array123");
+
+      objs.sort=(a,b)=>{
+        debugger
+        console.log("a");
+        console.log(a);
+        console.log(b);
+        // if (a.last_nom < b.last_nom)
+        //   return -1;
+        // if (a.last_nom > b.last_nom)
+        //   return 1;
+        // return 0;
+      }
+
     }
+
   render() {
     let row = [];
+    console.log(this.state.houses)
     
 
     if (this.state.loading) {
@@ -182,7 +224,7 @@ export default class FinalProductTable extends React.Component {
       )
     })
     
-    console.log(coordinat);
+    // console.log(coordinat);
     let addressesForMap=[];
     coordinat.forEach(i=>{
       addressesForMap.push(<AddressesForMap
@@ -193,7 +235,11 @@ export default class FinalProductTable extends React.Component {
       />)
     })
     console.log(addressesForMap);
-    
+
+    const objs = [
+      { g:{first_nom: 'Lazslo'}, p:{last_nom: 'Jamf'} },
+      { g:{first_nom: 'Pig'}, p:{last_nom: 'Bodine'} }
+    ];
     
     return (
       <div className="component-api-conteiner">
@@ -205,7 +251,12 @@ export default class FinalProductTable extends React.Component {
               inputRef={this.textInputFocus}
               onSubmit={this.handleSubmit}
             />
-            <BuildAddressTable>
+            <BuildAddressTable 
+              togglep={ 
+  
+                <img className="sort-toggle-img" src='ic-sort-default.svg' onClick={this.compare}/>
+              }
+                > 
               {row}
             </BuildAddressTable>
             {this.searchFailMessage}
@@ -219,11 +270,12 @@ export default class FinalProductTable extends React.Component {
 }
 
 
-function sortByName(cnt, array){
+function sortByName(cnt, array, item){
+  debugger
   let newArray =array.slice();
   let sortByFirstName = newArray.sort(function (a, b) {
-      let nameA = a.name.toLowerCase();
-      let nameB = b.name.toLowerCase();
+      let nameA = a.properties.item.toLowerCase();
+      let nameB = b.properties.item.toLowerCase();
       if (cnt===0) {
           if (nameA < nameB) {
               return -1;
@@ -244,6 +296,26 @@ function sortByName(cnt, array){
   });
   return sortByFirstName
 }
+
+function Compare(array) {
+  debugger
+  let newArray =array.slice();
+  console.log(newArray);
+  let sortByFirstName=newArray.sort=(a,b)=>{
+    if (a.properties.postcode < b.properties.postcode)
+      return -1;
+    if (a.properties.postcode > b.properties.postcode)
+      return 1;
+    return 0;
+  }
+  return sortByFirstName
+}
+
+// var objs = [
+//   { g:{first_nom: 'Lazslo'}, p:{last_nom: 'Jamf'} },
+//   { g:{first_nom: 'Pig'}, p:{last_nom: 'Bodine'} }
+// ];
+
 // function sortbyAsc(){
 //   const arr = sortByName(0, clientList)
 //   console.log("sortbyAsc")
