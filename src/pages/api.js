@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import GoogleMapReact from 'google-map-react';
+import { platform } from "os";
 
 
 class StreetRow extends React.Component {
@@ -240,6 +241,7 @@ export default class FinalProductTable extends React.Component {
       { g:{first_nom: 'Lazslo'}, p:{last_nom: 'Jamf'} },
       { g:{first_nom: 'Pig'}, p:{last_nom: 'Bodine'} }
     ];
+    console.log(navigator.userAgent, navigator)
     
     return (
       <div className="component-api-conteiner">

@@ -1,5 +1,4 @@
 import React from 'react'
-import {TodoList} from "./TodoList";
 import PropTypes from "prop-types";
 import {partial} from '../../lib/utils'
 
@@ -20,3 +19,26 @@ TodoItem.propTypes = {
     name: PropTypes.string,
     id: PropTypes.number
 }
+
+export class ToDoItem{
+    
+    static propTypes ={
+        handleToggle: PropTypes.func,
+        handleRemove: PropTypes.func,
+        id: PropTypes.number,
+        name: PropTypes.string,
+        isComplete: PropTypes.bool,
+    }
+    
+    handleToggle = partial(this.props.handleToggle, this.props.id)
+    handleRemove  = partial(this.props.handleRemove, this.props.id)
+
+    render(){
+        return(
+            <li>
+            <span className="delete-item"><a href='#' onClick={this.handleRemove}>X</a></span>
+            <input type="checkbox" onChange={this.handleToggle} checked={this.props.isComplete}/> {this.props.name}
+        </li>
+        )
+    }
+}  

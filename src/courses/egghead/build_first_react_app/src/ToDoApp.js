@@ -5,7 +5,7 @@ import {TodoForm, TodoList, Footer} from "./component/todo";
 import {addTodo, generalId, findById, toggleTodo, updateTodo, removeTodo} from './lib/todoHelper'
 import {pipe, partial} from "./lib/utils";
 
-class App extends Component {
+class ToDoApp extends Component {
 
     state = {
             todos:[
@@ -85,15 +85,6 @@ class App extends Component {
          let a = [];
          let b ={};
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <div>{console.log(this.Arrays())}</div>
           <div className="Todo-App">
               {this.state.errorMessage && <span className='error'>{this.state.errorMessage}</span>}
               <TodoForm handleInputChange={this.handleInputChange}
@@ -103,11 +94,11 @@ class App extends Component {
               <TodoList handleToggle={this.handleToggle}
                         todos={this.state.todos}
                         handleRemove={this.handleRemove}/>
-                <Footer />                       
+               <Footer />                       
           </div>
-      </div>
+
     );
   }
 }
 
-export default App;
+export default ToDoApp;
