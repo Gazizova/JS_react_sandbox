@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Forms</title>
     <script src="forms.js"></script>
     <script src="timer.js"></script>
-</head>
-<body onload="timer()">
-    <p> Секунд прошло:  <span id="count"> -1</span></p>
+  </head>
+  <body onload="timer()">
+    <p>Секунд прошло: <span id="count"> -1</span></p>
     <form action="" method="post" name="test_form" id="form">
-        <label for="name">Name:</label>
-        <input type="text" name="name" placeholder="Name" id="name"><br/> <br/>
-        <label for="email">Email:</label>
-        <input type="text" name="email" placeholder="Email" id="email"><br><br/>
-        <label for="password">Password:</label>
-        <input type="password" name="Password" placeholder="Password" id="password"><br><br/>
-         <label for="name">Repeat password:</label>
-        <input type="password" name="Password_check" placeholder="Password check" id="password_check"><br><br/>
-        <span>Sex:</span><br><br/>
-        <input type="radio" name="state" id="state_mail" value="Male">  <label for="name">Male</label><br><br/>
-        <input type="radio" name="state" id="state_femail" value="Femail">  <label for="name">Female</label><br><br/>
+      <label for="name">Name:</label>
+      <input type="text" name="name" placeholder="Name" id="name" /><br />
+      <br />
+      <label for="email">Email:</label>
+      <input type="text" name="email" placeholder="Email" id="email" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" name="Password" placeholder="Password" id="password" /><br /><br />
+      <label for="name">Repeat password:</label>
+      <input
+        type="password"
+        name="Password_check"
+        placeholder="Password check"
+        id="password_check"
+      /><br /><br />
+      <span>Sex:</span><br /><br />
+      <input type="radio" name="state" id="state_mail" value="Male" /> <label for="name">Male</label
+      ><br /><br />
+      <input type="radio" name="state" id="state_femail" value="Femail" />
+      <label for="name">Female</label><br /><br />
 
-         <input type="button" name="submit" value="Submit" onclick="valid(document.getElementById('form'))">
+      <input
+        type="button"
+        name="submit"
+        value="Submit"
+        onclick="valid(document.getElementById('form'))"
+      />
     </form>
-
-</body>
+  </body>
 </html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .data-table {
+        border-collapse: collapse;
+      }
+
+      .data-table td {
+        border: 1px solid black;
+        padding: 3px 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>Пользователи:</div>
+    <ul>
+      <li>Маша</li>
+      <li>Вовочка</li>
+    </ul>
+
+    <div></div>
+    <br />
+    <table class="data-table">
+      <tr>
+        <td>1:1</td>
+        <td>2:1</td>
+        <td>3:1</td>
+        <td>4:1</td>
+        <td>5:1</td>
+      </tr>
+      <tr>
+        <td>1:2</td>
+        <td>2:2</td>
+        <td>3:2</td>
+        <td>4:2</td>
+        <td>5:2</td>
+      </tr>
+      <tr>
+        <td>1:3</td>
+        <td>2:3</td>
+        <td>3:3</td>
+        <td>4:3</td>
+        <td>5:3</td>
+      </tr>
+      <tr>
+        <td>1:4</td>
+        <td>2:4</td>
+        <td>3:4</td>
+        <td>4:4</td>
+        <td>5:4</td>
+      </tr>
+      <tr>
+        <td>1:5</td>
+        <td>2:5</td>
+        <td>3:5</td>
+        <td>4:5</td>
+        <td>5:5</td>
+      </tr>
+    </table>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- форма -->
+    <form name="search">
+      <label>Поиск по сайту: <input type="text" name="search" /> </label>
+      <input type="submit" value="Искать!" />
+    </form>
+
+    <form name="search-person">
+      Поиск по посетителям:
+      <table id="age-table">
+        <tbody>
+          <tr>
+            <td>Возраст:</td>
+            <td id="age-list">
+              <label> <input type="radio" name="age" value="young" />до 18</label>
+              <label> <input type="radio" name="age" value="mature" />18-50</label>
+              <label> <input type="radio" name="age" value="senior" />более 50</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Дополнительно:</td>
+            <td>
+              <input type="text" name="info[0]" /> <input type="text" name="info[1]" />
+              <input type="text" name="info[2]" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <input type="submit" value="Искать!" />
+    </form>
+
+    <!-- список -->
+    <ul id="animals">
+      <li>
+        Животные
+        <ul>
+          <li>
+            Млекопитающие
+            <ul>
+              <li>Коровы</li>
+              <li>Ослы</li>
+              <li>Собаки</li>
+              <li>Тигры</li>
+            </ul>
+          </li>
+          <li>
+            Другие
+            <ul>
+              <li>Змеи</li>
+              <li>Птицы</li>
+              <li>Ящерицы</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Рыбы
+        <ul>
+          <li>
+            Аквариумные
+            <ul>
+              <li>Гуппи</li>
+              <li>Скалярии</li>
+            </ul>
+          </li>
+          <li>
+            Морские
+            <ul>
+              <li>Морская форель</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div id="widget" data-widget-name="menu">Выберите жанр</div>
+
+    <hr />
+    <a name="list">список</a>
+    <ul id="list-with-links" name="list">
+      <li><a href="http://google.com">http://google.com</a></li>
+      <li><a href="/tutorial">/tutorial.html</a></li>
+      <li><a href="local/path">local/path</a></li>
+      <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+      <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+      <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+    </ul>
+
+    <!-- комментарий -->
+
+    <script>
+      // get elements
+      var head = document.documentElement.children[0];
+      var ul = document.getElementsByTagName('ul')[0];
+      var li = document.getElementsByTagName('li')[1].innerHTML;
+      var hasChild = ul.lastElementChild.nextSibling;
+
+      console.log(head + ' ' + ul + ' ' + li + hasChild);
+      // проверка есть ли у элемента  дети
+
+      var element = document.getElementsByTagName('div')[1];
+      if (!element.childNodes.length) {
+        console.log('empty');
+      } else {
+        console.log(element.childNodes);
+      }
+      console.log(element.childNodes.length);
+
+      // выделить ячейки в таблице по диагонали
+      var table = document.getElementsByTagName('table')[0];
+      var tableRows = table.rows.length;
+
+      for (var i = 0; i < tableRows; i++) {
+        table.rows[i].cells[i].style.backgroundColor = 'red';
+      }
+      // поиск по элементам
+      var tableAge = document.getElementById('age-table');
+      var labels = document.getElementById('age-table').getElementsByTagName('label');
+      var searchForm = document.getElementsByName('search')[0];
+      var input = searchForm.getElementsByTagName('input')[0];
+      console.log(labels);
+      console.log(tableAge.rows[0].cells[0].innerHTML);
+      console.log(document.getElementsByName('search-person'));
+      console.log(input);
+
+      // Напишите код, который для каждого элемента <li> выведет:
+      // Текст непосредственно в нём (без подразделов).
+      // Количество вложенных в него элементов <li> – всех, с учётом вложенных.
+
+      var animalsList = document.getElementById('animals');
+      var listLength = animalsList.querySelectorAll('li');
+      var list = animalsList.getElementsByTagName('li');
+
+      console.log(listLength);
+      for (var i = 0; i < list.length; i++) {
+        var childCount = list[i].getElementsByTagName('li').length;
+        console.log(listLength[i].firstChild.data.trim() + ' ' + childCount);
+      }
+      // Получите пользовательский атрибут
+      var userDataElement = document.getElementById('widget').getAttribute('data-widget-name');
+      var userDataElement2 = document.getElementById('widget').dataset.widgetName;
+      console.log(userDataElement2, userDataElement);
+
+      // Поставьте класс ссылкам Сделайте желтыми внешние ссылки, добавив им класс external.
+      var listLinks = document.getElementById('list-with-links');
+      console.log(listLinks.getAttribute('id'));
+    </script>
+  </body>
+</html>
