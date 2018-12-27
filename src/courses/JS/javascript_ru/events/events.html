@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .button {
+        transition: width 1s;
+        width: 100px;
+      }
+      .wide {
+        width: 300px;
+      }
+      .menu::before {
+        content: '▶';
+      }
+      .menu ul {
+        display: none;
+      }
+      .menu-open:before {
+        content: '▼';
+      }
+      .menu-open ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="but" class="button">First</button>
+    <hr />
+    <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+    <div id="text">Текст</div>
+    <hr />
+    <button id="hideme" class="">Спрячь меня!</button>
+    <hr />
+    <div class="menu">
+      <span class="title"> Сладости (нажми меня)!</span>
+      <ul class="listopen">
+        <li>Торт</li>
+        <li>Пончик</li>
+        <li>Пирожное</li>
+      </ul>
+    </div>
+    <hr />
+
+    Кнопка для удаления: <button class="remove-button">[x]</button>
+
+    <div>
+      <div class="pane">
+        <h3>Лошадь</h3>
+        <p>
+          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный
+          сохранившийся подвид дикой лошади, вымершей в дикой природе, за исключением небольшой
+          популяции лошади Пржевальского.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Осёл</h3>
+        <p>
+          Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную историческую
+          роль в развитии хозяйства и культуры человека. Все одомашненные ослы относятся к
+          африканским ослам.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Корова, а также пара слов о диком быке, о волах и о тёлках.</h3>
+        <p>
+          Коро́ва — самка домашнего быка, одомашненного подвида дикого быка, парнокопытного жвачного
+          животного семейства полорогих. Самцы вида называются быками, молодняк — телятами,
+          кастрированные самцы — волами. Молодых (до первой стельности) самок называют тёлками.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function changeColor(e) {
+        return console.log(event);
+        return console.log(event.path);
+        return (event.currentTarget.style.color = 'red');
+      }
+
+      alertMessage = () => alert('click');
+      alertMessage2 = () => alert('Hi');
+
+      function toggleClass() {
+        this.classList.toggle('wide');
+      }
+
+      // but.onclick = alertMessage;
+      but.addEventListener('click', toggleClass);
+      but.addEventListener('transitionend', alertMessage);
+
+      // Спрятать при клике
+
+      hide = () => {
+        text.hidden = true;
+      };
+      show = () => {
+        text.hidden = false;
+      };
+      let count = 0;
+      hider.onclick = clickEvents = () => {
+        if (count === 0) {
+          hide();
+          return (count = 1);
+        } else if (count === 1) {
+          show();
+          return (count = 0);
+        }
+      };
+      //Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+      hideme.onclick = () => (hideme.hidden = true);
+
+      // Раскрывающееся меню
+      var menu = document.querySelector('.menu');
+      var title = menu.querySelector('.title');
+      title.onclick = () => menu.classList.toggle('menu-open');
+
+      //Добавьте каждому сообщению по кнопке для его скрытия.
+    </script>
+  </body>
+</html>

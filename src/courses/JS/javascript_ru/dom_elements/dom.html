@@ -11,6 +11,10 @@
         border: 1px solid black;
         padding: 3px 5px;
       }
+
+      .external {
+        background-color: yellow;
+      }
     </style>
   </head>
 
@@ -210,8 +214,14 @@
       console.log(userDataElement2, userDataElement);
 
       // Поставьте класс ссылкам Сделайте желтыми внешние ссылки, добавив им класс external.
-      var listLinks = document.getElementById('list-with-links');
-      console.log(listLinks.getAttribute('id'));
+      var listLinks = document.getElementById('list-with-links').querySelectorAll('a');
+      console.log(listLinks.length);
+      for (var i = 0; i < listLinks.length; i++) {
+        var href = listLinks[i].getAttribute('href');
+        if (href.includes('://') && !href.startsWith('http://internal.com')) {
+          listLinks[i].classList.add('external');
+        }
+      }
     </script>
   </body>
 </html>

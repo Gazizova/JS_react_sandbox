@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .data-table,
+      #table {
+        border-collapse: collapse;
+      }
+
+      .data-table td,
+      #table td {
+        border: 1px solid black;
+        padding: 3px 5px;
+      }
+
+      .external {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>Это</div>
+    <div>Все</div>
+    <div id="id">Элементы DOM</div>
+
+    <!-- removeChildren -->
+    <hr />
+    <table id="table">
+      <tr>
+        <td>Это</td>
+        <td>Все</td>
+        <td>Элементы DOM</td>
+      </tr>
+    </table>
+
+    <ol id="ol">
+      <li>Вася</li>
+      <li>Петя</li>
+      <li>Маша</li>
+      <li>Даша</li>
+    </ol>
+    <!-- комментарий -->
+    <div id="list-block">
+      <h1>Создание списка</h1>
+      <ul id="list-сontainer"></ul>
+    </div>
+    <!-- комментарий -->
+
+    <script>
+      // полифилл для метода remove для старых браузеров.
+      // Если у elem нет родителя – ничего не делает.
+      // Если есть – удаляет элемент из родителя.
+      if (!document.documentElement.remove) {
+        Object.defineProperty(Element.prototype, 'remove123', {
+          get: function() {
+            if (this.parentElement) {
+              return this.parentElement.removeChild(this);
+            }
+          }
+        });
+      }
+      var elemDiv = document.body.children[1];
+      console.log(elemDiv);
+      elemDiv.remove123;
+      // Напишите функцию insertAfter(elem, refElem), которая добавит elem после узла refElem.
+
+      var elem = document.createElement('div');
+      elem.innerHTML = '<b>Новый элемент</b>';
+
+      function insertAfter(elem, refElem) {
+        if (refElem) {
+          if (refElem.nextSibling) {
+            return refElem.parentElement.insertBefore(elem, refElem.nextSibling);
+          } else {
+            return refElem.parentElement.appendChild(elem);
+          }
+        }
+        return;
+      }
+      insertAfter(elem, document.body.firstElementChild);
+
+      //Напишите функцию removeChildren, которая удаляет всех потомков элемента.
+      function removeChildren(elem) {
+        console.log(elem.childNodes);
+        if (elem.firstChild) {
+          while (elem.lastChild) {
+            elem.removeChild(elem.lastChild);
+          }
+        }
+      }
+
+      var table = document.getElementById('table');
+      removeChildren(table);
+      //Напишите интерфейс для создания списка.
+      var listPrompts = [];
+      var item;
+      var listContainer = document.getElementById('list-сontainer');
+      function createList() {
+        var list = true;
+        while (list == true) {
+          answer = prompt('Введите текст для пункта списка');
+          answer === null ? (list = false) : listPrompts.push(answer);
+        }
+        console.log(listPrompts);
+
+        for (var i = 0; i < listPrompts.length; i++) {
+          item = document.createElement('li');
+          item.innerText = listPrompts[i];
+          listContainer.append(item);
+        }
+      }
+      createList();
+
+      /*
+      Напишите функцию, которая умеет генерировать календарь для заданной пары (месяц, год).
+      Календарь должен быть таблицей, где каждый день – это TD. У таблицы должен быть заголовок с названиями дней недели, каждый день – TH.
+      Синтаксис: createCalendar(id, year, month).
+      Такой вызов должен генерировать текст для календаря месяца month в году year, а затем помещать его внутрь элемента с указанным id.
+      Например: createCalendar("cal", 2012, 9) сгенерирует в <div id=„cal“></div> следующий календарь:
+      */
+    </script>
+  </body>
+</html>
