@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .form {
+        background-color: green;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .div {
+        background-color: blue;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .p {
+        background-color: red;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+      }
+
+      body {
+        line-height: 25px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <div class="div"><p class="p"></p></div>
+    </form>
+    <br />
+    <hr />
+    <div id="menu">
+      <button data-action="save">Сохранить</button> <button data-action="load">Загрузить</button>
+      <button data-action="search">Поиск</button>
+    </div>
+    <br />
+    <hr />
+    <!--кнопка для удаления блока текста через обработчик -->
+    Кнопка для удаления:
+
+    <div>
+      <div class="pane">
+        <button class="remove-button">[x]</button>
+        <h3>Лошадь</h3>
+        <p>
+          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный
+          сохранившийся подвид дикой лошади, вымершей в дикой природе, за исключением небольшой
+          популяции лошади Пржевальского.
+        </p>
+      </div>
+      <div class="pane">
+        <button class="remove-button">[x]</button>
+        <h3>Осёл</h3>
+        <p>
+          Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную историческую
+          роль в развитии хозяйства и культуры человека. Все одомашненные ослы относятся к
+          африканским ослам.
+        </p>
+      </div>
+      <div class="pane">
+        <button class="remove-button">[x]</button>
+        <h3>Корова, а также пара слов о диком быке, о волах и о тёлках.</h3>
+        <p>
+          Коро́ва — самка домашнего быка, одомашненного подвида дикого быка, парнокопытного жвачного
+          животного семейства полорогих. Самцы вида называются быками, молодняк — телятами,
+          кастрированные самцы — волами. Молодых (до первой стельности) самок называют тёлками.
+        </p>
+      </div>
+  </body>
+
+  <script>
+    var f = document.querySelector('form');
+
+    f.onclick = e => {
+      console.log(e);
+      alert(e.currentTarget.tagName + ' ' + e.target.tagName);
+    };
+
+    color = e => (e.target.style.backgroundColor = 'grey');
+
+    f.addEventListener('click', color);
+
+// делегирование демонстрация 
+    function Menu(elem) {
+      this.save = function() {
+        alert('сохраняю');
+      };
+      this.load = function() {
+        alert('загружаю');
+      };
+      this.search = function() {
+        alert('ищу');
+      };
+
+      var self = this;
+
+      elem.onclick = function(e) {
+        var target = e.target;
+        var action = target.getAttribute('data-action');
+        console.log(action);
+        if (action) {
+          self[action]();
+        }
+      };
+    }
+// делегирования задача с кнопкой
+    const divpane = document.getElementsByName('pane');
+    const buttons = document.querySelectorAll('.remove-button');
+
+    console.log(buttons);
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function() {
+          this.parentNode.classList.add('hidden');
+        };
+      }
+
+    new Menu(menu);
+  </script>
+</html>

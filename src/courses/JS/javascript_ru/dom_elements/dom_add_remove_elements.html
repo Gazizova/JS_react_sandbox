@@ -104,12 +104,16 @@
           answer === null ? (list = false) : listPrompts.push(answer);
         }
         console.log(listPrompts);
-
-        for (var i = 0; i < listPrompts.length; i++) {
+        listPrompts.forEach(i => {
           item = document.createElement('li');
-          item.innerText = listPrompts[i];
+          item.innerText = i;
           listContainer.append(item);
-        }
+        });
+        // for (var i = 0; i < listPrompts.length; i++) {
+        //   item = document.createElement('li');
+        //   item.innerText = listPrompts[i];
+        //   listContainer.append(item);
+        // }
       }
       createList();
 

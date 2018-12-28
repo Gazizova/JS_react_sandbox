@@ -25,16 +25,89 @@
       .menu-open ul {
         display: block;
       }
+      .pane {
+        background: #edf5e1;
+        padding: 10px 20px 10px;
+        border-top: solid 2px #c4df9b;
+        position: relative;
+        width: 60%;
+      }
+      .remove-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .hidden {
+        display: none;
+      }
+      .carusel {
+        position: relative;
+        width: 460px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: lightgray;
+      }
+
+      .carusel-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 0px;
+      }
+      .carusel-list img {
+        width: 130px;
+        height: 130px;
+        display: block;
+      }
+      .gallery {
+        width: 390px;
+        overflow: hidden;
+        margin: auto;
+      }
+      .arrow {
+        position: absolute;
+        top: 50%;
+      }
+      .right {
+        top: 50%;
+        right: 0;
+        float: left;
+      }
+      .left {
+        left: 0;
+      }
+      #field {
+        width: 200px;
+        height: 150px;
+        border: 10px groove black;
+        background-color: #00ff00;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #ball {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        width: 40px;
+        height: 40px;
+      }
     </style>
   </head>
   <body>
-    <button id="but" class="button">First</button>
+    <button id="but" class="button">First</button> <br />
     <hr />
+    <br />
     <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
     <div id="text">Текст</div>
+    <br />
     <hr />
-    <button id="hideme" class="">Спрячь меня!</button>
+    <br />
+    <button id="hideme" class="">Спрячь меня!</button> <br />
     <hr />
+    <br />
     <div class="menu">
       <span class="title"> Сладости (нажми меня)!</span>
       <ul class="listopen">
@@ -43,12 +116,40 @@
         <li>Пирожное</li>
       </ul>
     </div>
+    <br />
     <hr />
+    <br />
 
-    Кнопка для удаления: <button class="remove-button">[x]</button>
+    <!--карусель-->
+    <div><h2>Карусель</h2></div>
+
+    <div class="carusel">
+      <button class="arrow left">⇦</button>
+      <div class="gallery">
+        <ul class="carusel-list">
+          <li><img src="https://js.cx/carousel/1.png" /></li>
+          <li><img src="https://js.cx/carousel/2.png" /></li>
+          <li><img src="https://js.cx/carousel/3.png" /></li>
+          <li><img src="https://js.cx/carousel/4.png" /></li>
+          <li><img src="https://js.cx/carousel/5.png" /></li>
+          <li><img src="https://js.cx/carousel/6.png" /></li>
+          <li><img src="https://js.cx/carousel/7.png" /></li>
+          <li><img src="https://js.cx/carousel/8.png" /></li>
+          <li><img src="https://js.cx/carousel/9.png" /></li>
+          <li><img src="https://js.cx/carousel/10.png" /></li>
+        </ul>
+      </div>
+      <button class="arrow right">⇨</button>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <!--кнопка для удаления блока текста -->
+    Кнопка для удаления:
 
     <div>
       <div class="pane">
+        <button class="remove-button">[x]</button>
         <h3>Лошадь</h3>
         <p>
           Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный
@@ -57,6 +158,7 @@
         </p>
       </div>
       <div class="pane">
+        <button class="remove-button">[x]</button>
         <h3>Осёл</h3>
         <p>
           Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную историческую
@@ -65,6 +167,7 @@
         </p>
       </div>
       <div class="pane">
+        <button class="remove-button">[x]</button>
         <h3>Корова, а также пара слов о диком быке, о волах и о тёлках.</h3>
         <p>
           Коро́ва — самка домашнего быка, одомашненного подвида дикого быка, парнокопытного жвачного
@@ -73,7 +176,20 @@
         </p>
       </div>
     </div>
+    <br />
+    <hr />
 
+    Кликните на любое место поля, чтобы мяч перелетел туда. <br />
+    Мяч никогда не вылетит за границы поля.
+    <div id="field">
+      <img src="https://js.cx/clipart/ball.svg" id="ball" /> . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . .
+    </div>
+
+    <!--scripts-->
     <script>
       function changeColor(e) {
         return console.log(event);
@@ -92,7 +208,7 @@
       but.addEventListener('click', toggleClass);
       but.addEventListener('transitionend', alertMessage);
 
-      // Спрятать при клике
+      // Спрятать текст при клике
 
       hide = () => {
         text.hidden = true;
@@ -119,6 +235,67 @@
       title.onclick = () => menu.classList.toggle('menu-open');
 
       //Добавьте каждому сообщению по кнопке для его скрытия.
+
+      const divpane = document.getElementsByName('pane');
+      const buttons = document.querySelectorAll('.remove-button');
+
+      console.log(buttons);
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function() {
+          this.parentNode.classList.add('hidden');
+        };
+      }
+      //Карусель
+      var list = document.querySelector('.carusel-list');
+      var buttonLeft = document.querySelector('.left');
+      var buttonRight = document.querySelector('.right');
+      var listElems = list.querySelectorAll('li');
+
+      var position = 0;
+      var width = 130;
+      var countImages = 3;
+
+      buttonLeft.onclick = function() {
+        // console.log(event);
+        position = Math.min(position + width * countImages, 0);
+        console.log(position);
+        list.style.marginLeft = position + 'px';
+      };
+
+      buttonRight.onclick = function() {
+        console.log(position - width * countImages + '  1st');
+        console.log(-width * (listElems.length - countImages) + '  2nd');
+        position = Math.max(
+          position - width * countImages,
+          -width * (listElems.length - countImages)
+        );
+        console.log(position);
+        list.style.marginLeft = position + 'px';
+      };
+      // двигать мяч по полю за курсором
+      var field = document.getElementById('field');
+      var ball = document.getElementById('ball');
+
+      function getXY(e) {
+        console.log(e);
+        console.log(e.clientY, e.clientX);
+        console.log(ball.getBoundingClientRect());
+        // координаты левого-верхнего внутреннего угла поля
+        var fieldCoords = this.getBoundingClientRect();
+        var fieldInnerCoords = {
+          top: fieldCoords.top + field.clientTop,
+          left: fieldCoords.left + field.clientLeft
+        };
+        var ballCoords = {
+          top: event.clientY - fieldInnerCoords.top - ball.clientHeight / 2,
+          left: event.clientX - fieldInnerCoords.left - ball.clientWidth / 2
+        };
+
+        ball.style.left = ballCoords.left + 'px';
+        ball.style.top = ballCoords.top + 'px';
+      }
+      field.onclick = getXY;
+      console.dir(ball);
     </script>
   </body>
 </html>
