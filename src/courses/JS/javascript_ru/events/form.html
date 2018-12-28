@@ -121,17 +121,25 @@
         }
       };
     }
+    new Menu(menu);
 // делегирования задача с кнопкой
     const divpane = document.getElementsByName('pane');
     const buttons = document.querySelectorAll('.remove-button');
 
     console.log(buttons);
+    function handleDelete(){
+        this.delete = function(){
+            target.parentNode.classList.add('hidden');
+        }
+         }
+         
+
       for (var i = 0; i < buttons.length; i++) {
         buttons[i].onclick = function() {
           this.parentNode.classList.add('hidden');
         };
       }
 
-    new Menu(menu);
+    
   </script>
 </html>
