@@ -39,24 +39,98 @@
         line-height: 25px;
         font-size: 16px;
       }
+      .pane {
+        background: #edf5e1;
+        padding: 10px 20px 10px;
+        border-top: solid 2px #c4df9b;
+        position: relative;
+        width: 60%;
+      }
+      .remove-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .hidden {
+        display: none;
+      }
+      .container-behavior {
+        position: relative;
+      }
+      .hint {
+        padding: 5px;
+        border: 1px solid gray;
+        position: absolute;
+        top: -10px;
+        background-color: azure;
+      }
     </style>
   </head>
   <body>
+    <h3>Демонстрация всплытия</h3>
     <form class="form">
       <div class="div"><p class="p"></p></div>
     </form>
     <br />
     <hr />
+    <h3>Демонстрация делегирования</h3>
     <div id="menu">
       <button data-action="save">Сохранить</button> <button data-action="load">Загрузить</button>
       <button data-action="search">Поиск</button>
     </div>
+
+    <br />
+    <hr />
+    <!--дерево, которое по клику на заголовок скрывает-показывает детей: -->
+    <h3>дерево, которое по клику на заголовок скрывает-показывает детей (делегирование)</h3>
+    <ul class="tree">
+      <li>
+        <span>Животные</span>
+        <ul>
+          <li>
+            <span>Млекопитающие</span>
+            <ul>
+              <li><span>Коровы</span></li>
+              <li><span>Ослы</span></li>
+              <li><span>Собаки</span></li>
+              <li><span>Тигры</span></li>
+            </ul>
+          </li>
+          <li>
+            <span>Другие</span>
+            <ul>
+              <li><span>Змеи</span></li>
+              <li><span>Птицы</span></li>
+              <li><span>Ящерицы</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Рыбы</span>
+        <ul>
+          <li>
+            <span>Аквариумные</span>
+            <ul>
+              <li><span>Гуппи</span></li>
+              <li><span>Скалярии</span></li>
+            </ul>
+          </li>
+          <li>
+            <span>Морские</span>
+            <ul>
+              <li>Морская форель</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <br />
     <hr />
     <!--кнопка для удаления блока текста через обработчик -->
-    Кнопка для удаления:
+    Кнопка для удаления блока текста через один обработчик (делегирование всплытие):
 
-    <div>
+    <div class="pane-wrapper">
       <div class="pane">
         <button class="remove-button">[x]</button>
         <h3>Лошадь</h3>
@@ -84,9 +158,36 @@
           кастрированные самцы — волами. Молодых (до первой стельности) самок называют тёлками.
         </p>
       </div>
+    </div>
+    <div class="container-behavior">
+      <p>ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя</p>
+      <p>ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя</p>
+
+      <button data-tooltip="подсказка длиннее, чем элемент">Короткая кнопка</button>
+      <button data-tooltip="HTML<br>подсказка">Ещё кнопка</button>
+
+      <p>
+        Прокрутите страницу, чтобы ссылки были вверху и проверьте, правильно ли показываются
+        подсказки.
+      </p>
+    </div>
   </body>
 
   <script>
+    //Приём проектирования "поведение"
+    var cont = document.querySelector('.container-behavior');
+    console.log(cont);
+    cont.onmouseover = function(e) {
+      var data = e.target.getAttribute('data-tooltip');
+      var newhint = document.createElement('div');
+      newhint.classList.add('hint');
+      if (data) {
+        newhint.innerHTML = data;
+        e.target.after(newhint);
+        console.dir(data);
+      }
+    };
+    //всплытие
     var f = document.querySelector('form');
 
     f.onclick = e => {
@@ -98,7 +199,7 @@
 
     f.addEventListener('click', color);
 
-// делегирование демонстрация 
+    // делегирование демонстрация
     function Menu(elem) {
       this.save = function() {
         alert('сохраняю');
@@ -113,6 +214,7 @@
       var self = this;
 
       elem.onclick = function(e) {
+        console.log(e.target);
         var target = e.target;
         var action = target.getAttribute('data-action');
         console.log(action);
@@ -121,25 +223,40 @@
         }
       };
     }
-    new Menu(menu);
-// делегирования задача с кнопкой
-    const divpane = document.getElementsByName('pane');
-    const buttons = document.querySelectorAll('.remove-button');
+    Menu(menu);
+    // делегирования задача с кнопкой
+    const divpane = document.querySelector('.pane-wrapper');
 
-    console.log(buttons);
-    function handleDelete(){
-        this.delete = function(){
-            target.parentNode.classList.add('hidden');
-        }
-         }
-         
+    divpane.onclick = function(event) {
+      // if (event.target.getAttribute('class') === 'remove-button') {
+      //   e.target.parentNode.classList.add('hidden');
+      // }
 
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].onclick = function() {
-          this.parentNode.classList.add('hidden');
-        };
+      // Альтернативное решение:
+      if (!event.target.classList.contains('remove-button')) return;
+      event.target.parentNode.hidden = true;
+    };
+
+    //дерево, которое по клику на заголовок скрывает-показывает детей
+    var tree = document.querySelector('.tree');
+
+    tree.onmouseover = function(e) {
+      if (e.target.tagName === 'SPAN') {
+        e.target.style.fontWeight = 'bold';
       }
-
-    
+    };
+    tree.onmouseout = function(e) {
+      if (e.target.tagName === 'SPAN') {
+        e.target.style.fontWeight = '';
+      }
+    };
+    tree.onclick = function(e) {
+      var list = e.target.parentNode.children;
+      if (list.length) {
+        for (let items of list) {
+          if (items.tagName === 'UL') items.classList.toggle('hidden');
+        }
+      }
+    };
   </script>
 </html>
