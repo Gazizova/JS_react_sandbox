@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>2 Основы работы с событиями</title>
     <style>
       .form {
         background-color: green;
@@ -54,20 +54,20 @@
       .hidden {
         display: none;
       }
-      .container-behavior {
+      .container-button {
         position: relative;
       }
       .hint {
         padding: 5px;
         border: 1px solid gray;
         position: absolute;
-        top: -10px;
+        top: -50px;
         background-color: azure;
       }
     </style>
   </head>
   <body>
-    <h3>Демонстрация всплытия</h3>
+    <h3>2.4. Делегирование Демонстрация всплытия</h3>
     <form class="form">
       <div class="div"><p class="p"></p></div>
     </form>
@@ -82,7 +82,7 @@
     <br />
     <hr />
     <!--дерево, которое по клику на заголовок скрывает-показывает детей: -->
-    <h3>дерево, которое по клику на заголовок скрывает-показывает детей (делегирование)</h3>
+    <h3>2.5. дерево, которое по клику на заголовок скрывает-показывает детей (делегирование)</h3>
     <ul class="tree">
       <li>
         <span>Животные</span>
@@ -128,7 +128,7 @@
     <br />
     <hr />
     <!--кнопка для удаления блока текста через обработчик -->
-    Кнопка для удаления блока текста через один обработчик (делегирование всплытие):
+    2.5 Кнопка для удаления блока текста через один обработчик (делегирование всплытие):
 
     <div class="pane-wrapper">
       <div class="pane">
@@ -160,32 +160,84 @@
       </div>
     </div>
     <div class="container-behavior">
+      <p>2.6 Приём проектирования "поведение" - всплывающая подсказка</p>
       <p>ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя</p>
       <p>ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя</p>
 
-      <button data-tooltip="подсказка длиннее, чем элемент">Короткая кнопка</button>
-      <button data-tooltip="HTML<br>подсказка">Ещё кнопка</button>
+      <div class="container-button">
+        <button data-tooltip="подсказка длиннее, чем элемент">Короткая кнопка</button>
 
+        <button data-tooltip="HTML<br>подсказка">Ещё кнопка</button>
+      </div>
       <p>
         Прокрутите страницу, чтобы ссылки были вверху и проверьте, правильно ли показываются
         подсказки.
       </p>
     </div>
+    <input type="text" class="coord" />
+
+    <h1>2.7 Действия браузера по умолчанию</h1>
+    <!--2.7.1 -->
+    <fieldset id="contents">
+      <legend>#contents</legend>
+      <p>
+        Как насчет почитать <a href="http://wikipedia.org">Википедию</a>, или посетить
+        <a href="http://w3.org"><i>W3.org</i></a> и узнать про современные стандарты?
+      </p>
+    </fieldset>
   </body>
 
   <script>
-    //Приём проектирования "поведение"
+    /*
+    2.7.1
+    при клике на ссылки внутри элемента #contents пользователю выводился вопрос о том, действительно ли он хочет покинуть страницу и если он не хочет, то прерывать переход по ссылке.
+    */
+    var linkContainer = document.getElementById('contents');
+
+    getParent = e => {
+      if (e.target.tagName != 'A') return;
+      console.dir(e.target.href);
+    };
+
+    linkContainer.addEventListener('mouseover', getParent);
+    //координаты курсора
+    var coord = document.querySelector('.coord');
+
+    showCoord = e => {
+      console.log(e);
+    };
+    coord.addEventListener('mouseover', showCoord);
+    //2.6  Приём проектирования "поведение" - всплывающая подсказка
     var cont = document.querySelector('.container-behavior');
     console.log(cont);
-    cont.onmouseover = function(e) {
+    onMouse = e => {
       var data = e.target.getAttribute('data-tooltip');
+      if (!data) return;
+
       var newhint = document.createElement('div');
       newhint.classList.add('hint');
-      if (data) {
-        newhint.innerHTML = data;
-        e.target.after(newhint);
-        console.dir(data);
-      }
+      newhint.innerHTML = data;
+      e.target.after(newhint);
+      console.dir(data);
+
+      var coordsButton = e.target.getBoundingClientRect();
+      console.dir(coordsButton);
+
+      var left = coordsButton.left + (e.target.offsetWidth - newhint.offsetWidth) / 2;
+      if (left < 0) left = 0;
+      var top = coordsButton.height + newhint.offsetHeight;
+      if (top < 0) top = 0;
+
+      // console.dir(left);
+      newhint.style.left = left + 'px';
+      newhint.style.top = -top + 'px';
+    };
+    cont.addEventListener('mouseover', onMouse);
+
+    cont.onmouseout = function(e) {
+      var hint = document.querySelector('.hint');
+      if (!hint) return;
+      hint.remove();
     };
     //всплытие
     var f = document.querySelector('form');

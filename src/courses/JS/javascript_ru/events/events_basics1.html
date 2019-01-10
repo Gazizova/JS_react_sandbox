@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ифышсы<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>1 Основы работы с событиями</title>
     <style>
       .button {
         transition: width 1s;
@@ -97,6 +97,7 @@
     </style>
   </head>
   <body>
+    <p>2.1. Основы работы с событиями</p>
     <button id="but" class="button">First</button> <br />
     <hr />
     <br />
@@ -196,12 +197,14 @@
         return console.log(event.path);
         return (event.currentTarget.style.color = 'red');
       }
-
+      // изменение размеров кнопки при клике
       alertMessage = () => alert('click');
       alertMessage2 = () => alert('Hi');
 
-      function toggleClass() {
-        this.classList.toggle('wide');
+      function toggleClass(e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
+        e.currentTarget.classList.toggle('wide');
       }
 
       // but.onclick = alertMessage;
@@ -240,10 +243,19 @@
       const buttons = document.querySelectorAll('.remove-button');
 
       console.log(buttons);
+      // 1st variant:
+      // for (var i = 0; i < buttons.length; i++) {
+      //   buttons[i].onclick = function() {
+      //     this.parentNode.classList.add('hidden');
+      //   };
+      // }
+
+      // alternative:
+      addHidden = e => {
+        e.currentTarget.parentNode.classList.add('hidden');
+      };
       for (var i = 0; i < buttons.length; i++) {
-        buttons[i].onclick = function() {
-          this.parentNode.classList.add('hidden');
-        };
+        buttons[i].addEventListener('click', addHidden);
       }
       //Карусель
       var list = document.querySelector('.carusel-list');
