@@ -64,6 +64,25 @@
         top: -50px;
         background-color: azure;
       }
+      #largeImg {
+        border: solid 1px #ccc;
+        width: 550px;
+        height: 400px;
+        padding: 5px;
+      }
+
+      #thumbs a {
+        border: solid 1px #ccc;
+        width: 100px;
+        height: 100px;
+        padding: 3px;
+        margin: 2px;
+        float: left;
+      }
+
+      #thumbs a:hover {
+        border-color: #ff9900;
+      }
     </style>
   </head>
   <body>
@@ -75,14 +94,18 @@
     <hr />
     <h3>Демонстрация делегирования</h3>
     <div id="menu">
-      <button data-action="save">Сохранить</button> <button data-action="load">Загрузить</button>
+      <button data-action="save">Сохранить</button>
+      <button data-action="load">Загрузить</button>
       <button data-action="search">Поиск</button>
     </div>
 
     <br />
     <hr />
     <!--дерево, которое по клику на заголовок скрывает-показывает детей: -->
-    <h3>2.5. дерево, которое по клику на заголовок скрывает-показывает детей (делегирование)</h3>
+    <h3>
+      2.5. дерево, которое по клику на заголовок скрывает-показывает детей
+      (делегирование)
+    </h3>
     <ul class="tree">
       <li>
         <span>Животные</span>
@@ -128,34 +151,36 @@
     <br />
     <hr />
     <!--кнопка для удаления блока текста через обработчик -->
-    2.5 Кнопка для удаления блока текста через один обработчик (делегирование всплытие):
+    2.5 Кнопка для удаления блока текста через один обработчик (делегирование
+    всплытие):
 
     <div class="pane-wrapper">
       <div class="pane">
         <button class="remove-button">[x]</button>
         <h3>Лошадь</h3>
         <p>
-          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный
-          сохранившийся подвид дикой лошади, вымершей в дикой природе, за исключением небольшой
-          популяции лошади Пржевальского.
+          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и
+          единственный сохранившийся подвид дикой лошади, вымершей в дикой
+          природе, за исключением небольшой популяции лошади Пржевальского.
         </p>
       </div>
       <div class="pane">
         <button class="remove-button">[x]</button>
         <h3>Осёл</h3>
         <p>
-          Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную историческую
-          роль в развитии хозяйства и культуры человека. Все одомашненные ослы относятся к
-          африканским ослам.
+          Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший
+          важную историческую роль в развитии хозяйства и культуры человека. Все
+          одомашненные ослы относятся к африканским ослам.
         </p>
       </div>
       <div class="pane">
         <button class="remove-button">[x]</button>
         <h3>Корова, а также пара слов о диком быке, о волах и о тёлках.</h3>
         <p>
-          Коро́ва — самка домашнего быка, одомашненного подвида дикого быка, парнокопытного жвачного
-          животного семейства полорогих. Самцы вида называются быками, молодняк — телятами,
-          кастрированные самцы — волами. Молодых (до первой стельности) самок называют тёлками.
+          Коро́ва — самка домашнего быка, одомашненного подвида дикого быка,
+          парнокопытного жвачного животного семейства полорогих. Самцы вида
+          называются быками, молодняк — телятами, кастрированные самцы — волами.
+          Молодых (до первой стельности) самок называют тёлками.
         </p>
       </div>
     </div>
@@ -165,13 +190,15 @@
       <p>ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя ЛяЛяЛя</p>
 
       <div class="container-button">
-        <button data-tooltip="подсказка длиннее, чем элемент">Короткая кнопка</button>
+        <button data-tooltip="подсказка длиннее, чем элемент">
+          Короткая кнопка
+        </button>
 
         <button data-tooltip="HTML<br>подсказка">Ещё кнопка</button>
       </div>
       <p>
-        Прокрутите страницу, чтобы ссылки были вверху и проверьте, правильно ли показываются
-        подсказки.
+        Прокрутите страницу, чтобы ссылки были вверху и проверьте, правильно ли
+        показываются подсказки.
       </p>
     </div>
     <input type="text" class="coord" />
@@ -181,41 +208,116 @@
     <fieldset id="contents">
       <legend>#contents</legend>
       <p>
-        Как насчет почитать <a href="http://wikipedia.org">Википедию</a>, или посетить
-        <a href="http://w3.org"><i>W3.org</i></a> и узнать про современные стандарты?
+        Как насчет почитать <a href="http://wikipedia.org">Википедию</a>, или
+        посетить <a href="http://w3.org"><i>W3.org</i></a> и узнать про
+        современные стандарты?
       </p>
     </fieldset>
+
+    <!--2.7.2. Галерея изображений -->
+
+    <p>
+      <img
+        id="largeImg"
+        src="https://js.cx/gallery/img1-lg.jpg"
+        alt="Large image"
+      />
+    </p>
+
+    <div id="thumbs">
+      <!-- При наведении на изображение показывается встроенная подсказка браузера (title) -->
+      <a href="https://js.cx/gallery/img2-lg.jpg" title="Image 2"
+        ><img src="https://js.cx/gallery/img2-thumb.jpg"
+      /></a>
+      <a href="https://js.cx/gallery/img3-lg.jpg" title="Image 3"
+        ><img src="https://js.cx/gallery/img3-thumb.jpg"
+      /></a>
+      <a href="https://js.cx/gallery/img4-lg.jpg" title="Image 4"
+        ><img src="https://js.cx/gallery/img4-thumb.jpg"
+      /></a>
+      <a href="https://js.cx/gallery/img5-lg.jpg" title="Image 5"
+        ><img src="https://js.cx/gallery/img5-thumb.jpg"
+      /></a>
+      <a href="https://js.cx/gallery/img6-lg.jpg" title="Image 6"
+        ><img src="https://js.cx/gallery/img6-thumb.jpg"
+      /></a>
+    </div>
   </body>
 
   <script>
-    /*
-    2.7.1
-    при клике на ссылки внутри элемента #contents пользователю выводился вопрос о том, действительно ли он хочет покинуть страницу и если он не хочет, то прерывать переход по ссылке.
-    */
-    var linkContainer = document.getElementById('contents');
+    /*2.7.2. Галерея изображений*/
+    var largeImg = document.getElementById("largeImg");
+    var thumbs = document.getElementById("thumbs");
 
-    getParent = e => {
-      if (e.target.tagName != 'A') return;
-      console.dir(e.target.href);
+    getImg = e => {
+      target = e.target;
+      while (target != thumbs) {
+        if (target.nodeName == "A") {
+          console.log(target.href);
+          e.preventDefault();
+          largeImg.src = target.href;
+          largeImg.alt = target.title;
+        }
+        target = target.parentNode;
+      }
     };
 
-    linkContainer.addEventListener('mouseover', getParent);
+    thumbs.addEventListener("click", getImg);
+
+    /*
+    2.7.1
+    при клике на ссылки внутри элемента #contents пользователю выводился вопрос о том,
+    действительно ли он хочет покинуть страницу и если он не хочет,
+    то прерывать переход по ссылке.
+    */
+    var linkContainer = document.getElementById("contents");
+
+    catchLink = e => {
+      let target = e.target;
+      console.log(target);
+      while (target != linkContainer) {
+        if (target.nodeName == "A") {
+          var answer = confirm("Are you want to leave page");
+          if (!answer) e.preventDefault();
+        }
+        target = target.parentNode;
+        console.log(target);
+      }
+    };
+
+    oncl = function(evt) {
+      var target = evt.target;
+
+      while (target != linkContainer) {
+        if (target.nodeName == "A") {
+          var isLeaving = confirm(
+            "Уйти на " + target.getAttribute("href") + "?"
+          );
+          if (!isLeaving) evt.preventDefault();
+        }
+        target = target.parentNode;
+        console.log(target);
+      }
+    };
+
+    linkContainer.addEventListener("click", catchLink);
+
     //координаты курсора
-    var coord = document.querySelector('.coord');
+    var coord = document.querySelector(".coord");
 
     showCoord = e => {
       console.log(e);
     };
-    coord.addEventListener('mouseover', showCoord);
+    coord.addEventListener("mouseover", showCoord);
     //2.6  Приём проектирования "поведение" - всплывающая подсказка
-    var cont = document.querySelector('.container-behavior');
+    var cont = document.querySelector(".container-behavior");
     console.log(cont);
     onMouse = e => {
-      var data = e.target.getAttribute('data-tooltip');
+      var data = e.target.getAttribute("data-tooltip");
       if (!data) return;
 
-      var newhint = document.createElement('div');
-      newhint.classList.add('hint');
+      var newhint = document.createElement("div");
+      newhint.classList.add("hint");
       newhint.innerHTML = data;
       e.target.after(newhint);
       console.dir(data);
@@ -223,44 +325,45 @@
       var coordsButton = e.target.getBoundingClientRect();
       console.dir(coordsButton);
 
-      var left = coordsButton.left + (e.target.offsetWidth - newhint.offsetWidth) / 2;
+      var left =
+        coordsButton.left + (e.target.offsetWidth - newhint.offsetWidth) / 2;
       if (left < 0) left = 0;
       var top = coordsButton.height + newhint.offsetHeight;
       if (top < 0) top = 0;
 
       // console.dir(left);
-      newhint.style.left = left + 'px';
-      newhint.style.top = -top + 'px';
+      newhint.style.left = left + "px";
+      newhint.style.top = -top + "px";
     };
-    cont.addEventListener('mouseover', onMouse);
+    cont.addEventListener("mouseover", onMouse);
 
     cont.onmouseout = function(e) {
-      var hint = document.querySelector('.hint');
+      var hint = document.querySelector(".hint");
       if (!hint) return;
       hint.remove();
     };
     //всплытие
-    var f = document.querySelector('form');
+    var f = document.querySelector("form");
 
     f.onclick = e => {
       console.log(e);
-      alert(e.currentTarget.tagName + ' ' + e.target.tagName);
+      alert(e.currentTarget.tagName + " " + e.target.tagName);
     };
 
-    color = e => (e.target.style.backgroundColor = 'grey');
+    color = e => (e.target.style.backgroundColor = "grey");
 
-    f.addEventListener('click', color);
+    f.addEventListener("click", color);
 
     // делегирование демонстрация
     function Menu(elem) {
       this.save = function() {
-        alert('сохраняю');
+        alert("сохраняю");
       };
       this.load = function() {
-        alert('загружаю');
+        alert("загружаю");
       };
       this.search = function() {
-        alert('ищу');
+        alert("ищу");
       };
 
       var self = this;
@@ -268,7 +371,7 @@
       elem.onclick = function(e) {
         console.log(e.target);
         var target = e.target;
-        var action = target.getAttribute('data-action');
+        var action = target.getAttribute("data-action");
         console.log(action);
         if (action) {
           self[action]();
@@ -277,7 +380,7 @@
     }
     Menu(menu);
     // делегирования задача с кнопкой
-    const divpane = document.querySelector('.pane-wrapper');
+    const divpane = document.querySelector(".pane-wrapper");
 
     divpane.onclick = function(event) {
       // if (event.target.getAttribute('class') === 'remove-button') {
@@ -285,28 +388,28 @@
       // }
 
       // Альтернативное решение:
-      if (!event.target.classList.contains('remove-button')) return;
+      if (!event.target.classList.contains("remove-button")) return;
       event.target.parentNode.hidden = true;
     };
 
     //дерево, которое по клику на заголовок скрывает-показывает детей
-    var tree = document.querySelector('.tree');
+    var tree = document.querySelector(".tree");
 
     tree.onmouseover = function(e) {
-      if (e.target.tagName === 'SPAN') {
-        e.target.style.fontWeight = 'bold';
+      if (e.target.tagName === "SPAN") {
+        e.target.style.fontWeight = "bold";
       }
     };
     tree.onmouseout = function(e) {
-      if (e.target.tagName === 'SPAN') {
-        e.target.style.fontWeight = '';
+      if (e.target.tagName === "SPAN") {
+        e.target.style.fontWeight = "";
       }
     };
     tree.onclick = function(e) {
       var list = e.target.parentNode.children;
       if (list.length) {
         for (let items of list) {
-          if (items.tagName === 'UL') items.classList.toggle('hidden');
+          if (items.tagName === "UL") items.classList.toggle("hidden");
         }
       }
     };

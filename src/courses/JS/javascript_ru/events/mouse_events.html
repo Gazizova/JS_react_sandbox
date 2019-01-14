@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mouse Events</title>
+    <style>
+      .list-select-with-buttons li:hover {
+        cursor: pointer;
+      }
+      .selected-item {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <!--3.1 Mouse Клик на элементе выделяет только его.-->
+    Клик на элементе выделяет только его. <br />
+    Ctrl(Cmd)+Клик добавляет/убирает элемент из выделенных. <br />
+    Shift+Клик добавляет промежуток от последнего кликнутого к выделению. <br />
+
+    <ul class="list-select-with-buttons">
+      <li>Кристофер Робин</li>
+      <li>Винни-Пух</li>
+      <li>Ослик Иа</li>
+      <li>Мудрая Сова</li>
+      <li>Кролик. Просто кролик.</li>
+    </ul>
+  </body>
+  <script>
+    // 3.1 Клик на элементе выделяет только его.
+    var list = document.querySelector(".list-select-with-buttons");
+
+    selectElement = e => {
+      target = e.target;
+      target.classList.add("selected-item");
+      if (e.ctrlKey) {
+        target.classList.toggle("selected-item");
+      }
+      if (e.shiftKey) {
+      }
+    };
+
+    unSelectElement = e => {
+      e.target.style.backgroundColor = "";
+    };
+
+    list.addEventListener("click", selectElement);
+    list.addEventListener("ctrlKey", unSelectElement);
+  </script>
+</html>
