@@ -9,15 +9,17 @@ function update(bgColor, textColor, font) {
 }
 
 select.onchange = function() {
-  ( select.value === 'black' ) ? update('black','white', 'Impact,Charcoal,sans-serif') : update('white','black', 'Monospace');
-}
+  select.value === 'black'
+    ? update('black', 'white', 'Impact,Charcoal,sans-serif')
+    : update('white', 'black', 'Monospace');
+};
 
-const s = "hello world"; // Значение строкового типа
-const S = new String("Hello World"); // Объект String
+const s = 'hello world'; // Значение строкового типа
+const S = new String('Hello World'); // Объект String
 // eval(s.toLowerCase());
-for(let i = 0; i<5; i ++){
-    testvar = 0;
-    console.log(testvar);
+for (let i = 0; i < 5; i++) {
+  var testvar = 0;
+  console.log(testvar);
 }
 
-document.write(testvar)
+document.write(testvar);
