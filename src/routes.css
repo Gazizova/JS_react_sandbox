@@ -1,0 +1,47 @@
+.sub-menu-header::after {
+  content: '  ▶';
+  font-size: 12px;
+}
+
+.open::after {
+  content: '  ▼';
+  font-size: 12px;
+}
+
+.menu,
+#home > ul {
+  list-style: none;
+  margin: 0px;
+}
+ul {
+  padding-inline-start: 0px;
+}
+.menu li a {
+  text-decoration: none;
+  cursor: default;
+}
+.menu li {
+  padding: 5px 5px 5px 25px;
+  border-bottom: 1px solid lightblue;
+  min-width: 50px;
+  margin-top: 1px;
+  background-color: aliceblue;
+  text-align: left;
+  position: relative;
+}
+.menu .multilevel li:first-child {
+  margin-top: 10px;
+}
+.menu .sub-menu li {
+  border-bottom: 0px;
+  padding-left: 50px;
+}
+.main-block {
+  display: flex;
+}
+.main-block .menu {
+  width: 20%;
+}
+.hidden {
+  display: none;
+}

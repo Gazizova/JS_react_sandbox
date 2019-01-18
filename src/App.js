@@ -18,8 +18,6 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <button onClick={() => window.open('https://github.com/Gazizova', 'Github')}>Button</button>
-
         <Route />
       </div>
     );
