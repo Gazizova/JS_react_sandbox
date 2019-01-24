@@ -139,46 +139,7 @@ class Swapi extends React.Component {
     );
   }
 }
-class GetFbData extends React.Component {
-  state = {
-    planets: {},
-    loading: true,
-    error: false
-  };
 
-  componentDidMount() {
-    this.fetchPlanet();
-  }
-
-  fetchPlanet = () => {
-    axios
-      .get("http://placekitten.com/200/300")
-      .then(response => {
-        console.log(response);
-        // this.setState({ planets: response.data.results, loading: false });
-      })
-      .catch(() => this.setState({ error: true, loading: false }));
-  };
-
-  render() {
-    //   if (this.state.loading) {
-    //     return "loading";
-    //   }
-
-    //   if (this.state.error) {
-    //     return "error";
-    //   }
-    //   let items = this.state.planets;
-    //   console.log(items);
-    return (
-      <div>
-        {/* //       {items.map(item => ( */}
-        {/* //         <h4 key={item.diameter}>{item.name}</h4> */}
-        {/* //       ))} */}
-      </div>
-    );
-  }
-}
 export default class FinalProductTable extends React.Component {
   constructor(props) {
     super(props);
@@ -223,7 +184,6 @@ export default class FinalProductTable extends React.Component {
           inStockOnly={this.state.inStockOnly}
         />
         <Swapi />
-        <GetFbData />
         <input
           type="text"
           // ref={this.textInput}

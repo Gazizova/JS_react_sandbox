@@ -1,30 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { HomeAlt } from './pages/home';
-import { SliderPage } from './pages/slider-page';
-import Game from './pages/game';
-import Form from './pages/form';
-import FinalProductTable from './pages/price';
-import BackTo from './components/back_to';
-import ReactBeginnersGuide from './pages/beginners-guide';
-import Routing from './pages/routing';
-import Api from './pages/api';
-import Startlearningreact from './pages/startLearningReact';
-import TestHook from './pages/react-app-with-react-hook';
-import './routes.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HomeAlt } from "./pages/home";
+import { SliderPage } from "./pages/slider-page";
+import Game from "./pages/game";
+import Form from "./pages/form";
+import FinalProductTable from "./pages/price";
+import BackTo from "./components/back_to";
+import { TestSwapiHooks } from "./pages/api-swapi";
+import Api from "./pages/api";
+import ReactBeginnersGuide from "./pages/beginners-guide";
+import Routing from "./pages/routing";
+
+import Startlearningreact from "./pages/startLearningReact";
+import TestHook from "./pages/react-app-with-react-hook";
+import "./routes.css";
 
 class RouteElements extends React.Component {
-  menu = document.querySelector('.menu');
+  menu = document.querySelector(".menu");
 
   boldFont = e => {
-    if (e.target.tagName === 'A') {
-      e.target.style.fontWeight = 'bold';
+    if (e.target.tagName === "A") {
+      e.target.style.fontWeight = "bold";
     }
   };
 
   lightFont = function(e) {
-    if (e.target.tagName === 'A') {
-      e.target.style.fontWeight = '';
+    if (e.target.tagName === "A") {
+      e.target.style.fontWeight = "";
     }
   };
 
@@ -32,9 +34,9 @@ class RouteElements extends React.Component {
     var list = e.target.parentNode.children;
     if (list.length) {
       for (let items of list) {
-        if (items.tagName === 'UL') {
-          items.classList.toggle('hidden');
-          items.parentNode.firstElementChild.classList.toggle('open');
+        if (items.tagName === "UL") {
+          items.classList.toggle("hidden");
+          items.parentNode.firstElementChild.classList.toggle("open");
         }
       }
     }
@@ -76,10 +78,14 @@ class RouteElements extends React.Component {
                     <Link to="/courses/beginners-guide">beginners guide</Link>
                   </li>
                   <li>
-                    <Link to="/courses/start-learn-react">start-learn-react</Link>
+                    <Link to="/courses/start-learn-react">
+                      start-learn-react
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/courses/react-app-with-react-hook">test-react-hook</Link>
+                    <Link to="/courses/react-app-with-react-hook">
+                      test-react-hook
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -87,7 +93,17 @@ class RouteElements extends React.Component {
                 <Link to="/routing">Routing</Link>
               </li>
               <li>
-                <Link to="/api">Api</Link>
+                <a href="#" className="sub-menu-header">
+                  API
+                </a>
+                <ul className="sub-menu hidden">
+                  <li>
+                    <Link to="/api-map">Api France addresses</Link>
+                  </li>
+                  <li>
+                    <Link to="/api-swapi">Api Star Wars</Link>
+                  </li>
+                </ul>
               </li>
             </ul>
             <div className="component">
@@ -96,11 +112,21 @@ class RouteElements extends React.Component {
               <Route path="/game" component={Game} />
               <Route path="/form" component={Form} />
               <Route path="/price" component={FinalProductTable} />
-              <Route path="/courses/beginners-guide" component={ReactBeginnersGuide} />
-              <Route path="/courses/start-learn-react" component={Startlearningreact} />
-              <Route path="/courses/react-app-with-react-hook" component={TestHook} />
+              <Route
+                path="/courses/beginners-guide"
+                component={ReactBeginnersGuide}
+              />
+              <Route
+                path="/courses/start-learn-react"
+                component={Startlearningreact}
+              />
+              <Route
+                path="/courses/react-app-with-react-hook"
+                component={TestHook}
+              />
               <Route path="/routing" component={Routing} />
-              <Route path="/api" component={Api} />
+              <Route path="/api-map" component={Api} />
+              <Route path="/api-swapi" component={TestSwapiHooks} />
             </div>
           </div>
         </div>
