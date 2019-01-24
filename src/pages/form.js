@@ -1,9 +1,8 @@
-import React from "react";
-import TextareaAutosize from "react-autosize-textarea";
+import React from 'react';
 
 const scaleNames = {
-  c: "Celsius",
-  f: "Fahrenheit"
+  c: 'Celsius',
+  f: 'Fahrenheit'
 };
 
 class TemperatureInput extends React.Component {
@@ -34,9 +33,9 @@ export default class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
-      temperature: "",
-      scale: "c"
+      value: '',
+      temperature: '',
+      scale: 'c'
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
@@ -48,17 +47,17 @@ export default class Form extends React.Component {
     this.setState({ value: event.target.value });
   }
   handleCelsiusChange(temperature) {
-    this.setState({ temperature: temperature, scale: "c" });
+    this.setState({ temperature: temperature, scale: 'c' });
   }
   handleFahrenheitChange(temperature) {
-    this.setState({ temperature, scale: "f" });
+    this.setState({ temperature, scale: 'f' });
   }
   onSubmit(e) {
     e.preventDefault();
     if (!this.state.value) {
-      alert("Please, input something");
+      alert('Please, input something');
     } else {
-      alert("You input: " + this.state.value.toUpperCase());
+      alert('You input: ' + this.state.value.toUpperCase());
     }
   }
 
@@ -81,7 +80,7 @@ export default class Form extends React.Component {
   tryConvert(temperature, convert) {
     const input = parseFloat(temperature);
     if (Number.isNaN(input)) {
-      return "";
+      return '';
     }
     const output = convert(input);
     const rounded = Math.round(output * 1000) / 1000;
@@ -91,25 +90,14 @@ export default class Form extends React.Component {
   render() {
     const temperature = this.state.temperature;
     const scale = this.state.scale;
-    const celsius =
-      scale === "f"
-        ? this.tryConvert(temperature, this.toCelsius)
-        : temperature;
-    const farengeit =
-      scale === "c"
-        ? this.tryConvert(temperature, this.toFahrenheit)
-        : temperature;
+    const celsius = scale === 'f' ? this.tryConvert(temperature, this.toCelsius) : temperature;
+    const farengeit = scale === 'c' ? this.tryConvert(temperature, this.toFahrenheit) : temperature;
     return (
       <div>
         <form onSubmit={this.onSubmit}>
           <div className="form-block">
             <label htmlFor="name">Input any text: </label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
+            <input type="text" name="name" value={this.state.value} onChange={this.handleChange} />
             {/* <label htmlFor="name">Input any text: </label> */}
             {/* <div class="fake-textarea" contenteditable='true'
               // name="textarea"

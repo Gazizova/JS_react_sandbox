@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useLogger } from 'react-use';
 
-export default function React_conference_hook() {
+export default function ReactConferenceHook() {
   const [name, setName] = useState('Mary');
   const [surname, setSurname] = useState('Poppins');
   const width = useWindowWidth();
@@ -13,12 +14,27 @@ export default function React_conference_hook() {
     setSurname(e.target.value);
   }
 
+  const Demo = (...props) => {
+    useLogger('Demo', props);
+    return null;
+  };
+
   useEffect(() => {
     document.title = name + '' + surname;
+    console.time('1');
+    console.group('Group for logs');
+    console.log('log');
+    console.info('info');
+    console.warn('warn');
+    console.error('error');
+    console.groupEnd();
+    console.timeEnd('1');
   });
 
+  Demo(name, surname);
+
   return (
-    <div className="container">
+    <div className="lesson">
       <div>
         <label htmlFor="name">Name</label>
         <input id="name" value={name} onChange={setUserName} />

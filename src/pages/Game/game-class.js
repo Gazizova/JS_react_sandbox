@@ -1,6 +1,6 @@
 import React from 'react';
-import Board from '../components/game/board';
-import { Clock } from '../components/clock/clock';
+import Board from '../../components/game/board';
+import { Clock } from '../../components/clock/clock';
 
 class Game extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Game extends React.Component {
   }
 
   handleClick(i) {
-    const history = this.state.history;
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
 
@@ -37,8 +37,8 @@ class Game extends React.Component {
     });
   }
 
-  determineWinner = squares => {
-    squares = this.props;
+  determineWinner = () => {
+    const squares = this.state.history;
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -51,6 +51,7 @@ class Game extends React.Component {
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
+      console.log(squares[a]);
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
         return squares[a];
       }
@@ -77,7 +78,9 @@ class Game extends React.Component {
   };
 
   render() {
-    const winner = this.determineWinner(this.props.squares);
+    const winner = this.determineWinner();
+    console.log(this.props);
+
     const current = this.state.history[this.state.stepNumber];
 
     let status;

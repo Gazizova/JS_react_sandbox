@@ -1,8 +1,8 @@
-import React, { useState, Suspense, useEffect } from "react";
-import axios from "axios";
-import "./slider.css";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './slider.css';
 
-const url = "https://swapi.co/api/planets";
+const url = 'https://swapi.co/api/planets';
 
 export function TestSwapiHooks() {
   return (
@@ -31,6 +31,10 @@ export function SwapiHooks() {
   useEffect(() => {
     handlePlanets();
   }, []);
+
+  if (error) {
+    return 'error';
+  }
 
   return (
     <div className="lesson">
@@ -64,11 +68,11 @@ export class Swapi extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return "loading";
+      return 'loading';
     }
 
     if (this.state.error) {
-      return "error";
+      return 'error';
     }
     let items = this.state.planets;
     return (

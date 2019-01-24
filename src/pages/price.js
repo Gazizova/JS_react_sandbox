@@ -1,6 +1,5 @@
-import React from "react";
-import data from "../data/price.json";
-import axios from "axios";
+import React from 'react';
+import data from '../data/price.json';
 
 class ProductCategoryRow extends React.Component {
   render() {
@@ -44,7 +43,7 @@ class ProductTable extends React.Component {
           key={i.name}
           name={i.name}
           price={i.price}
-          style={i.stocked ? {} : { color: "red" }}
+          style={i.stocked ? {} : { color: 'red' }}
         />
       );
     });
@@ -93,49 +92,10 @@ class SearchBar extends React.Component {
             type="checkbox"
             checked={this.props.inStockOnly}
             onChange={this.handleinStockChange}
-          />{" "}
+          />{' '}
           Only show products in stock
         </p>
       </form>
-    );
-  }
-}
-class Swapi extends React.Component {
-  state = {
-    planets: {},
-    loading: true,
-    error: false
-  };
-
-  componentDidMount() {
-    this.fetchPlanet();
-  }
-
-  fetchPlanet = () => {
-    axios
-      .get("https://swapi.co/api/planets")
-      .then(response => {
-        this.setState({ planets: response.data.results, loading: false });
-      })
-      .catch(() => this.setState({ error: true, loading: false }));
-  };
-
-  render() {
-    if (this.state.loading) {
-      return "loading";
-    }
-
-    if (this.state.error) {
-      return "error";
-    }
-    let items = this.state.planets;
-    console.log(items);
-    return (
-      <div>
-        {items.map(item => (
-          <h4 key={item.diameter}>{item.name}</h4>
-        ))}
-      </div>
     );
   }
 }
@@ -144,7 +104,7 @@ export default class FinalProductTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filterText: "",
+      filterText: '',
       inStockOnly: false
     };
     this.handleChange = this.handleChange.bind(this);
@@ -183,7 +143,6 @@ export default class FinalProductTable extends React.Component {
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />
-        <Swapi />
         <input
           type="text"
           // ref={this.textInput}
