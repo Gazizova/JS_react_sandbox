@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.component-user-row{
+  border-bottom: 1px solid #ccc;
+  padding: 2px;
+  height: 50px;
+  /*position: relative;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*cursor: pointer;*/
+  text-align: left;
+
+}
+
+.component-user-row:hover{
+  background-color: #eee;
+}
+
+.component-user-row .user-name   {
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+}
+.component-user-row .user-age  {
+  float: right;
+  position: relative;
+  top: 25px;
+  right: 10px;
+}
+
+.component-user-row img {
+  width: 40px;
+  height: 40px;
+  padding-right: 15px;
+  padding-top: 5px;
+
+}
+
+.button-block{
+  float: right;
+  padding-top: 20px;
+  position: relative;
+}
+
+.component-search-input{
+  float: left;
+  position: relative;
+  padding-top:20px;
+}
+
+.component-users-results{
+  position: relative;
+  clear: both;
+  padding-top: 20px;
+
+}
+
+label{
+  position: relative;
+  color: darkgrey;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+
+input{
+  background-color: #eeeeee;
+  box-shadow: darkgrey;
+  height: 25px;
+}
+button{
+  position: relative;
+  display: inline-block;
+  width: 8em;
+  font-size: 80%;
+  color: rgba(255,255,255,.9);
+  text-shadow: #2e7ebd 0 1px 2px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.1;
+  white-space: pre-line;
+  padding: .7em 0;
+  border: 1px solid;
+  border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+  border-radius: 6px;
+  outline: none;
+  background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+  box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+}
+
+

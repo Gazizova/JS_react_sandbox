@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './toDo.css';
 import { TodoForm, TodoList, Footer } from './component/todo';
 import { addTodo, generalId, findById, toggleTodo, updateTodo, removeTodo } from './lib/todoHelper';
 import { pipe, partial } from './lib/utils';

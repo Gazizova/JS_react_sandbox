@@ -1,0 +1,24 @@
+.Todo-App {
+  padding-top: 20px;
+  display: inline-block;
+  text-align: left;
+}
+input {
+  font-size: 20px;
+}
+ul {
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+}
+.delete-item a {
+  visibility: visible;
+}
+.Footer a {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.Footer a.active {
+  font-weight: bold;
+}

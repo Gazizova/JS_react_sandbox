@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './square.css';
-// import useLogger from 'react-use';
-// import Axios from 'axios';
+import debounce from 'lodash.debounce';
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -10,25 +9,84 @@ function sleep(ms) {
 const API = {
   async reportErrors(errors) {
     await sleep(1000);
-    alert('LOGS ARE ON SERVER');
+    alert('LOGS ARE ON SERVER ' + errors.join(', '));
   }
 };
 
-function useLogger(type) {
-  let errorLogs = [];
+// function debounce(f, ms) {
+//   let timer = null;
 
-  function warn(info) {
-    return console.warn(info);
+//   return function(...args) {
+//     const onComplete = () => {
+//       f.apply(this, args);
+//       timer = null;
+//     };
+
+//     if (timer) {
+//       clearTimeout(timer);
+//     }
+
+//     timer = setTimeout(onComplete, ms);
+//   };
+// }
+
+function throttle(func, ms) {
+  var isThrottled = false,
+    savedArgs,
+    savedThis;
+
+  function wrapper() {
+    if (isThrottled) {
+      // (2)
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
+
+    func.apply(this, arguments); // (1)
+
+    isThrottled = true;
+
+    setTimeout(function() {
+      isThrottled = false; // (3)
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = savedThis = null;
+      }
+    }, ms);
   }
 
-  function error(err) {
-    console.error(info);
+  return wrapper;
+}
 
-    errorLogs.push(err);
-    setTimeout(async () => {
-      await API.reportErrors(errorLogs);
-      errorLogs = [];
-    }, 1000);
+let errorLogs = [];
+let warnLogs = [];
+
+async function callApi() {
+  await API.reportErrors(errorLogs);
+  alert('Sent: ', errorLogs.join(', '));
+  errorLogs = [];
+}
+
+const throttledCallApi = debounce(callApi, 2000);
+
+function useLogger(info) {
+  function warn(info) {
+    console.warn(info);
+    warnLogs.push(info);
+
+    console.log(warnLogs);
+  }
+
+  function error(info) {
+    console.error(info);
+    errorLogs.push(info);
+    throttledCallApi();
+    // throttle(
+    //   API.reportErrors(errorLogs);
+    // , 1000);
+
+    // console.log(errorLogs);
   }
 
   function info(info) {
@@ -38,20 +96,52 @@ function useLogger(type) {
   return [warn, error, info];
 }
 
+// why can't call?
+
+// function useErrorLogger(inf) {
+//   const [error, setErrorLog] = useState([]);
+
+//   function setupWarningLogs(inf) {
+//     console.error(inf);
+//     setErrorLog(error.concat(inf));
+//     setTimeout(async () => {
+//       await API.reportErrors(error);
+//       setErrorLog = [];
+//     }, 1000);
+
+//     console.log(error);
+//   }
+
+//   return error;
+// }
+
 export default function GameHooks(props) {
   const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
   const [xIsNext, setXIsNext] = useState(true);
   const [stepNumber, setStepNumber] = useState(0);
+  // const [warn, setWarnLog] = useState([]);
   const [warn, error, info] = useLogger('GameHooks');
 
+  // function setupWarningLogs(err) {
+  //   console.warn(err);
+  //   setWarnLog(warn.concat(err));
+  //   console.log(warn);
+  // }
+
+  // setupWarningLogs(2);
+
   function handleClick(i) {
+    // setTimeout(() => console.log(warn), 3000);
+
     const current = history[history.length - 1];
     const squares = current.squares.slice();
 
     if (squares[i]) {
       error('ERROR ' + squares[i]);
+      // setupWarningLogs('ERROR ' + squares[i]);
       return;
     }
+    // setupWarningLogs(squares[i]);
 
     squares[i] = xIsNext ? 'X' : 'O';
     setHistory(history.concat([{ squares: squares }]));
@@ -108,11 +198,12 @@ export default function GameHooks(props) {
   }
 
   const current = history[stepNumber];
+  let clickButton = handleClick;
 
   return (
     <div className="game">
       <div className="game-board">
-        <Board squares={current.squares} onClick={i => handleClick(i)} />
+        <Board squares={current.squares} onClick={i => clickButton(i)} />
       </div>
       <div className="game-info">
         <div>{status}</div>
