@@ -44,15 +44,15 @@ class ToDoApp extends Component {
     });
   };
   handleToggle = id => {
-    const getupdatedTodos = pipe(
-      findById,
-      toggleTodo,
-      partial(updateTodo, this.state.todos)
-    );
-    const updatedTodos = getupdatedTodos(id, this.state.todos);
-    // const todo = findById(id,  this.state.todos)
-    // const toggled = toggleTodo(todo)
-    // const updatedTodo = updateTodo(this.state.todos, toggled)
+    // const getupdatedTodos = pipe(
+    //   findById,
+    //   toggleTodo,
+    //   partial(updateTodo, this.state.todos)
+    // );
+    // const updatedTodos = getupdatedTodos(id, this.state.todos);
+    const todo = findById(id, this.state.todos);
+    const toggled = toggleTodo(todo);
+    const updatedTodos = updateTodo(this.state.todos, toggled);
     this.setState({ todos: updatedTodos });
   };
 
@@ -60,7 +60,7 @@ class ToDoApp extends Component {
     const submitHandler = this.state.currentTodo ? this.handleSubmit : this.handleEmptySubmit;
     return (
       <div className="Todo-App">
-        {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
+        {this.state.errorMessage && <div className="error">{this.state.errorMessage}</div>}
         <TodoForm
           handleInputChange={this.handleInputChange}
           currentTodo={this.state.currentTodo}
