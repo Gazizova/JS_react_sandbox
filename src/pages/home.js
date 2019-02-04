@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ToDoApp from '../courses/egghead/build_first_react_app/src/ToDoApp';
+import { ToDoAppIndex } from '../courses/egghead/build_first_react_app/src/index';
 export class HomeAlt extends Component {
   numbers = [1, 2, 3, 4, 5];
 
@@ -14,7 +14,7 @@ export class HomeAlt extends Component {
       <div id="home">
         <h2>This is the home page.</h2>
 
-        <ToDoApp />
+        <ToDoAppIndex />
         <button onClick={() => window.open('https://github.com/Gazizova', 'Github')}>Button</button>
         {/* <this.NumberList numbers={this.numbers}/> */}
       </div>
