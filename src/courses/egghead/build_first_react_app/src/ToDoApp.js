@@ -1,17 +1,25 @@
-import React, { Component } from 'react';
-import './toDo.css';
-import { TodoForm, TodoList, Footer } from './component/todo';
-import { addTodo, generalId, findById, toggleTodo, updateTodo, removeTodo } from './lib/todoHelper';
-import { pipe, partial } from './lib/utils';
+import React, { Component } from "react";
+import "./toDo.css";
+import { TodoForm, TodoList, Footer } from "./component/todo";
+import {
+  addTodo,
+  generalId,
+  findById,
+  toggleTodo,
+  updateTodo,
+  removeTodo,
+  filerTodos
+} from "./lib/todoHelper";
+import { pipe, partial } from "./lib/utils";
 
 class ToDoApp extends Component {
   state = {
     todos: [
-      { id: 1, name: 'Learn JSX', isComplete: true },
-      { id: 2, name: 'Build an Awesome App', isComplete: false },
-      { id: 3, name: 'Ship It', isComplete: false }
+      { id: 1, name: "Learn JSX", isComplete: true },
+      { id: 2, name: "Build an Awesome App", isComplete: false },
+      { id: 3, name: "Ship It", isComplete: false }
     ],
-    currentTodo: ''
+    currentTodo: ""
   };
 
   handleRemove = (id, evt) => {
@@ -29,18 +37,22 @@ class ToDoApp extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const newId = generalId();
-    const newTodo = { id: newId, name: this.state.currentTodo, isComplete: false };
+    const newTodo = {
+      id: newId,
+      name: this.state.currentTodo,
+      isComplete: false
+    };
     const updatedTodos = addTodo(this.state.todos, newTodo);
     this.setState({
       todos: updatedTodos,
-      currentTodo: '',
-      errorMessage: ''
+      currentTodo: "",
+      errorMessage: ""
     });
   };
   handleEmptySubmit = evt => {
     evt.preventDefault();
     this.setState({
-      errorMessage: 'Please supply the todo name'
+      errorMessage: "Please supply the todo name"
     });
   };
   handleToggle = id => {
@@ -57,10 +69,14 @@ class ToDoApp extends Component {
   };
 
   render() {
-    const submitHandler = this.state.currentTodo ? this.handleSubmit : this.handleEmptySubmit;
+    const submitHandler = this.state.currentTodo
+      ? this.handleSubmit
+      : this.handleEmptySubmit;
     return (
       <div className="Todo-App">
-        {this.state.errorMessage && <div className="error">{this.state.errorMessage}</div>}
+        {this.state.errorMessage && (
+          <div className="error">{this.state.errorMessage}</div>
+        )}
         <TodoForm
           handleInputChange={this.handleInputChange}
           currentTodo={this.state.currentTodo}

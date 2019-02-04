@@ -1,17 +1,27 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-export class Link extends Component{
-    static contextTypes = {
-        route: PropTypes.string, 
-        linkHandler: PropTypes.func
-    }
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-    handleClick = (evt) => {
-        evt.preventDefault()
-        window.history.pushState(null, '', this.props.to)
-    }
+export class Link extends Component {
+  static contextTypes = {
+    route: PropTypes.string,
+    linkHandler: PropTypes.func
+  };
 
-    render(){
-        return <a href="#" onClick={this.handleClick}>{this.props.children}</a>
-    }
+  handleClick = evt => {
+    evt.preventDefault();
+    this.context.linkHandler(this.props.to);
+  };
+
+  render() {
+    const activeClass = this.context.route === this.props.to ? "active" : "";
+    return (
+      <a href="#" className={activeClass} onClick={this.handleClick}>
+        {this.props.children}
+      </a>
+    );
+  }
 }
+
+Link.propTypes = {
+  to: PropTypes.string.isRequired
+};
