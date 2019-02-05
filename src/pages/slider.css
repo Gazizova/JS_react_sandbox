@@ -1,7 +1,8 @@
+/*
 .componentSlider {
   width: 80% !important;
   margin: auto;
-  /* color: brown; */
+
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -9,13 +10,13 @@
 .componentSlider .input-range {
   width: 80%;
   margin: 1px;
-  /* border: 1px solid black; */
+
   align-self: flex-start;
 }
 .componentSlider-message {
   width: 20%;
   align-self: flex-end;
-  /* border: 1px solid black; */
+
 }
 .inner-slider {
   display: flex;
@@ -31,7 +32,6 @@
 .componentSlider {
   width: 80% !important;
   margin: auto;
-  /* color: brown; */
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -39,14 +39,15 @@
 .componentSlider .input-range {
   width: 80%;
   margin: 1px;
-  /* border: 1px solid black; */
+
   align-self: flex-start;
 }
 .componentSlider-message {
   width: 20%;
   align-self: flex-end;
-  /* border: 1px solid black; */
+
 }
+*/
 .inner-slider {
   display: flex;
   flex-direction: row;
@@ -61,9 +62,6 @@
 .course-block {
   max-width: 80%;
   margin: auto;
-  /* display: flex;
-  flex-wrap: wrap; */
-
 }
 
 .course-block .lesson {
@@ -106,39 +104,39 @@
 ul {
   list-style: none;
 }
-.api-submit{
+.api-submit {
   width: 70px;
   height: 40px;
   padding: 0;
   border: 0;
   margin: 5px;
 }
-.component-api-conteiner{
+.component-api-conteiner {
   display: flex;
   /* justify-content: row; */
 }
-.address-table, 
-.map-container{
+.address-table,
+.map-container {
   /* border: 1px solid black; */
   margin: 10px;
 }
-.address-table{
-  width:50%
+.address-table {
+  width: 50%;
 }
-.map-container{
+.map-container {
   width: 50%;
   height: 500px;
   border: 2px solid rgb(173, 173, 173);
   padding: 10px;
 }
-.map-pointer{
+.map-pointer {
   color: rgb(5, 7, 114);
-  background: url("http://ruralshores.com/assets/marker-icon.png") no-repeat 50% 50%;
+  background: url('http://ruralshores.com/assets/marker-icon.png') no-repeat 50% 50%;
   width: 40px;
   height: 40px;
 }
-.sort-toggle-img{
-  max-width:100%;
+.sort-toggle-img {
+  max-width: 100%;
   width: 20px;
   display: inline-block;
   cursor: pointer;
@@ -148,7 +146,7 @@ ul {
   margin-right: 3px;
 }
 .table-address {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif;
   font-size: 18px;
   width: 100%;
   background: white;
