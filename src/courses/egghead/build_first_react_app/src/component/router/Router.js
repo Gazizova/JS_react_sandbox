@@ -1,12 +1,13 @@
-import React, { Component, createContext } from "react";
-import PropTypes from "prop-types";
+import React, { Component, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 export const ThemeContext = createContext();
 
 const getCurrentPath = () => {
   const path = document.location.pathname;
-  return path.substring(path.lastIndexOf("/"));
+  return path.substring(path.lastIndexOf('/'));
 };
+
 export class Router extends Component {
   state = {
     route: getCurrentPath()
@@ -14,7 +15,7 @@ export class Router extends Component {
 
   handleLinkClick = route => {
     this.setState({ route });
-    window.history.pushState(null, "", route);
+    window.history.pushState(null, '', route);
   };
 
   componentDidMount = () => {
@@ -25,9 +26,7 @@ export class Router extends Component {
 
   render() {
     return (
-      <ThemeContext.Provider
-        value={{ route: this.state.route, linkHandler: this.handleLinkClick }}
-      >
+      <ThemeContext.Provider value={{ route: this.state.route, linkHandler: this.handleLinkClick }}>
         <div>{this.props.children}</div>
       </ThemeContext.Provider>
     );
