@@ -8,8 +8,9 @@ import {
   toggleTodo,
   updateTodo,
   removeTodo,
-  filerTodos
+  filterTodos
 } from "./lib/todoHelper";
+import { ThemeContext } from "./component/router/Router";
 import { pipe, partial } from "./lib/utils";
 
 class ToDoApp extends Component {
@@ -68,10 +69,14 @@ class ToDoApp extends Component {
     this.setState({ todos: updatedTodos });
   };
 
+  static contextType = ThemeContext;
+
   render() {
     const submitHandler = this.state.currentTodo
       ? this.handleSubmit
       : this.handleEmptySubmit;
+
+    const displayTodos = filterTodos(this.state.todos, this.context.route);
     return (
       <div className="Todo-App">
         {this.state.errorMessage && (
@@ -85,7 +90,7 @@ class ToDoApp extends Component {
 
         <TodoList
           handleToggle={this.handleToggle}
-          todos={this.state.todos}
+          todos={displayTodos}
           handleRemove={this.handleRemove}
         />
         <Footer />

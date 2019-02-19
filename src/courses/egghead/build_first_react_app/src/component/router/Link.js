@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { ThemeContext } from "./Router";
 
 export class Link extends Component {
-  static contextTypes = {
-    route: PropTypes.string,
-    linkHandler: PropTypes.func
-  };
+  //   static contextTypes = {
+  //     route: PropTypes.string,
+  //     linkHandler: PropTypes.func
+  //   };
+  static contextType = ThemeContext;
 
   handleClick = evt => {
     evt.preventDefault();
