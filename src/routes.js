@@ -9,11 +9,12 @@ import FinalProductTable from './pages/price';
 import BackTo from './components/back_to';
 import { TestSwapiHooks } from './pages/api-swapi';
 import Api from './pages/api';
-import ReactBeginnersGuide from './pages/beginners-guide';
+import ReactBeginnersGuide from './pages/Courses/beginners-guide';
 import Routing from './pages/routing';
 
-import Startlearningreact from './pages/startLearningReact';
-import TestHook from './pages/react-app-with-react-hook';
+import Startlearningreact from './pages/Courses/start-learning-react';
+import TestHook from './pages/Courses/react-app-with-react-hook';
+import BuildFirstReactApp from './pages/Courses/build-first-react-app';
 import './routes.css';
 
 class RouteElements extends React.Component {
@@ -89,10 +90,13 @@ class RouteElements extends React.Component {
                     <Link to="/courses/beginners-guide">beginners guide</Link>
                   </li>
                   <li>
-                    <Link to="/courses/start-learn-react">start-learn-react</Link>
+                    <Link to="/courses/start-learn-react">start learn react</Link>
                   </li>
                   <li>
-                    <Link to="/courses/react-app-with-react-hook">test-react-hook</Link>
+                    <Link to="/courses/react-app-with-react-hook">test react hook</Link>
+                  </li>
+                  <li>
+                    <Link to="/courses/build-first-react-app">build first react app</Link>
                   </li>
                 </ul>
               </li>
@@ -123,6 +127,7 @@ class RouteElements extends React.Component {
               <Route path="/courses/beginners-guide" component={ReactBeginnersGuide} />
               <Route path="/courses/start-learn-react" component={Startlearningreact} />
               <Route path="/courses/react-app-with-react-hook" component={TestHook} />
+              <Route path="/courses/build-first-react-app" component={BuildFirstReactApp} />
               <Route path="/routing" component={Routing} />
               <Route path="/api-map" component={Api} />
               <Route path="/api-swapi" component={TestSwapiHooks} />
