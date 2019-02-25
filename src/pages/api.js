@@ -1,6 +1,6 @@
-import React from 'react';
-import axios from 'axios';
-import GoogleMapReact from 'google-map-react';
+import React from "react";
+import axios from "axios";
+import GoogleMapReact from "google-map-react";
 
 class StreetRow extends React.Component {
   render() {
@@ -43,15 +43,19 @@ class SearchBar extends React.Component {
 function getAddress(filteredText) {
   console.log(filteredText);
   let filteredTextUpdated;
-  if (filteredText.includes(' ')) {
-    filteredTextUpdated = filteredText.split(' ').join('+');
+  if (filteredText.includes(" ")) {
+    filteredTextUpdated = filteredText.split(" ").join("+");
     console.log(filteredTextUpdated);
   } else {
     filteredTextUpdated = filteredText;
   }
 
-  console.log(`https://api-adresse.data.gouv.fr/search/?q=${filteredTextUpdated}&limit=10`);
-  return axios.get(`https://api-adresse.data.gouv.fr/search/?q=${filteredTextUpdated}&limit=10`);
+  console.log(
+    `https://api-adresse.data.gouv.fr/search/?q=${filteredTextUpdated}&limit=10`
+  );
+  return axios.get(
+    `https://api-adresse.data.gouv.fr/search/?q=${filteredTextUpdated}&limit=10`
+  );
 }
 
 class BuildAddressTable extends React.Component {
@@ -93,9 +97,9 @@ class SimpleMap extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100%', width: '100%' }}>
+      <div style={{ height: "100%", width: "100%" }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyDRdx47eRI-WR5cqdT9hbtfE6V_z6QZJOc' }}
+          bootstrapURLKeys={{ key: "AIzaSyDRdx47eRI-WR5cqdT9hbtfE6V_z6QZJOc" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
@@ -109,7 +113,7 @@ export default class FinalProductTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filterText: ' ',
+      filterText: " ",
       loading: true,
       houses: [],
       error: false,
@@ -120,20 +124,20 @@ export default class FinalProductTable extends React.Component {
     this.textInputFocus = React.createRef();
   }
 
-  searchFailMessage = ' ';
+  searchFailMessage = " ";
 
   componentDidMount() {
     getAddress(this.state.filterText).then(response => {
-      console.log('Mounted' + response.data.features);
+      console.log("Mounted" + response.data.features);
       this.setState({ houses: response.data.features, loading: false });
     });
   }
   componentDidUpdate() {
-    console.log('Updated');
+    console.log("Updated");
     console.log(this.state.failSearch);
     this.state.failSearch === true
       ? (this.searchFailMessage = <div>Can't find address..</div>)
-      : (this.searchFailMessage = ' ');
+      : (this.searchFailMessage = " ");
   }
 
   handleChange(filterText) {
@@ -147,7 +151,11 @@ export default class FinalProductTable extends React.Component {
         console.log(response.data.features.length);
         console.log(typeof response.data.features);
         if (response.data.features.length > 0) {
-          this.setState({ houses: response.data.features, loading: false, failSearch: false });
+          this.setState({
+            houses: response.data.features,
+            loading: false,
+            failSearch: false
+          });
         } else {
           this.setState({ houses: [], failSearch: true });
         }
@@ -169,17 +177,17 @@ export default class FinalProductTable extends React.Component {
 
   compare = () => {
     const objs = [
-      { g: { first_nom: 'Lazslo' }, p: { last_nom: 'Jamf' } },
-      { g: { first_nom: 'Pig' }, p: { last_nom: 'Bodine' } }
+      { g: { first_nom: "Lazslo" }, p: { last_nom: "Jamf" } },
+      { g: { first_nom: "Pig" }, p: { last_nom: "Bodine" } }
     ];
 
     // let newArray = [];
     // newArray =array.slice();
-    console.log('Array123');
+    console.log("Array123");
 
     objs.sort = (a, b) => {
       debugger;
-      console.log('a');
+      console.log("a");
       console.log(a);
       console.log(b);
       // if (a.last_nom < b.last_nom)
@@ -195,11 +203,11 @@ export default class FinalProductTable extends React.Component {
     console.log(this.state.houses);
 
     if (this.state.loading) {
-      return 'loading';
+      return "loading";
     }
 
     if (this.state.error) {
-      return 'error';
+      return "error";
     }
 
     this.state.houses.forEach(i => {
@@ -225,7 +233,9 @@ export default class FinalProductTable extends React.Component {
     // console.log(coordinat);
     let addressesForMap = [];
     coordinat.forEach(i => {
-      addressesForMap.push(<AddressesForMap key={i.lat} lat={i.lat} lng={i.lng} text={i.label} />);
+      addressesForMap.push(
+        <AddressesForMap key={i.lat} lat={i.lat} lng={i.lng} text={i.label} />
+      );
     });
     console.log(addressesForMap);
 

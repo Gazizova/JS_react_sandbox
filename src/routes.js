@@ -1,34 +1,35 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { HomeAlt } from './pages/home';
-import { SliderPage } from './pages/slider-page';
-import Game from './pages/Game/game-class';
-import GameHooks from './pages/Game/game-hooks';
-import Form from './pages/form';
-import FinalProductTable from './pages/price';
-import BackTo from './components/back_to';
-import { TestSwapiHooks } from './pages/api-swapi';
-import Api from './pages/api';
-import ReactBeginnersGuide from './pages/Courses/beginners-guide';
-import Routing from './pages/routing';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HomeAlt } from "./pages/home";
+import { SliderPage } from "./pages/slider-page";
+import Game from "./pages/Game/game-class";
+import GameHooks from "./pages/Game/game-hooks";
+import Form from "./pages/form";
+import FinalProductTable from "./pages/price";
+import BackTo from "./components/back_to";
+import { TestSwapiHooks } from "./pages/api-swapi";
+import Api from "./pages/api";
+import Routing from "./pages/routing";
 
-import Startlearningreact from './pages/Courses/start-learning-react';
-import TestHook from './pages/Courses/react-app-with-react-hook';
-import BuildFirstReactApp from './pages/Courses/build-first-react-app';
-import './routes.css';
+import MobXCourse from "./pages/courses/manage-complex-state-in-react-apps-with-mobx";
+import ReactBeginnersGuide from "./pages/courses/beginners-guide";
+import Startlearningreact from "./pages/courses/start-learning-react";
+import TestHook from "./pages/courses/react-app-with-react-hook";
+import BuildFirstReactApp from "./pages/courses/build-first-react-app";
+import "./routes.css";
 
 class RouteElements extends React.Component {
-  menu = document.querySelector('.menu');
+  menu = document.querySelector(".menu");
 
   boldFont = e => {
-    if (e.target.tagName === 'A') {
-      e.target.style.fontWeight = 'bold';
+    if (e.target.tagName === "A") {
+      e.target.style.fontWeight = "bold";
     }
   };
 
   lightFont = function(e) {
-    if (e.target.tagName === 'A') {
-      e.target.style.fontWeight = '';
+    if (e.target.tagName === "A") {
+      e.target.style.fontWeight = "";
     }
   };
 
@@ -36,9 +37,9 @@ class RouteElements extends React.Component {
     var list = e.target.parentNode.children;
     if (list.length) {
       for (let items of list) {
-        if (items.tagName === 'UL') {
-          items.classList.toggle('hidden');
-          items.parentNode.firstElementChild.classList.toggle('open');
+        if (items.tagName === "UL") {
+          items.classList.toggle("hidden");
+          items.parentNode.firstElementChild.classList.toggle("open");
         }
       }
     }
@@ -90,13 +91,24 @@ class RouteElements extends React.Component {
                     <Link to="/courses/beginners-guide">beginners guide</Link>
                   </li>
                   <li>
-                    <Link to="/courses/start-learn-react">start learn react</Link>
+                    <Link to="/courses/start-learn-react">
+                      start learn react
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/courses/react-app-with-react-hook">test react hook</Link>
+                    <Link to="/courses/react-app-with-react-hook">
+                      test react hook
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/courses/build-first-react-app">build first react app</Link>
+                    <Link to="/courses/build-first-react-app">
+                      build first react app
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/courses/manage-complex-state-with-mobx">
+                      manage complex state with MobX
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -124,10 +136,26 @@ class RouteElements extends React.Component {
               <Route path="/game-hooks" component={GameHooks} />
               <Route path="/form" component={Form} />
               <Route path="/price" component={FinalProductTable} />
-              <Route path="/courses/beginners-guide" component={ReactBeginnersGuide} />
-              <Route path="/courses/start-learn-react" component={Startlearningreact} />
-              <Route path="/courses/react-app-with-react-hook" component={TestHook} />
-              <Route path="/courses/build-first-react-app" component={BuildFirstReactApp} />
+              <Route
+                path="/courses/beginners-guide"
+                component={ReactBeginnersGuide}
+              />
+              <Route
+                path="/courses/start-learn-react"
+                component={Startlearningreact}
+              />
+              <Route
+                path="/courses/react-app-with-react-hook"
+                component={TestHook}
+              />
+              <Route
+                path="/courses/build-first-react-app"
+                component={BuildFirstReactApp}
+              />
+              <Route
+                path="/courses/manage-complex-state-with-mobx"
+                component={MobXCourse}
+              />
               <Route path="/routing" component={Routing} />
               <Route path="/api-map" component={Api} />
               <Route path="/api-swapi" component={TestSwapiHooks} />
