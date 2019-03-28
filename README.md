@@ -1,3 +1,6 @@
+Run project: [yarn start]
+Run json server: json-server -p 3000 --watch /Users/alyonagazizova/Projects/myGit/JS_react_sandbox/src/courses/egghead/build_first_react_app/db.json
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
