@@ -16,6 +16,7 @@ import ReactBeginnersGuide from './pages/courses/beginners-guide';
 import Startlearningreact from './pages/courses/start-learning-react';
 import TestHook from './pages/courses/react-app-with-react-hook';
 import BuildFirstReactApp from './pages/courses/build-first-react-app';
+import ContextCourse from './pages/courses/react-context-for-state-management';
 import './routes.css';
 
 class RouteElements extends React.Component {
@@ -104,6 +105,11 @@ class RouteElements extends React.Component {
                       manage complex state with MobX
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/courses/react-context-for-state-management">
+                      React Context for State Management
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -135,6 +141,7 @@ class RouteElements extends React.Component {
               <Route path="/courses/react-app-with-react-hook" component={TestHook} />
               <Route path="/courses/build-first-react-app" component={BuildFirstReactApp} />
               <Route path="/courses/manage-complex-state-with-mobx" component={MobXCourse} />
+              <Route path="/courses/react-context-for-state-management" component={ContextCourse} />
               <Route path="/routing" component={Routing} />
               <Route path="/api-map" component={Api} />
               <Route path="/api-swapi" component={TestSwapiHooks} />

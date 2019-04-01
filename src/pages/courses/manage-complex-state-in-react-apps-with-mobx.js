@@ -16,6 +16,12 @@ export default function MobXCourse() {
     Amsterdam: new TempLesson4(),
     Rome: new TempLesson4()
   });
+  debugger;
+
+  let newT = new TempLesson4();
+  newT.setTemperatureAndUnit(10, 'F');
+
+  temps.set('Tel-Aviv', new TempLesson4()).set('Kiyv', newT);
 
   const temp = observable([]);
 
@@ -26,10 +32,9 @@ export default function MobXCourse() {
       <Temp />
       <TempLesson4 />
       <ArrayTemp temperature={temps} />
-      <Provider temperatures={temp}>
-        <App />
-      </Provider>
-      ,
+      {/* <Provider temperatures={temp}>
+          <App />
+        </Provider> */}
     </div>
   );
 }

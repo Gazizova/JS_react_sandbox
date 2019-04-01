@@ -40,17 +40,22 @@ export const TempLesson4 = observer(
       this.temperatureCelsius = parseInt(e.target.value);
     };
 
-    setTemperatureAndUnit = (degrees, unit) => {
-      this.setCelsius(degrees);
-      this.setUnit(unit);
+    setTemperatureAndUnit = (newDegrees, newUnit) => {
+      this.temperatureCelsius = parseInt(newDegrees);
+      this.unit = newUnit;
+    };
+
+    inc = () => {
+      this.temperatureCelsius = this.temperatureCelsius + 1;
     };
 
     render() {
       return (
         <div className="lesson">
           <div>
+            <div>{this.setTemperatureAndUnit(10, 'F')}</div>
             <label>
-              Temperature in Celsius
+              Temperature in Celsius ( Array)
               <input type="text" placeholder={this.temperatureCelsius} onInput={this.setCelsius} />
             </label>
           </div>
@@ -75,7 +80,8 @@ decorate(TempLesson4, {
   temperature: computed,
   setUnit: action,
   setCelsius: action,
-  setTemperatureAndUnit: action
+  setTemperatureAndUnit: action,
+  inc: action
 });
 
 // temps = observable.map({
@@ -84,16 +90,12 @@ decorate(TempLesson4, {
 // });
 
 export const ArrayTemp = observer(({ temperature }) => (
-  <div>
-    {/*
-        keys and values now return iterators, to return an array, use Array.from with the iterator
-        https://github.com/mobxjs/mobx/issues/1488
-      */
-    Array.from(temperature.keys(), city => (
-      <div key={city}>
+  <ul>
+    {Array.from(temperature.keys(), city => (
+      <li key={city}>
         {city}: {temperature.get(city).temperature}
-      </div>
+      </li>
     ))}
     <DevTools />
-  </div>
+  </ul>
 ));

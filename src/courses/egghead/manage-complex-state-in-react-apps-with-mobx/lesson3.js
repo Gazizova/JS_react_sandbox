@@ -42,7 +42,6 @@ export const Temp = observer(
       }
     }
     render() {
-      debugger;
       return (
         <div className="lesson">
           <div>
