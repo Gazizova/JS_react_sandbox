@@ -9,4 +9,90 @@
   <body>
     <input type="number" />
   </body>
+  <script>
+    let objectStore = {
+      extensions: [
+        {
+          type: 'strikersoft.ext.computed.jumpTo',
+          version: '0.1',
+          level: 'sections'
+        }
+      ]
+    };
+    let extension = {
+      extensions: [
+        {
+          type: 'strikersoft.ext.computed.jumpTo',
+          version: '0.4',
+          newItem: '() => ()',
+          script:
+            "() => {    if (thisQuestion.answers[0].selected) {        return {            destination: 'qwc.title'        };    } else if (thisQuestion.ans"
+        }
+      ]
+    };
+    let expected = {
+      extensions: [
+        {
+          type: 'strikersoft.ext.computed.jumpTo',
+          version: '0.4',
+          script111: '() => ()',
+          level: 'group'
+        }
+      ]
+    };
+    let array = [
+      {
+        type: 'strikersoft.ext.computed.jumpTo',
+        version: '0.4',
+        script111: '() => ()',
+        script:
+          "() => {    if (thisQuestion.answers[0].selected) {        return {            destination: 'qwc.title'        };    } else if (thisQuestion.answers[1].selected) {        return {            destination: 'ssq.slider',            caption: 'Custom caption:'        };    } else if (thisQuestion.answers[2].selected) {        return {            destination: 'fnq.slider',            value: 'Custom value'        };    } else {        return null;    }};"
+      },
+      { type: 'strikersoft.ext.computed.jumpTo', version: '0.3', level: 'group' }
+    ];
+
+    // array.reverse();
+    let obj = Object.assign(array[0], array[1]);
+    console.log('!!!', obj);
+
+    let b = extension.extensions[0];
+    let a = objectStore.extensions[0];
+    // console.log(a, b);
+    let arr = [];
+
+    function compare(a, b) {
+      console.log('a,b', a, b);
+      if (typeof a !== 'object') {
+        return;
+      }
+      arr.push(a, b);
+      let obj = Object.assign(a, b);
+      console.log('assigned', obj);
+      return obj;
+    }
+
+    // function compareExtensions(objectStore, extension) {
+    //   for (key in extension) {
+    //     debugger;
+    //     console.log(key);
+    //     if (extension.hasOwnProperty(key)) {
+    //       if (extension[key] !== objectStore[key]) {
+    //         console.log(extension[key]);
+    //         if (!objectStore[key]) {
+    //           console.log(objectStore);
+    //           objectStore.key = extension[key];
+    //         }
+    //         objectStore[key] = extension[key];
+    //         console.log(objectStore);
+    //         // return objectStore;
+    //       }
+    //     }
+    //   }
+    //   console.log(objectStore);
+    //   return objectStore;
+    // }
+
+    // compareExtensions(a, b);
+    compare(a, b);
+  </script>
 </html>

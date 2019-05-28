@@ -9,6 +9,55 @@
   <body>
     <!--scripts-->
     <script>
+      // 7.1 Типы данных: [[Class]], instanceof и утки
+      /*
+      Задача
+      Напишите функцию formatDate(date), которая возвращает дату в формате dd.mm.yy.
+      Ее первый аргумент должен содержать дату в одном из видов:
+      -Как объект Date.
+      -Как строку, например yyyy-mm-dd или другую в стандартном формате даты.
+      -Как число секунд с 01.01.1970.
+      -Как массив [гггг, мм, дд], месяц начинается с нуля
+      */
+
+      let newdate = new Date();
+      let newstring = 'Jun 8, 2005';
+      let newnumb = 987987987;
+      let newarr = [2019, 00, 01];
+
+      document.write(formatDate(newdate) + '<br>');
+      document.write(formatDate(newstring) + '<br>');
+      document.write(formatDate(newnumb) + '<br>');
+      document.write(formatDate(newarr) + '<br>');
+
+      function formatDate(date) {
+        // debugger;
+        let newdata;
+
+        function returnDateFormat(innerdate) {
+          let year = innerdate.getFullYear();
+          let blya = '' + year;
+          return innerdate.getDate() + '.' + innerdate.getMonth() + '.' + blya.slice(2);
+        }
+
+        if (date.getDate) {
+          newdata = returnDateFormat(date);
+        }
+        if (typeof date === 'string') {
+          dateparse = new Date(Date.parse(date));
+          newdata = returnDateFormat(dateparse);
+        }
+        if (typeof date === 'number') {
+          let num = new Date();
+          num.setMilliseconds(date);
+          newdata = returnDateFormat(num);
+        }
+        if (Array.isArray(date)) {
+          newdata = 'array';
+        }
+        return newdata;
+      }
+
       const a = 1 / 0;
       const b = 0 / 0;
       const c = 3;
@@ -80,8 +129,8 @@
       }
 
       let p = debounce(alertFunc, 1000);
-      p(132);
-      p(333);
+      // p(132);
+      // p(333);
     </script>
   </body>
 </html>
