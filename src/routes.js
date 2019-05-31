@@ -17,6 +17,7 @@ import Startlearningreact from './pages/courses/start-learning-react';
 import TestHook from './pages/courses/react-app-with-react-hook';
 import BuildFirstReactApp from './pages/courses/build-first-react-app';
 import ContextCourse from './pages/courses/react-context-for-state-management';
+import AdvancedReactComponent from './pages/courses/advanced-react-component-patterns';
 import './routes.css';
 
 class RouteElements extends React.Component {
@@ -110,6 +111,11 @@ class RouteElements extends React.Component {
                       React Context for State Management
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/courses/advanced-react-component-patterns">
+                      Advanced React Component Patterns
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -142,6 +148,10 @@ class RouteElements extends React.Component {
               <Route path="/courses/build-first-react-app" component={BuildFirstReactApp} />
               <Route path="/courses/manage-complex-state-with-mobx" component={MobXCourse} />
               <Route path="/courses/react-context-for-state-management" component={ContextCourse} />
+              <Route
+                path="/courses/advanced-react-component-patterns"
+                component={AdvancedReactComponent}
+              />
               <Route path="/routing" component={Routing} />
               <Route path="/api-map" component={Api} />
               <Route path="/api-swapi" component={TestSwapiHooks} />
