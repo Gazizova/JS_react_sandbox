@@ -128,7 +128,7 @@ function NavigationFooter({ exerciseId, type }) {
         ) : null}
       </div>
       <div style={{ flex: 1, textAlign: 'center' }}>
-        <Link to="/">Home</Link>
+        <Link to="/courses/advanced-react-component-patterns/">Home</Link>
       </div>
       <div style={{ flex: 1, textAlign: 'right' }}>
         {Usage.next ? (
@@ -248,7 +248,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact={true} component={Home} />
+        <Route path="/courses/advanced-react-component-patterns/" exact={true} component={Home} />
         <Route path={`/:exerciseId`} exact={true} component={ExerciseContainer} />
         <Route
           path={`/:exerciseId/exercise`}
