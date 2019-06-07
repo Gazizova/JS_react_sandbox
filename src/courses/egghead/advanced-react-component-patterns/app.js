@@ -6,7 +6,7 @@ import loadable from 'react-loadable';
 const files = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
 const pages = files.reduce((p, filename, index, fullArray) => {
-  const final = require(`./exercises-final/${filename}`);
+  const final = `./exercises-final/${filename}`;
   Object.assign(final, {
     previous: fullArray[index - 1],
     next: fullArray[index + 1],

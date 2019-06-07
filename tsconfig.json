@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "allowJs": true
+    "allowJs": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "module": "commonjs"
   }
 }
