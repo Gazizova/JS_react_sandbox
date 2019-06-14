@@ -1,3 +1,4 @@
+//@ts-nocheck
 var audioCtx;
 var audioBuffer;
 function init() {
@@ -46,3 +47,14 @@ function playSound() {
 }
 
 document.getElementById('audiobutton').addEventListener('click', init);
+
+class Person2 {
+  static learn() {
+    console.log('I am learning');
+  }
+  nonStaticLearn() {
+    console.log('Non static');
+  }
+}
+
+const add = (a, b) => a + b;
