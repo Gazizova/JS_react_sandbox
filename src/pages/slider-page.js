@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import {VolumeSlider} from '../components/slider'
-import data from '../data/data.1.json';
-import './slider.css';
-import InputRange from 'react-input-range';
-import 'react-input-range/lib/css/index.css';
-import Button from '../components/button/button';
-import { CustomButton } from '../components/atoms/buttons/radio-button';
-import { TextArea } from '../components/atoms/text-area/text-area';
+import data from "../data/data.1.json";
+import "./slider.css";
+import InputRange from "react-input-range";
+import "react-input-range/lib/css/index.css";
+import Button from "../components/button/button";
+import { CustomButton } from "../components/atoms/buttons/radio-button";
+import { TextArea } from "../components/atoms/text-area/text-area";
 
 export class SliderPage extends Component {
   constructor(props) {
@@ -14,6 +14,7 @@ export class SliderPage extends Component {
     this.handleFirstClick = this.handleFirstClick.bind(this);
     this.handleFSecondClick = this.handleFSecondClick.bind(this);
     this.state = {
+      textValue: "",
       value: 0,
       value4: {
         min: 5,
@@ -25,7 +26,8 @@ export class SliderPage extends Component {
   }
 
   localData = JSON.parse(JSON.stringify(data));
-  section = this.localData.assessment.sections[0].subsections[1].groups[0].questions[1].answers;
+  section = this.localData.assessment.sections[0].subsections[1].groups[0]
+    .questions[1].answers;
 
   handleFirstClick() {
     this.setState({ isDubleSlider: true });
@@ -39,12 +41,22 @@ export class SliderPage extends Component {
     this.setState({ checked: !this.state.checked });
   };
 
+  onChange = e => {
+    console.log(e.target.value);
+    // let symbolcount = !!symbol;
+    this.setState({ textValue: e.target.value });
+  };
   render() {
     const isDubleSlider = this.state.isDubleSlider;
     let button;
     let slider;
     if (isDubleSlider) {
-      button = <Button value={'select default slider'} onClick={this.handleFSecondClick} />;
+      button = (
+        <Button
+          value={"select default slider"}
+          onClick={this.handleFSecondClick}
+        />
+      );
       slider = (
         <InputRange
           maxValue={this.section.length}
@@ -56,7 +68,12 @@ export class SliderPage extends Component {
         />
       );
     } else {
-      button = <Button value={'select double slider'} onClick={this.handleFirstClick} />;
+      button = (
+        <Button
+          value={"select double slider"}
+          onClick={this.handleFirstClick}
+        />
+      );
       slider = (
         <InputRange
           maxValue={this.section.length}
@@ -69,7 +86,7 @@ export class SliderPage extends Component {
     }
     return (
       <div className="componentSlider">
-        <div className="inner-slider">
+        {/* <div className="inner-slider">
           {slider}
           <div className="componentSlider-message">
             {' '}
@@ -79,11 +96,7 @@ export class SliderPage extends Component {
               : this.state.value}
           </div>
         </div>
-        {button}
-        <div style={{ width: '300px', margin: 'auto' }}>
-          <CustomButton checked={this.state.checked} onClick={this.handleClick} />
-        </div>
-        <TextArea />
+        {button} */}
       </div>
     );
   }

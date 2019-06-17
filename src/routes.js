@@ -10,6 +10,7 @@ import BackTo from "./components/back_to";
 import { TestSwapiHooks } from "./pages/api-swapi";
 import Api from "./pages/api";
 import Routing from "./pages/routing";
+import { Components } from "./pages/components";
 
 import MobXCourse from "./pages/courses/manage-complex-state-in-react-apps-with-mobx";
 import ReactBeginnersGuide from "./pages/courses/beginners-guide";
@@ -130,7 +131,7 @@ class RouteElements extends React.Component {
               </li>
             </ul>
             <div className="component">
-              <Route exact path="/" component={HomeAlt} />
+              <Route exact path="/" component={Components} />
               <Route path="/slider" component={SliderPage} />
               <Route path="/game-class" component={Game} />
               <Route path="/game-hooks" component={GameHooks} />

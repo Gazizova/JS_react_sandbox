@@ -1,8 +1,8 @@
-/*
-.componentSlider {
-  width: 80% !important;
+.components {
+  width: 70% !important;
   margin: auto;
-
+}
+/*
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -131,7 +131,8 @@ ul {
 }
 .map-pointer {
   color: rgb(5, 7, 114);
-  background: url('http://ruralshores.com/assets/marker-icon.png') no-repeat 50% 50%;
+  background: url("http://ruralshores.com/assets/marker-icon.png") no-repeat 50%
+    50%;
   width: 40px;
   height: 40px;
 }
@@ -146,7 +147,7 @@ ul {
   margin-right: 3px;
 }
 .table-address {
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 18px;
   width: 100%;
   background: white;

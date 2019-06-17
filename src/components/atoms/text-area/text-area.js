@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -18,6 +18,7 @@ const CustomLabel = styled.div`
   border-width: 0;
   font-size: 16px;
   font-weight: bold;
+  text-align: left;
 `;
 
 const StyledInput = styled.textarea`
@@ -42,18 +43,20 @@ export class TextArea extends React.Component {
     length: 140
   };
 
-  onChange = symbol => {
-    let symbolcount = !!symbol;
-    this.setState({ length: this.state.length - symbolcount });
+  onChange = e => {
+    console.log(e.target.value);
+    // let symbolcount = !!symbol;
+    // this.setState({ length: this.state.length - symbolcount });
   };
 
   render() {
+    const value = this.props.value || "";
     return (
       <React.Fragment>
         <StyledWrapper>
           <CustomLabel>{this.props.label}</CustomLabel>
           <StyledInput
-            style={{ textAlignVertical: 'top' }}
+            style={{ textAlignVertical: "top" }}
             multiline={true}
             editable={true}
             autoCorrect={false}
@@ -61,11 +64,15 @@ export class TextArea extends React.Component {
             blurOnSubmit={true}
             autoCapitalize="none"
             keyboardType="default"
-            maxLength={140}
             placeholder={this.props.placeholder}
-            onChangeText={this.onChange}
+            onChange={this.props.onChange}
+            value={value}
           />
-          <CustomLabel>{this.state.length} symbols left</CustomLabel>
+          {value ? (
+            <CustomLabel>
+              {this.props.maxlength - value.length} symbols left
+            </CustomLabel>
+          ) : null}
         </StyledWrapper>
       </React.Fragment>
     );
@@ -73,7 +80,8 @@ export class TextArea extends React.Component {
 }
 
 TextArea.defaultProps = {
+  maxlength: 140,
   disabled: false,
-  label: 'TextAreaLabel',
-  placeholder: 'TextArea Value'
+  label: "TextAreaLabel",
+  placeholder: "TextArea Value"
 };
