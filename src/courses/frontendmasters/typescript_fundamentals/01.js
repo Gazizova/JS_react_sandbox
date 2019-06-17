@@ -11,18 +11,49 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 function greeter(person) {
-    var div = document.createElement('div');
-    div.innerHTML = 'Hello, ' + person.firstName + ' ' + person.lastName;
+    var div = document.createElement("div");
+    div.innerHTML = "Hello, " + person.firstName + " " + person.lastName;
     return div;
 }
 var user1 = {
-    firstName: 'Jane',
-    lastName: 'User',
-    added: new Date().getUTCDate() + '/' + new Date().getUTCMonth() + 1 + '/' + new Date().getUTCFullYear()
+    firstName: "Jane",
+    lastName: "User",
+    added: new Date().getUTCDate() +
+        "/" +
+        new Date().getUTCMonth() +
+        1 +
+        "/" +
+        new Date().getUTCFullYear()
 };
-var user2 = { firstName: 'Jane2', lastName: 'User2', added: new Date() };
-var user3 = { firstName: 'Bob', lastName: 'Star' };
+var user2 = {
+    firstName: "Jane2",
+    lastName: "User2",
+    added: new Date()
+};
+var user3 = { firstName: "Bob", lastName: "Star" };
 document.body.appendChild(greeter(user1)).append(greeter(user2));
 function userList() {
     var args = [];
@@ -30,16 +61,16 @@ function userList() {
         args[_i] = arguments[_i];
     }
     // debugger;
-    var table = document.createElement('table');
-    var tableBody = document.createElement('tbody');
+    var table = document.createElement("table");
+    var tableBody = document.createElement("tbody");
     var values;
     var row;
     var cell;
     args.forEach(function (i) {
         values = Object.keys(i).map(function (key) { return i[key]; });
-        row = document.createElement('tr');
+        row = document.createElement("tr");
         values.forEach(function (y) {
-            cell = document.createElement('td');
+            cell = document.createElement("td");
             cell.appendChild(document.createTextNode(y));
             row.appendChild(cell);
         });
@@ -53,7 +84,7 @@ userList(user1, user2, user3);
 // Public and Instance fields
 var Person1 = /** @class */ (function () {
     function Person1(name) {
-        this.planet = 'Earth';
+        this.planet = "Earth";
         this.id = Person1._counter++;
         this.name = name;
     }
@@ -67,9 +98,9 @@ var Person1 = /** @class */ (function () {
 Person1.prototype.age = function () {
     return (this.isOld = Math.round(Math.random() * 100));
 };
-var mike = new Person1('mike');
+var mike = new Person1("mike");
 mike.age();
-var stef = new Person1('stef');
+var stef = new Person1("stef");
 var Employee = /** @class */ (function (_super) {
     __extends(Employee, _super);
     function Employee(_a) {
@@ -80,7 +111,7 @@ var Employee = /** @class */ (function (_super) {
     }
     return Employee;
 }(Person1));
-var inna = new Employee({ name: 'inna', id: 3 });
+var inna = new Employee({ name: "inna", id: 3 });
 inna.age();
 console.log(stef, mike, inna);
 var MyArray = /** @class */ (function (_super) {
@@ -88,17 +119,6 @@ var MyArray = /** @class */ (function (_super) {
     function MyArray() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    MyArray.prototype.toString = function () {
-        return '[PRIVATE]';
-    };
-    Object.defineProperty(MyArray, Symbol.species, {
-        get: function () {
-            // doesn't work
-            return Array;
-        },
-        enumerable: true,
-        configurable: true
-    });
     return MyArray;
 }(Array));
 var arr1 = new MyArray(1, 2, 3); // doesn't work
@@ -125,16 +145,34 @@ var Person3 = /** @class */ (function (_super) {
     }
     return Person3;
 }(Abstract(Object)));
-var user3a = new Person3('Mike');
+var user3a = new Person3("Mike");
 console.log(user3a.asJSON); // doesn't work
 // Enums
-var CommandInputType;
-(function (CommandInputType) {
-    CommandInputType[CommandInputType["NoModal"] = 0] = "NoModal";
-    CommandInputType[CommandInputType["ConfirmWithOK"] = 1] = "ConfirmWithOK";
-    CommandInputType[CommandInputType["OptionalText"] = 2] = "OptionalText";
-    CommandInputType[CommandInputType["MandatoryText"] = 3] = "MandatoryText";
-})(CommandInputType || (CommandInputType = {}));
+var ItemType;
+(function (ItemType) {
+    ItemType[ItemType["red"] = 0] = "red";
+    ItemType[ItemType["green"] = 1] = "green";
+    ItemType[ItemType["blue"] = 2] = "blue";
+})(ItemType || (ItemType = {}));
+/*
+Example:
+
+delete ItemType.red// impossible for enum
+
+const response = [{ type: 1 }, { type: 2}, { type: 3}]
+
+<div color="blue">{}<div>
+<div color="green">{}<div>
+
+response.map(item => {
+  switch (item.type) {
+    case ItemType.red:
+      return <div color="red">{}<div>
+    case ItemType.green:
+      return <div color="green">{}<div>
+  }
+})
+
 /*
 CommandInputType:
 {
@@ -148,17 +186,66 @@ NoModal: 0
 OptionalText: 2
 }
 */
+// Example 2:
+var Suit;
+(function (Suit) {
+    Suit[Suit["Clubs"] = 7] = "Clubs";
+    Suit[Suit["Hearts"] = 5] = "Hearts";
+})(Suit || (Suit = {}));
+var CardNumber;
+(function (CardNumber) {
+    CardNumber[CardNumber["Ace"] = 0] = "Ace";
+    CardNumber[CardNumber["Two"] = 1] = "Two";
+    CardNumber[CardNumber["Three"] = 2] = "Three";
+    CardNumber[CardNumber["Queen"] = 3] = "Queen";
+    CardNumber[CardNumber["King"] = 4] = "King";
+})(CardNumber || (CardNumber = {}));
+var c = [Suit.Clubs, CardNumber.King];
+function readCard(card) {
+    // let [suit, number] = card;
+    return CardNumber[card[1]] + " of " + Suit[card[0]];
+}
+console.log(readCard(c));
 //Arays
 var arr2 = [];
 arr2.push(1);
-arr2.push('a');
+arr2.push("a");
 var arr3 = [];
 arr3.push(1);
-arr3.push('a'); // error
+arr3.push("a"); // error
 var ShoppingCart = /** @class */ (function () {
     function ShoppingCart() {
-        this.items = [];
-        this.items.push(5);
+        this.items = []; // items: number[] =[]
+        this.items.push("a"); // works but shouldn't
     }
     return ShoppingCart;
 }());
+var red = [255, 0, 0];
+// Object Litarals, destructured assignment
+var person4 = {
+    name: {
+        first: "Mike",
+        last: "North"
+    },
+    languages: {
+        backend: {
+            elixir: {
+                experience: "3 year"
+            }
+        }
+    }
+};
+// Rest and spresd properties:
+var obj1 = { x1: 1, y1: 2, z1: 3 };
+var x1 = obj1.x1, others = __rest(obj1, ["x1"]);
+console.log(others);
+var values1 = __assign({}, others, { a1: 3, b1: 45 });
+console.log(values1);
+// Generics:
+function gimmiFive(x) {
+    return [x, x, x, x, x];
+}
+var egg = gimmiFive("egg");
+var three = gimmiFive(3);
+console.log(egg);
+console.log(three);

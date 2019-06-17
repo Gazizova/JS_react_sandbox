@@ -5,35 +5,44 @@ interface Person {
 }
 
 function greeter(person: Person) {
-  let div = document.createElement('div');
-  div.innerHTML = 'Hello, ' + person.firstName + ' ' + person.lastName;
+  let div = document.createElement("div");
+  div.innerHTML = "Hello, " + person.firstName + " " + person.lastName;
   return div;
 }
 
 let user1 = {
-  firstName: 'Jane',
-  lastName: 'User',
+  firstName: "Jane",
+  lastName: "User",
   added:
-    new Date().getUTCDate() + '/' + new Date().getUTCMonth() + 1 + '/' + new Date().getUTCFullYear()
+    new Date().getUTCDate() +
+    "/" +
+    new Date().getUTCMonth() +
+    1 +
+    "/" +
+    new Date().getUTCFullYear()
 };
-let user2: Person = { firstName: 'Jane2', lastName: 'User2', added: new Date() };
-let user3 = { firstName: 'Bob', lastName: 'Star' };
+let user2: Person = {
+  firstName: "Jane2",
+  lastName: "User2",
+  added: new Date()
+};
+let user3 = { firstName: "Bob", lastName: "Star" };
 
 document.body.appendChild(greeter(user1)).append(greeter(user2));
 
 function userList(...args: any) {
   // debugger;
-  let table = document.createElement('table');
-  let tableBody = document.createElement('tbody');
+  let table = document.createElement("table");
+  let tableBody = document.createElement("tbody");
   let values;
   let row;
   let cell;
 
   args.forEach(i => {
     values = Object.keys(i).map(key => i[key]);
-    row = document.createElement('tr');
+    row = document.createElement("tr");
     values.forEach(y => {
-      cell = document.createElement('td');
+      cell = document.createElement("td");
       cell.appendChild(document.createTextNode(y));
       row.appendChild(cell);
     });
@@ -56,7 +65,7 @@ class Person1 {
   age: Function;
 
   static _counter: number = 0;
-  planet = 'Earth';
+  planet = "Earth";
 
   constructor(name) {
     this.id = Person1._counter++;
@@ -72,10 +81,10 @@ Person1.prototype.age = function() {
   return (this.isOld = Math.round(Math.random() * 100));
 };
 
-let mike = new Person1('mike');
+let mike = new Person1("mike");
 mike.age();
 
-let stef = new Person1('stef');
+let stef = new Person1("stef");
 
 class Employee extends Person1 {
   _employeeId: number;
@@ -86,7 +95,7 @@ class Employee extends Person1 {
   }
 }
 
-let inna = new Employee({ name: 'inna', id: 3 });
+let inna = new Employee({ name: "inna", id: 3 });
 inna.age();
 
 console.log(stef, mike, inna);
@@ -122,7 +131,7 @@ class Person3 extends Abstract(Object) {
   }
 }
 
-let user3a = new Person3('Mike');
+let user3a = new Person3("Mike");
 console.log(user3a.asJSON); // doesn't work
 
 // Enums
@@ -164,22 +173,83 @@ OptionalText: 2
 }
 */
 
+// Example 2:
+
+enum Suit {
+  Clubs = 7,
+  Hearts = 5
+}
+enum CardNumber {
+  Ace,
+  Two,
+  Three,
+  Queen,
+  King
+}
+
+type Card = [Suit, CardNumber];
+
+const c: Card = [Suit.Clubs, CardNumber.King];
+
+function readCard(card: Card) {
+  // let [suit, number] = card;
+  return `${CardNumber[card[1]]} of ${Suit[card[0]]}`;
+}
+
+console.log(readCard(c));
+
 //Arays
 
 let arr2 = [];
 arr2.push(1);
-arr2.push('a');
+arr2.push("a");
 
 let arr3: number[] = [];
 arr3.push(1);
-arr3.push('a'); // error
+arr3.push("a"); // error
 
 class ShoppingCart {
   items = []; // items: number[] =[]
   constructor() {
-    this.items.push('a'); // works but shouldn't
+    this.items.push("a"); // works but shouldn't
   }
 }
 // Type Alias
 type Color = [number, number, number];
 let red: Color = [255, 0, 0];
+
+// Object Litarals, destructured assignment
+let person4 = {
+  name: {
+    first: "Mike",
+    last: "North"
+  },
+  languages: {
+    backend: {
+      elixir: {
+        experience: "3 year"
+      }
+    }
+  }
+};
+
+// Rest and spresd properties:
+
+let obj1 = { x1: 1, y1: 2, z1: 3 };
+let { x1, ...others } = obj1;
+console.log(others);
+
+let values1 = { ...others, a1: 3, b1: 45 };
+console.log(values1);
+
+// Generics:
+function gimmiFive<T>(x: T) {
+  return [x, x, x, x, x];
+}
+let egg: string[] = gimmiFive("egg");
+let three: number[] = gimmiFive(3);
+console.log(egg);
+console.log(three);
+// arrays generic:
+let cards = Array<[Suit, CardNumber]>();
+let data2: Promise<Response> = fetch("https://google.com");
