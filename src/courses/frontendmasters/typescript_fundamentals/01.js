@@ -237,6 +237,7 @@ console.log(others);
 var values1 = __assign({}, others, { a1: 3, b1: 45 });
 console.log(values1);
 // ---- Generics --------
+/* Generic allow to reuse code across many types, interfaces and functions */
 function gimmiFive(x) {
     return [x, x, x, x, x];
 }
@@ -246,6 +247,7 @@ console.log(egg);
 console.log(three);
 // arrays generic:
 var cards = Array();
+// promises generic:
 var data2 = fetch('https://github.com');
 cards.push([Suit.Hearts, CardNumber.Queen]);
 cards.push([5, 2], [3, 4]);
@@ -257,3 +259,24 @@ function addCart(arr, p1) {
 }
 var arr4 = [23, 67, 890];
 addCart(arr4, 7);
+// ---- Access modifier keywords --------
+/**
+ * public- anyone
+ * protected - self and subclasses
+ * privat- self
+ */
+var Account = /** @class */ (function () {
+    function Account() {
+    }
+    return Account;
+}());
+var SharedAccount = /** @class */ (function (_super) {
+    __extends(SharedAccount, _super);
+    function SharedAccount() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    SharedAccount.prototype.setEmail = function (newEmail) {
+        this.email = newEmail;
+    };
+    return SharedAccount;
+}(Account));

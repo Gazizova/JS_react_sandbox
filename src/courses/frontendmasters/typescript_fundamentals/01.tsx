@@ -238,6 +238,8 @@ let values1 = { ...others, a1: 3, b1: 45 };
 console.log(values1);
 
 // ---- Generics --------
+/* Generic allow to reuse code across many types, interfaces and functions */
+
 function gimmiFive<T>(x: T) {
   return [x, x, x, x, x];
 }
@@ -247,10 +249,12 @@ console.log(egg);
 console.log(three);
 // arrays generic:
 let cards = Array<[Suit, CardNumber]>();
+// promises generic:
 let data2: Promise<Response> = fetch('https://github.com');
 
 cards.push([Suit.Hearts, CardNumber.Queen]);
 cards.push([5, 2], [3, 4]);
+
 // constraints of generic type:
 function addCart<T extends CardNumber>(arr: number[], p1: T): number[] {
   arr.push(p1);
@@ -264,4 +268,23 @@ addCart(arr4, 7);
 // can be used with interface
 interface addCart2<T extends CardNumber> {
   addNewCart: number;
+}
+// ---- Access modifier keywords --------
+
+/**
+ * public- anyone
+ * protected - self and subclasses
+ * privat- self
+ */
+
+class Account {
+  protected email: string;
+  private password: string;
+  public accountId: number;
+}
+
+class SharedAccount extends Account {
+  setEmail(newEmail: string) {
+    this.email = newEmail;
+  }
 }

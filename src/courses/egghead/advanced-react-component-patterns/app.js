@@ -21,7 +21,7 @@ const pages = files.reduce((p, filename, index, fullArray) => {
   p[filename] = {
     exercise,
     final,
-    title: final.default.title
+    title: 'default' //final.default.title
   };
   return p;
 }, {});
