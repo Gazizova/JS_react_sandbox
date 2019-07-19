@@ -4,6 +4,7 @@ import { HomeAlt } from './pages/home';
 import { SliderPage } from './pages/slider-page';
 import Game from './pages/Game/game-class';
 import GameHooks from './pages/Game/game-hooks';
+import GameWords from './pages/Game/game-words';
 import Form from './pages/form';
 import FinalProductTable from './pages/price';
 import BackTo from './components/back_to';
@@ -76,6 +77,9 @@ class RouteElements extends React.Component {
                   <li>
                     <Link to="/game-hooks">Game hooks</Link>
                   </li>
+                  <li>
+                    <Link to="/game-words">Game words</Link>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -140,6 +144,7 @@ class RouteElements extends React.Component {
               <Route path="/slider" component={SliderPage} />
               <Route path="/game-class" component={Game} />
               <Route path="/game-hooks" component={GameHooks} />
+              <Route path="/game-words" component={GameWords} />
               <Route path="/form" component={Form} />
               <Route path="/price" component={FinalProductTable} />
               <Route path="/courses/beginners-guide" component={ReactBeginnersGuide} />

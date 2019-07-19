@@ -6,7 +6,7 @@ import loadable from 'react-loadable';
 const files = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
 const pages = files.reduce((p, filename, index, fullArray) => {
-  const final = `./exercises-final/${filename}`;
+  const final = require(`./exercises-final/${filename}`);
   Object.assign(final, {
     previous: fullArray[index - 1],
     next: fullArray[index + 1],
@@ -21,7 +21,7 @@ const pages = files.reduce((p, filename, index, fullArray) => {
   p[filename] = {
     exercise,
     final,
-    title: 'default' //final.default.title
+    title: final.default.title
   };
   return p;
 }, {});
@@ -87,7 +87,7 @@ function ExerciseContainer({ match }) {
         gridTemplateRows: '30px 1fr 30px'
       }}
     >
-      <h1 style={{ gridColumn: 'span 2', textAlign: 'center' }}>{Final.title}</h1>
+      {/* <h1 style={{ gridColumn: 'span 2', textAlign: 'center' }}>"Final"</h1> */}
       <ComponentContainer label={<Link to={`/${exerciseId}/exercise`}>Exercise</Link>}>
         <Exercise />
       </ComponentContainer>
@@ -231,9 +231,9 @@ function Home() {
             <div key={filename} style={{ margin: 10 }}>
               {filename}
               {'. '}
-              <Link to={`/${filename}`}>{title}</Link>{' '}
+              <Link to={`/${filename}`}>{title}</Link>
               <small>
-                <Link to={`/${filename}/exercise`}>(exercise)</Link>{' '}
+                <Link to={`/${filename}/exercise`}>(exercise)</Link>
                 <Link to={`/${filename}/final`}>(final)</Link>
               </small>
             </div>
