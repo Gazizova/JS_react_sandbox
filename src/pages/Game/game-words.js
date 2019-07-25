@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-const words = ['Лисица', 'Зайчик', 'Медведь', 'Кот'];
-
 function UserInput(props) {
   return (
     <div style={{ flexDirection: 'row' }}>
@@ -10,57 +8,78 @@ function UserInput(props) {
   );
 }
 
+function ErorMessage(props) {
+  return (
+    <div {...props.style}>
+      <div style={{ color: 'red' }}>Wrong! Try again</div>
+    </div>
+  );
+}
+
 function HiddenWord(props) {
   return (
     <div>
       <h3>Your word is: </h3>
-      <h1>{props.hidden}</h1>
+      <h1>{props.hiddenWord}</h1>
     </div>
   );
 }
 
 export default function gameWords() {
-  let [hidden, setHidden] = useState('');
-  let [word, setWord] = useState('');
-  let [userInput, setUserInput] = useState('');
+  const [hiddenWord, sethiddenWord] = useState([]);
+  const [word, setWord] = useState('');
+  const [userInput, setUserInput] = useState('');
+  const [hideErrorMessage, sethideErrorMessage] = useState(true);
 
+  // select random name
   function startGame() {
-    setWord((word = words[Math.floor(Math.random() * words.length)]));
-    const re = /[\D]/gi;
-    setHidden((hidden = word.replace(re, '*')));
-    console.log(word);
+    const re = /[\w\d]/gi;
+    fetch('https://swapi.co/api/people/?page=1').then(response =>
+      response
+        .json()
+        .then(({ results: items }) => items)
+        .then(items => {
+          const selectedWord = items[Math.floor(Math.random() * items.length)].name;
+          setWord(selectedWord);
+          sethiddenWord(selectedWord.split('').map(i => i.replace(re, '*')));
+          console.log(selectedWord);
+        })
+    );
   }
 
   function onChange(e) {
-    debugger;
-    if (hidden.includes('*')) {
-      setUserInput((userInput = e.currentTarget.value));
-      let newarr = hidden.split('', hidden.length);
-      let arr = [];
-      if (userInput) {
-        if (word.toLowerCase().includes(userInput.toLowerCase())) {
-          for (let i = 0; i < word.length; i++) {
-            if (word.toLowerCase()[i] === userInput.toLowerCase()) {
-              arr.push(i);
+    sethideErrorMessage(true);
+    const inputLetter = e.currentTarget.value;
+    const astericsArray = hiddenWord.slice();
+    setUserInput(inputLetter);
+
+    if (hiddenWord.includes('*')) {
+      if (inputLetter) {
+        const hasMatchedLetter = word.toLowerCase().includes(inputLetter.toLowerCase());
+
+        if (hasMatchedLetter) {
+          word.split('').forEach((letter, index) => {
+            if (letter.toLowerCase() === inputLetter.toLowerCase()) {
+              astericsArray[index] = inputLetter;
             }
-          }
-          arr.forEach(i => {
-            newarr[i] = userInput;
           });
-          setHidden((hidden = newarr.join('')));
+          sethiddenWord(astericsArray);
+          return;
         }
+
+        sethideErrorMessage(false);
       }
     } else {
       console.log('STOP');
       return;
     }
   }
-
   return (
     <div className="lesson" style={{ display: 'flex', flexDirection: 'column' }}>
       <button onClick={startGame}>Start game</button>
-      <HiddenWord hidden={hidden} />
+      <HiddenWord hiddenWord={hiddenWord.join('')} />
       <UserInput onChange={onChange} />
+      <ErorMessage style={{ hidden: hideErrorMessage }} />
     </div>
   );
 }
